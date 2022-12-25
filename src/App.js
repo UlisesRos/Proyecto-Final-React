@@ -1,15 +1,14 @@
+import { Box, Heading } from "@chakra-ui/react";
 
-import React from 'react';
 
 const App = () => {
   return (
-    <div
-    style={{
-      textAlign: "center"
-    }}
-    >
-      <h1>Proyecto Final React</h1>
-    </div>
+    <Box>
+      <Heading
+        textAlign="center"
+        marginTop="15px"
+          >Proyecto React</Heading>
+    </Box>
   )
 }
 
