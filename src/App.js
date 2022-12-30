@@ -7,6 +7,7 @@ const App = () => {
       <Heading
         textAlign="center"
         marginTop="15px"
+        fontFamily="'Roboto', sans-serif"
           >Proyecto React</Heading>
     </Box>
   )
