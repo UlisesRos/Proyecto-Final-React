@@ -1,14 +1,13 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import SeccionSmartphone from "./components/seccion-smartphone/SeccionSmartphone";
+import TarjetaEscritorio from "./components/seccion-smartphone/TarjetaEscrtorio";
+import TarjetaMobile from "./components/seccion-smartphone/TarjetaMobile";
 
 
 const App = () => {
   return (
     <Box>
-      <Heading
-        textAlign="center"
-        marginTop="15px"
-        fontFamily="'Roboto', sans-serif"
-          >Proyecto React</Heading>
+      <SeccionSmartphone/>
     </Box>
   )
 }
