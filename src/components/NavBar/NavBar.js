@@ -37,7 +37,9 @@ import close from "../../img/NavIconos/close.png"
                 p={[6, 6, 0, 0]}                          //entre md/lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
                 fontSize={["24px", "24px", "20px", "20px"]}
                 letterSpacing="2px"
-                color={["#331D4A", "#331D4A", "white", "white"]}
+                color={["--backg-color", "--backg-color", "white", "white"]}
+                fontFamily= "--first-font"
+                fontWeight="600"
             >
                 <Link href="/">Destacados</Link>
                 <Link href="/">SmartPhone</Link>
@@ -62,7 +64,7 @@ import close from "../../img/NavIconos/close.png"
                 justify="space-between"
                 w="100%"
                 p={6}
-                background="#331D4A"
+                bg="--backg-color"
                 color="white"
                 wrap="wrap"
             >
@@ -97,7 +99,7 @@ import close from "../../img/NavIconos/close.png"
             <Box 
             display={["block", "block", "none", "none"]}
             borderBottom="2px solid"
-            borderBottomColor="#331D4A"
+            borderBottomColor="--backg-color"
             >
                 <MenuLinks isOpen={isOpen}  //MenuLinks dentro del menu hambuerguesa, visible cuando isOpen es true entre sm y md
                 />                         
