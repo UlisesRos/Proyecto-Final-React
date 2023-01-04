@@ -17,7 +17,7 @@ const SeccionSmartphone = ({ producto }) => {
                 bgSize="cover"
                 bgPosition="center"
                 w="100%"
-                h={["40vh", "50vh", "70vh"]}
+                h={["40vh", "50vh", "100vh"]}
                 >
                     <Flex
                         flexDirection="column"
@@ -30,7 +30,7 @@ const SeccionSmartphone = ({ producto }) => {
                                 color="#331D4A"
                                 fontFamily="'Roboto', sans-serif"
                                 fontSize={["2rem", "2.5rem", "4rem"]}
-                                mt="30px"
+                                mt={["40px", "70px", "150px"]}
                                 letterSpacing="8px"
                                 textAlign="center"
                                 textShadow="1px 1px 2px #000000"

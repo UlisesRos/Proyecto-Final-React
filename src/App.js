@@ -1,5 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import SeccionSmartphone from "./components/seccion-smartphone/SeccionSmartphone";
+import NavBar from "./components/NavBar/NavBar";
+import HomeSlider from "./components/Home/HomeSlider";
 
 const producto = [
   {
@@ -40,9 +42,18 @@ const producto = [
 const App = () => {
   return (
     <Box>
-      <SeccionSmartphone producto={producto}/>
+      <Box
+        as="header">
+          <NavBar/>
+      </Box>
+      <Box
+        as="main">
+          <HomeSlider/>
+          <SeccionSmartphone producto={producto}/>
+      </Box>
     </Box>
   )
 }
 
-export default App;
+
+export default App
