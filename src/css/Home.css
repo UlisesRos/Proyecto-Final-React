@@ -1,0 +1,33 @@
+@import url(/node_modules/swiper/swiper-bundle.min.css);
+
+
+.swiper-button-next, .swiper-button-prev{
+    top:50%;
+    padding: 5px 9px;
+}
+
+@media screen and (min-width: 576px) {
+    .swiper-container {
+    width: 576px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .swiper-container {
+    width: 768px;
+    }
+}
+
+@media (min-width: 992px) {
+    .swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: space;
+    width: auto;
+    height: 100vh;
+    }
+    button{
+        height: 10vh;
+    }
+}
+
