@@ -20,6 +20,8 @@ const colors = {
   "--second-font": '"Nunito", sans-serif'
 }
 
+
+
 const Theme = extendTheme({ colors, fonts });
 
 export default Theme;

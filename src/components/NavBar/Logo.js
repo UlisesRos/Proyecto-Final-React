@@ -8,7 +8,8 @@ const Logo = () => {
         <Box
         width={["50px", "55px", "58px","67"]}
         >
-            <img style={{
+            <img className="hoverIcon" 
+                style={{
                 cursor: "pointer"
             }}  src={pineapple} alt="" />
         </Box>
