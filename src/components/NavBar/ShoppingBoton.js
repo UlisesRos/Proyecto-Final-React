@@ -6,9 +6,10 @@ import shopping from "../../img/NavIconos/Shopping.png";
 const ShoppingBoton = () => {
     return (
         <Box
-        width={["39px", "44px", "50px","67"]}
+        width={["45px", "50px", "55px"]}
         >
-            <img style={{
+            <img className="hoverIcon" 
+                style={{
                 cursor: "pointer"
             }} src={shopping} alt="" />
         </Box>
