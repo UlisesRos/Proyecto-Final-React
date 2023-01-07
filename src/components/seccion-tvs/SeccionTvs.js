@@ -1,9 +1,9 @@
-import fondoSmartphone from "./img/fondo/fondo-smartphone.png"
+import fondoTvs from "./img/fondo-tv.png"
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionSmartphone = ({ producto }) => {
+const SeccionTvs = ({ producto }) => {
 
     return (
         <Box
@@ -12,7 +12,8 @@ const SeccionSmartphone = ({ producto }) => {
             flexWrap="wrap">
             
             <Box
-                backgroundImage={fondoSmartphone}
+                backgroundImage={fondoTvs}
+                backgroundColor="--backg-second-color"
                 bgRepeat="no-repeat"
                 bgSize="cover"
                 bgPosition="center"
@@ -27,22 +28,22 @@ const SeccionSmartphone = ({ producto }) => {
                         >
                             <Heading
                                 as="h2"
-                                color="--backg-color"
+                                color="--white-color"
                                 fontFamily='--first-font'
                                 fontSize={["3rem", "3.5rem", "6rem"]}
                                 mt={["40px", "70px", "150px"]}
                                 letterSpacing="8px"
                                 textAlign="center"
                                 textShadow="1px 1px 2px #000000"
-                                    >Smartphone</Heading>
+                                    >TV'S</Heading>
                             <Text
-                                color="--backg-color"
+                                color="--white-color"
                                 fontFamily='--first-font'
                                 fontWeight="semibold"
                                 fontSize={["1.4rem", "1.7rem", "3rem"]}
                                 letterSpacing="4px"
                                 textAlign="center"
-                                    >Estilo es comprar lo que te hace sentir bien.</Text>
+                                    >Descubre aquí un interés que te asombrará</Text>
                     </Flex>
             </Box>
             <Flex
@@ -50,10 +51,11 @@ const SeccionSmartphone = ({ producto }) => {
                 flexDir="column"
                 justify="center"
                 align="center"
+                background="--backg-second-color"
                 >
                     <Heading
                         mt="50px"
-                        color="--backg-color"
+                        color="--white-color"
                         textShadow="1px 1px 2px #000000"
                         >¡Elegi el tuyo!</Heading>
                     <ListaTarjetas producto={producto}/>
@@ -62,4 +64,4 @@ const SeccionSmartphone = ({ producto }) => {
     )
 }
 
-export default SeccionSmartphone
+export default SeccionTvs

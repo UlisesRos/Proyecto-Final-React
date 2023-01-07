@@ -1,9 +1,9 @@
-import fondoSmartphone from "./img/fondo/fondo-smartphone.png"
+import fondoAudio from "./img/fondo-audio.png"
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionSmartphone = ({ producto }) => {
+const SeccionAudio = ({ producto }) => {
 
     return (
         <Box
@@ -12,7 +12,7 @@ const SeccionSmartphone = ({ producto }) => {
             flexWrap="wrap">
             
             <Box
-                backgroundImage={fondoSmartphone}
+                backgroundImage={fondoAudio}
                 bgRepeat="no-repeat"
                 bgSize="cover"
                 bgPosition="center"
@@ -34,7 +34,7 @@ const SeccionSmartphone = ({ producto }) => {
                                 letterSpacing="8px"
                                 textAlign="center"
                                 textShadow="1px 1px 2px #000000"
-                                    >Smartphone</Heading>
+                                    >Audio</Heading>
                             <Text
                                 color="--backg-color"
                                 fontFamily='--first-font'
@@ -42,7 +42,7 @@ const SeccionSmartphone = ({ producto }) => {
                                 fontSize={["1.4rem", "1.7rem", "3rem"]}
                                 letterSpacing="4px"
                                 textAlign="center"
-                                    >Estilo es comprar lo que te hace sentir bien.</Text>
+                                    >Tú pulsas el botón, nosotros hacemos el resto</Text>
                     </Flex>
             </Box>
             <Flex
@@ -62,4 +62,4 @@ const SeccionSmartphone = ({ producto }) => {
     )
 }
 
-export default SeccionSmartphone
+export default SeccionAudio

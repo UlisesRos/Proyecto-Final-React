@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Image, Heading, Text, CardFooter, Button, Link} from "@chakra-ui/react";
+import { Box, Card, CardBody, Image, Heading, Text, CardFooter, Button, Link } from "@chakra-ui/react";
 import TarjetaEscrtorio from "./TarjetaEscrtorio";
 import Swal from "sweetalert2";
 
@@ -43,6 +43,7 @@ const TarjetaMobile = (props) => {
                 align="center"
                 >
                 <Image
+                    borderRadius="10px"
                     src={props.prod.img}
                     maxW="100%"
                     h="auto"
@@ -67,7 +68,7 @@ const TarjetaMobile = (props) => {
 
             </CardBody>
             <CardFooter
-                mt="-15px"
+                mt="-20px"
                 display="flex"
                 flexDir="column"
                 justifyContent="center"
@@ -85,7 +86,7 @@ const TarjetaMobile = (props) => {
                     fontFamily="--second-font"
                     fontSize="1rem"
                     >{props.prod.boton}</Button>
-                
+
                 <Link
                         textAlign="center"
                         w="100px"

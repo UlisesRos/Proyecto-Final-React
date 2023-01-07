@@ -9,7 +9,7 @@ import TarjetaMobile from "./TarjetaMobile";
 
 
 
-const SwiperSmartphone = ({producto}) => {
+const SwiperAudio = ({producto}) => {
     return (
         <Swiper
             effect={"coverflow"}
@@ -43,5 +43,5 @@ const SwiperSmartphone = ({producto}) => {
     )
 }
 
-export default SwiperSmartphone
+export default SwiperAudio
 

@@ -38,7 +38,9 @@ const HomeSlider = () => {
                     <img src={img1} style={{width: '100%', background: 'cover',}} alt="" />
                     <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems: "center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
@@ -50,14 +52,16 @@ const HomeSlider = () => {
                     width: '70%',
                     heigth: '2rem',
                     textAlign: 'center',
-                }}>Tu futuro a sólo un click</p>
+                }}><b>Tu futuro a sólo un click</b></p>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
                 <img src={img2} style={{width: '100%', background: 'cover'}} alt="" />
                 <div className="divsMobile" style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
@@ -68,7 +72,9 @@ const HomeSlider = () => {
                 <img src={img3} style={{width: '100%'}} alt="" />
                 <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
@@ -79,7 +85,9 @@ const HomeSlider = () => {
                 <img src={img4} style={{width: '100%'}} alt="" />
                 <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>

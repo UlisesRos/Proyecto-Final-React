@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Image, Heading, Text, CardFooter, Button, Link} from "@chakra-ui/react";
+import { Box, Card, CardBody, Image, Heading, Text, CardFooter, Button, Link } from "@chakra-ui/react";
 import TarjetaEscrtorio from "./TarjetaEscrtorio";
 import Swal from "sweetalert2";
 
@@ -34,7 +34,7 @@ const TarjetaMobile = (props) => {
             display={["block", "block", "none"]}
             justify="center"
             align="center"
-            bg="rgba(80, 67, 117, .8)"
+            bg="--white-color"
             >
             <CardBody
                 display="flex"
@@ -43,6 +43,7 @@ const TarjetaMobile = (props) => {
                 align="center"
                 >
                 <Image
+                    borderRadius="10px"
                     src={props.prod.img}
                     maxW="100%"
                     h="auto"
@@ -53,7 +54,7 @@ const TarjetaMobile = (props) => {
                     as="h3"
                     fontSize="1.4rem"
                     mt="30px"
-                    color="--white-color"
+                    color="--backg-color"
                     fontFamily="--first-font"
                     fontWeight="semibold"
                     >{props.prod.titulo}</Heading>
@@ -61,13 +62,13 @@ const TarjetaMobile = (props) => {
                     fontWeight="semibold"
                     fontSize="1.25rem"
                     mt="20px"
-                    color="--white-color"
+                    color="--backg-color"
                     fontFamily="--first-font"
                     >{props.prod.precio}</Text>
 
             </CardBody>
             <CardFooter
-                mt="-15px"
+                mt="-20px"
                 display="flex"
                 flexDir="column"
                 justifyContent="center"
@@ -77,24 +78,24 @@ const TarjetaMobile = (props) => {
                     borderRadius="20px"
                     h="2rem"
                     w="5rem"
-                    color="--third-color"
-                    bg="--white-color"
+                    color="--first-color"
+                    bg="--backg-second-color"
                     _hover={{
                         boxShadow:"dark-lg",
                     }}
                     fontFamily="--second-font"
                     fontSize="1rem"
                     >{props.prod.boton}</Button>
-                
+
                 <Link
                         textAlign="center"
                         w="100px"
                         fontFamily="--second-font"
-                        color="--white-color"
+                        color="--backg-color"
                         fontWeight="bold"
                         mt="10px"
                         _hover={{
-                            color:"--first-color"
+                            color:"--third-color"
                         }}
                         onClick={() => caracteristicas(props.prod)}
                         >

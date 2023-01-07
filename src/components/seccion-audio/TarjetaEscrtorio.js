@@ -15,7 +15,6 @@ const TarjetaEscrtorio = (props) => {
 
     const modalCarrito = (prod) => {
         Swal.fire({
-            heightAuto: "true",
             title: prod.titulo,
             text: "Producto agregado correctamente",
             imageUrl: prod.img,
@@ -38,7 +37,7 @@ const TarjetaEscrtorio = (props) => {
                 w="250px"
                 h="360px"
                 _hover={{
-                    h:"490px",
+                    h:"515px",
                     boxShadow: "dark-lg",
                 }}
                 transition= "0.1s"
@@ -56,9 +55,10 @@ const TarjetaEscrtorio = (props) => {
                     align="center"
                     >
                     <Image
+                        borderRadius="10px"
                         src={props.prod.img}
                         maxW="100%"
-                        h="auto"
+                        h="200px"
                         alignSelf="center"
                         objectFit="cover"
                         />
@@ -108,7 +108,7 @@ const TarjetaEscrtorio = (props) => {
                             mt="20px"
                             display={visible ? "inline" : "none"}
                                 >{props.prod.boton}</Button>
-                        
+
                         <Link
                             alignSelf="center"
                             w="100px"
