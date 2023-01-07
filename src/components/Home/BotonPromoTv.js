@@ -3,15 +3,14 @@ import React from 'react'
 const BotonPromoTv = () => {
   return (
     <button style={{
-        background: 'var(--backg-color)',
         color: 'var(--third-color)',
         fontFamily: 'var(--first-font)',
-        fontSize: '1.3rem',
+        fontSize: '1.6rem',
         borderRadius: '10px',
         width: '90%',
-        heigth: '2rem',
+        heigth: 'auto',
     }}>
-        Viví el ultimo mundial de Messi con estas promos de TV
+        <b>Viví el ultimo mundial de Messi con estas promos de TV</b>
     </button>
   )
 }

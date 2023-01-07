@@ -1,45 +1,46 @@
 import { Box } from "@chakra-ui/react";
+import axios from "axios";
 import SeccionSmartphone from "./components/seccion-smartphone/SeccionSmartphone";
+import SeccionTvs from "./components/seccion-tvs/SeccionTvs";
+import SeccionAudio from "./components/seccion-audio/SeccionAudio";
+import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 
-const producto = [
-  {
-    id: 1,
-    img: "https://armoto.vtexassets.com/arquivos/ids/163823-500-auto?v=1759093632&width=500&height=auto&aspect=true",
-    titulo: "Motorola Edge 30",
-    descripcion: "Motorola Edge 30 Fusion 256 GB opal 12 GB RAM",
-    precio: "$ 129.999",
-    boton: "Comprar"
-  },
-  {
-    id: 2,
-    img: "https://armoto.vtexassets.com/arquivos/ids/163796-500-auto?v=1759093939&width=500&height=auto&aspect=true",
-    titulo: "Moto G32",
-    descripcion: "Celular Motorola Moto G32 4/128gb Plata Satinado",
-    precio: "$ 65.999",
-    boton: "Comprar"
-  },
-  {
-    id: 3,
-    img: "https://armoto.vtexassets.com/arquivos/ids/163829-500-auto?v=1759093897&width=500&height=auto&aspect=true",
-    titulo: "Moto G52",
-    descripcion: "Celular Motorola Moto G52 128GB",
-    precio: "$ 75.999",
-    boton: "Comprar"
-  },
-  {
-    id: 4,
-    img: "https://armoto.vtexassets.com/arquivos/ids/163817-800-auto?v=638071417161630000&width=800&height=auto&aspect=true",
-    titulo: "Moto E22",
-    descripcion: "Celular Motorola Moto E22 4/128gb Negro",
-    precio: "$ 42.999",
-    boton: "Comprar"
-  },
-]
-
+const initalState = {
+  productosSmartphone: [],
+  productosTvs: [],
+  productosAudio: []
+}
 
 const App = () => {
+
+  const [Productos, setProductos] = useState(initalState)
+
+  const infoProductos = async () => {
+    const ENDPOINTS = {
+      smartphone: "http://localhost:5000/productos-smartphone",
+      tvs: "http://localhost:5000/productos-tvs",
+      audio: "http://localhost:5000/productos-audio"
+    };
+    const resSmartphone = await axios.get(ENDPOINTS.smartphone),
+      resTvs = await axios.get(ENDPOINTS.tvs),
+      resAudio = await axios.get(ENDPOINTS.audio),
+      productosSmart = resSmartphone.data,
+      productosTvs = resTvs.data,
+      productosAudio = resAudio.data
+
+    setProductos({
+      productosSmartphone: productosSmart,
+      productosTvs: productosTvs,
+      productosAudio: productosAudio,
+    })
+  }
+
+  useEffect(() => {
+    infoProductos()
+  }, [])
+  
   return (
     <Box>
       <Box
@@ -49,7 +50,9 @@ const App = () => {
       <Box
         as="main">
           <HomeSlider/>
-          <SeccionSmartphone producto={producto}/>
+          <SeccionSmartphone producto={Productos.productosSmartphone}/>
+          <SeccionTvs producto={Productos.productosTvs}/>
+          <SeccionAudio producto={Productos.productosAudio}/>
       </Box>
     </Box>
   )

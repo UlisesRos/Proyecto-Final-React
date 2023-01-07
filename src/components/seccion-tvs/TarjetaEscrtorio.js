@@ -15,7 +15,6 @@ const TarjetaEscrtorio = (props) => {
 
     const modalCarrito = (prod) => {
         Swal.fire({
-            heightAuto: "true",
             title: prod.titulo,
             text: "Producto agregado correctamente",
             imageUrl: prod.img,
@@ -38,7 +37,7 @@ const TarjetaEscrtorio = (props) => {
                 w="250px"
                 h="360px"
                 _hover={{
-                    h:"490px",
+                    h:"515px",
                     boxShadow: "dark-lg",
                 }}
                 transition= "0.1s"
@@ -47,7 +46,7 @@ const TarjetaEscrtorio = (props) => {
                 display={["none", "none", "block"]}
                 justify="center"
                 align="center"
-                bg="rgba(80, 67, 117, .8)"
+                bg="--white-color"
                 >
                 <CardBody
                     display="flex"
@@ -56,6 +55,7 @@ const TarjetaEscrtorio = (props) => {
                     align="center"
                     >
                     <Image
+                        borderRadius="10px"
                         src={props.prod.img}
                         maxW="100%"
                         h="auto"
@@ -67,15 +67,15 @@ const TarjetaEscrtorio = (props) => {
                         as="h3"
                         fontSize="1.5rem"
                         mt="30px"
-                        color="--white-color"
+                        color="--backg-color"
                         fontFamily='--first-font'
                         fontWeight="extrabold"
                             >{props.prod.titulo}</Heading>
 
                     <Text
                         fontFamily="--first-font"
-                        fontWeight="medium"
-                        color="--white-color"
+                        fontWeight="semibold"
+                        color="--backg-color"
                         textAlign="left"
                         mt="10px"
                         fontSize=".9rem"
@@ -87,7 +87,7 @@ const TarjetaEscrtorio = (props) => {
                         fontWeight="semibold"
                         fontSize="1.25rem"
                         mt="10px"
-                        color="--white-color"
+                        color="--backg-color"
                         fontFamily='--first-font'
                         display={visible ? "inline" : "none"}
                         textAlign="left"
@@ -96,8 +96,8 @@ const TarjetaEscrtorio = (props) => {
                         <Button
                             onClick={() => modalCarrito(props.prod)}
                             borderRadius="20px"
-                            color="--third-color"
-                            bg="--white-color"
+                            color="--first-color"
+                            bg="--backg-second-color"
                             _hover={{
                                 boxShadow:"dark-lg",
                             }}
@@ -108,17 +108,17 @@ const TarjetaEscrtorio = (props) => {
                             mt="20px"
                             display={visible ? "inline" : "none"}
                                 >{props.prod.boton}</Button>
-                        
+                            
                         <Link
                             alignSelf="center"
                             w="100px"
                             display={visible ? "inline" : "none"}
                             fontFamily="--second-font"
-                            color="--white-color"
+                            color="--backg-color"
                             fontWeight="bold"
                             m="8px"
                             _hover={{
-                                color:"--first-color"
+                                color:"--third-color"
                             }}
                             onClick={() => caracteristicas(props.prod)}
                             >
