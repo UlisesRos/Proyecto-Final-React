@@ -1,0 +1,13 @@
+.links:hover {
+    color: var(--third-color);
+    border-bottom: 2px solid var(--third-color);
+    padding-bottom: 5px;
+
+}
+
+
+.hoverIcon:hover {
+    cursor: pointer;
+    filter:brightness(0) saturate(100%) invert(36%) sepia(9%) saturate(3673%) hue-rotate(289deg) brightness(97%) contrast(83%);
+}
+
