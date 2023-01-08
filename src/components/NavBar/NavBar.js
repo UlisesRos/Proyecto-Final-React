@@ -28,21 +28,19 @@ import close from "../../img/NavIconos/close.png"
     const MenuLinks = ({ isOpen }) => {
     return (
         <Box  
-            display={{ base: isOpen ? "812px" : "none", lg: "block" }}
-            //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true
-            //si isOpen es true es visible el segundo llamado de MenuLinks
+            display={{ base: isOpen ? "812px" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
-                spacing={7}
+                spacing={[0, 0, 0, 7]}
                 align="center"
-                direction={["column", "column", "column", "row"]}   //entre sm y lg los links se agrupan en columnas (menu hamburguesa)
-                p={[6, 6, 6, 0]}                          //a partir de lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
+                direction={["column", "column", "column", "row"]}   //entre sm y lg los links se agrupan en columnas (menu hamburguesa) a partir de lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
                 fontSize={["24px", "24px", "24px", "20px"]}
                 letterSpacing="2px"
                 color="white"
                 fontFamily= "--first-font"
                 fontWeight="600"
-                _hover={{ textDecoration: "none" }}
+                boxSizing="border-box"
+                className="stackIn"
                 >
                 <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Destacados</Link> 
                 <Link href="/" className="links" _hover={{ textDecoration: "none" }}>SmartPhone</Link>
