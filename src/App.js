@@ -10,7 +10,8 @@ import HomeSlider from "./components/Home/HomeSlider";
 const initalState = {
   productosSmartphone: [],
   productosTvs: [],
-  productosAudio: []
+  productosAudio: [],
+  productosBuscador: [],
 }
 
 const App = () => {
@@ -21,19 +22,23 @@ const App = () => {
     const ENDPOINTS = {
       smartphone: "http://localhost:5000/productos-smartphone",
       tvs: "http://localhost:5000/productos-tvs",
-      audio: "http://localhost:5000/productos-audio"
+      audio: "http://localhost:5000/productos-audio",
+      buscador: "http://localhost:5000/productos-buscador"      
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
+      resBuscador = await axios.get(ENDPOINTS.buscador),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
-      productosAudio = resAudio.data
+      productosAudio = resAudio.data,
+      productosBuscador = resBuscador.data
 
     setProductos({
       productosSmartphone: productosSmart,
       productosTvs: productosTvs,
       productosAudio: productosAudio,
+      productosBuscador: productosBuscador
     })
   }
 
@@ -45,7 +50,7 @@ const App = () => {
     <Box>
       <Box
         as="header">
-          <NavBar/>
+          <NavBar producto={Productos.productosBuscador}/>
       </Box>
       <Box
         as="main">
