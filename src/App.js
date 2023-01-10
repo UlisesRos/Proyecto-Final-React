@@ -5,7 +5,9 @@ import SeccionTvs from "./components/seccion-tvs/SeccionTvs";
 import SeccionAudio from "./components/seccion-audio/SeccionAudio";
 import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
+import ShoppingModal from "./components/NavBar/ShoppingModal";
 import HomeSlider from "./components/Home/HomeSlider";
+
 
 const initalState = {
   productosSmartphone: [],
