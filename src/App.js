@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 
+
 const initalState = {
   productosSmartphone: [],
   productosTvs: [],
