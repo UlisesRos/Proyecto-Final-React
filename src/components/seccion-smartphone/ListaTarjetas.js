@@ -6,18 +6,19 @@ import SwiperSmartphone from "./SwiperSmartphone";
 
 const ListaTarjetas = ({producto}) => {
 
-
     return (
         <Flex
             justify="center"
             align="center"
             >
             <Box
-                m="100px 0 150px 0"
-                display={["none", "none", "grid"]}
-                gridTemplateColumns="repeat(2, 600px)"
-                justifyItems="center"
-                rowGap="150px"
+                h="100vh"
+                display={["none", "none", "flex"]}
+                justifyContent="center"
+                alignItems="center"
+                flexWrap="wrap"
+                columnGap="40px"
+                rowGap="30px"
                 >
                 {
                     producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod }/>)
