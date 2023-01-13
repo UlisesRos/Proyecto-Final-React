@@ -37,7 +37,6 @@
             "boton": "Comprar"
         }
     ],
-
     "productos-tvs": [
         {
             "id": 1,
@@ -76,7 +75,6 @@
             "boton": "Comprar"
         }
     ],
-
     "productos-audio": [
         {
             "id": 1,
@@ -113,6 +111,35 @@
             "caracteristicas": "¡Llevá la fiesta a donde sea que vayas! Con la Correa de fácil transporte podés moverte con tu música de la terraza, a la playa o en donde mas gustes. Práctica, liviana y portatil, con un sonido potente. Sus deslumbrantes efectos de luces le darán ese toque mágico a todos tus momentos..",
             "precio": "$ 31.099",
             "boton": "Comprar"
+        }
+    ],
+    "productos-destacados": [
+        {
+            "id": 1,
+            "img": "./img/Samsung_Galaxy_S20.png",
+            "titulo": "Samsung Galaxy S20",
+            "descripcion": "Smartphone Galaxy S20 FE 5G 256GB Cloud Navy Liberado",
+            "precio": "$ 149.999",
+            "antes" : "$ 187.498",
+            "discount": "25% OFF"
+        },
+        {
+            "id": 2,
+            "img": "./img/Smart_TV_LG.png",
+            "titulo": "Smart TV LG 4K",
+            "descripcion": "LG UHD AI ThinQ 55 pulgadas UP75 4K, a5 AI Processor",
+            "precio": "$ 115.999",
+            "antes" : "$ 162.398",
+            "discount": "40% OFF"
+        },
+        {
+            "id": 3,
+            "img": "./img/parlante_jbl.png",
+            "titulo": "JBL Party Box 110",
+            "descripcion": "Altavoz portátil con sonido de 160W, luces incorporadas y diseño a prueba de salpicaduras.",
+            "precio": "$ 99.999",
+            "antes" : "$ 129.998",
+            "discount": "30% OFF"
         }
     ]
 }
