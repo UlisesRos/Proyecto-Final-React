@@ -6,6 +6,122 @@
             "titulo": "Motorola Edge 30",
             "descripcion": "Motorola Edge 30 Fusion 256 GB opal 12 GB RAM",
             "caracteristicas": "Celular con pantalla de 6.55 pOLED. Resolucion 1080 x 2400 FHD+, 402, HiD, 144Hz. Procesador Octa core Qualcomm Snapdragon 778G+ (2.5 GHz). Camara Principal: 50MP (84) F1.8. Gran angular y macro: 13MP (120) F2.2. Profundidad: 2MP (80.1) F2.4. Zoom, digital (8x picture / 6x video). Flash Dual LED / Camara frontal 32Mp. Flash frontal backlight. Capacidad 128 Gb / RAM 8 Gb.",
+            "precio": 129.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 2,
+            "img": "https://armoto.vtexassets.com/arquivos/ids/163931-800-auto?v=638083712992000000&width=800&height=auto&aspect=true",
+            "titulo": "Moto G32",
+            "descripcion": "Celular Motorola Moto G32 4/128gb Plata Satinado",
+            "caracteristicas": "Celular. Pantalla IPS de 6.49. Relacion aspecto 20:9. Resolucion 1080 x 2400, FHD+, 405, Mid-HiD, 90Hz. Procesador Qualcomm Snapdragon 680 Octa core (2.4GHz). Capacidad 128 Gb (expandible hasta 1Tb) / RAM 4 Gb. Camara Principal: 50MP (74.26)F1.8Gran Angular: 8MP (118) F2.2Macro: 2MP (88) F2.2. Zoom digital (8x picture / 8x video). Flash LED. Camara frontal 16MP (118) F2.2. Flash frontal backlight. Conexiones: USB C 2.0.",
+            "precio": 65.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 3,
+            "img": "https://armoto.vtexassets.com/arquivos/ids/163829-500-auto?v=1759093897&width=500&height=auto&aspect=true",
+            "titulo": "Moto G52",
+            "descripcion": "Celular Motorola Moto G52 128GB",
+            "caracteristicas": "Celular de 6.55 pOLED. Procesador Qualcomm Snapdragon 680, Octa core, 2.4GHz. Resolucion FHD+ (1080 x 2400). Sistema operativo Android 12. Camara principal: 50MP (74.26) F1.8, Gran angular y profundidad: 8MP (118) F2.2, Macro: 2MP (78) F2.4. Zoom digital (8x fotos / 8x video). Flash LED / Camara frontal 16MP (74.45) F2.45. Flash frontal backlight. Capacidad 128 Gb (expandible hasta 1Tb, Micro SD) / RAM 6 Gb. Sensores: Acelerometro, sensor de proximidad, brujula",
+            "precio": 75.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 4,
+            "img": "https://armoto.vtexassets.com/arquivos/ids/163939-800-auto?v=638085377686730000&width=800&height=auto&aspect=true",
+            "titulo": "Moto E22",
+            "descripcion": "Celular Motorola Moto E22 4/128gb Negro",
+            "caracteristicas": "Celular. Pantalla 6.5, 720 x 1600, HD+, 90 Hz. Almacenamiento: 32 Gb. Memoria RAM: 3 Gb. Procesador: Mediatek Helio G37 - Octa core 2.3 Ghz. Sistema Operativo: Android 12. Camara Principal: 16 MP (80) F2.2 Macro: 2MP (80.1) F2.4. Camara Frontal: 5MP (78) F2.4. Flash Led. Wifi. Bluetooth. Conector 3.5 mm. Bateria: 4020 mAh. Radio. Huella dactilar. Acelerometro.",
+            "precio": 42.999,
+            "boton": "Comprar"
+        }
+    ],
+
+    "productos-tvs": [
+        {
+            "id": 1,
+            "img": "https://medias.musimundo.com/medias/00562007-146614-146614-01-146614-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MjY5MHxpbWFnZS9qcGVnfGg1Ni9oNWMvMTA0NDA3NTAxMDQ2MDYvMDA1NjIwMDctMTQ2NjE0LTE0NjYxNF8wMS0xNDY2MTRfMDEuanBnX3NpemU1MTV8NGVjNmIxNzYyZTA3ODY2ZDg5M2MxMDM0MDhhZTBjMjlmMTU4ODM4YjE1NTJkOGFjYjFjM2E5ZDJjY2QxMjYyOQ",
+            "titulo": "Smart Led Tv Philips 32''",
+            "descripcion": "Smart Led Android Tv Philips 32 Pulgadas HD",
+            "caracteristicas": "Televisor Smart / Android. Pantalla: TV LED HD. Resolucion de panel: 1366 x 768 p. Relacion de aspecto: 16:9. Optimizacion de la imagen: HDR10, HLG (Hybrid Log Gamma), Pixel Plus alta definicion. Tamano diagonal de pantalla: 32 pulgadas / 80 cm. Cantidad de conexiones HDMI: 3. Cantidad de puertos USB: 2. WIFI. Bluetooth.",
+            "precio": 64.499,
+            "boton": "Comprar"
+        },
+        {
+            "id": 2,
+            "img": "https://medias.musimundo.com/medias/00543027-146106-146106-01-146106-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w2NTU3NHxpbWFnZS9qcGVnfGgxZC9oMzYvMTA0NDEwMDA5NDM2NDYvMDA1NDMwMjctMTQ2MTA2LTE0NjEwNl8wMS0xNDYxMDZfMDEuanBnX3NpemU1MTV8Y2Y1ZmEyMWUxZTVkZWRkMmYyMTllYTQ0MWQ2NDJmZWM3Yzg0YjM2ZDkxNzM5NTUyNGQ3ZWM3MWQ2OWYxZjkxZQ",
+            "titulo": "Smart Led Tv Quint 42''",
+            "descripcion": "Smart Led Tv Quint 42 Pulgadas FULL HD",
+            "caracteristicas": "Televisor Smart de 42 FHD (1920x1080), pantalla plana. Tiempo de respuesta 8ms. Frecuencia de barrido 60Hz. Brillo 240cd/m2 Radio de contraste 3000:1. Parlantes integrados. Potencia RMS 2x8W. Dolby MS12. Salidas de audio. Wi Fi. Entrada video componente. 2 Entradas USB. 3 Entradas HDMI.",
+            "precio": 59.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 3,
+            "img": "https://medias.musimundo.com/medias/00313068-140728-140728-01-140728-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1ODAxM3xpbWFnZS9qcGVnfGgwZS9oOWEvMTAzNzk4MTkxODgyNTQvMDAzMTMwNjgtMTQwNzI4LTE0MDcyOF8wMS0xNDA3MjhfMDEuanBnX3NpemU1MTV8MmVhMzgxY2RiN2RhY2Q0NGQzMTA0NjdmMTA1OGM4NDk3ZDRiM2YxMzkxMmM4ZmI3NGQzNzk4YTRlNGU5ODY1YQ",
+            "titulo": "Smart Led Tv Samsung 42''",
+            "descripcion": "Smart Led Tv Samsung 42 Pulgadas FULL HD",
+            "caracteristicas": "Smart TV LED 43 FHD 1920 x 1080. Clean View. Wide Color Enhancer. Wi-Fi integ. SO tizen. Dolby Digital Plus. Sonido 20W RMS. Samsung Cloud. Smart View/Hub. HDMI x 2. USB x 1. HDR. Control remoto. Manual.",
+            "precio": 83.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 4,
+            "img": "https://medias.musimundo.com/medias/00620057-147339-147339-01-147339-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w2OTQ2OHxpbWFnZS9qcGVnfGhhNS9oOTEvMTA0NDI5MTgyMzIwOTQvMDA2MjAwNTctMTQ3MzM5LTE0NzMzOV8wMS0xNDczMzlfMDEuanBnX3NpemU1MTV8OWEyOWVjOGUxYTZhZmRmNzA3ZDZiNzQ0Yjc1MTIzYTAxOWJmMTlmZDUwODNhNzM4ZDFlOWJiMmVhMDUyYzA3Yg",
+            "titulo": "Smart Neo TV Samsung 42''",
+            "descripcion": "Smart Neo QLED TV Samsung 43 Pulgadas 4K",
+            "caracteristicas": "Televisor gaming Smart, Neo QLED serie 9 con pantalla de 43, UHD 4K (3840x2160) Formato de pantalla wide. Tasa de refresco 144 Hz. Procesador Neo Quantum 4K. Mil millones de colores. PQI (indice de calidad de la imagen) 4500. Quantum HDR 24x. HLG. Contraste Quantum MatrixTecnhology, Volumen de color al 100 % con Quantum Dot. Deteccion de brillo y color. Atenuacion UHD definitiva. Motion Xcelerator Turbo Pro. LED Clear Motion. Reduccion de ruido. Calibracion experta. Modo cineasta (FMM). Audio Dolby Digital Plus MS12 2ch. Potencia 20W (RMS). Amplificador de voz activo.",
+            "precio": 251.999,
+            "boton": "Comprar"
+        }
+    ],
+
+    "productos-audio": [
+        {
+            "id": 1,
+            "img": "https://www.aiwaelectronics.com.ar/images/productos/aw-t2008/parlante.png",
+            "titulo": "Equipo de Audio AIWA T2008",
+            "descripcion": "Parlante Torre Bluetooth Portátil Ring Aiwa Aw-t2008",
+            "caracteristicas": "Con la función TWS podrás conectar dos de estos parlantes transmitiendo un canal por cada uno ¡y obteniendo como resultado un sonido estéreo! Con sus diferentes estilos de luces vas a poder tener s iempre el clima ideal para la ocasión. Es un parlante ideal para presentaciones acústicas gracias a su potente sonido y que podés conectar tu guitarra y un micrófono adicional al que viene incluido ¡y es inalámbrico!",
+            "precio": 89.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 2,
+            "img": "https://www.aiwaelectronics.com.ar/images/productos/p450d/preview.png",
+            "titulo": "Parlante Portatil Aiwa",
+            "descripcion": "Parlante Portatil Aiwa AW-P450D. Potencia de 1200W",
+            "caracteristicas": "900 W. PMPO, Woofer 6.5, Luces RGB, CONEXIÓN BT/ USB/SD/MIC/AUX, Radio FM, Batería recargable, Dsiplay LED",
+            "precio": 14.999,
+            "boton": "Comprar"
+        },
+        {
+            "id": 3,
+            "img": "https://www.aiwaelectronics.com.ar/images/productos/p1200d/con-accesorios.png",
+            "titulo": "Parlante Bluetooth Aiwa",
+            "descripcion": "Parlante Bluetooth Carry-On Aiwa con Microfono",
+            "caracteristicas": "Parlante portatil, 20 hs de reproduccion, Solido y resistente al agua IPX7. Funcion de bateria incorporada. Carga a traves de dispositivos USB. Entrada de audio. Funcion que evita los cortes. Reproduce a un volumen alto sin distorsion. Bluetooth 5.0. Hasta 20 m de alcance inalambrico. Sonido estereo. Las luces LED multicolor. Carga completa de bateria: h/6 horas. Conexion de audio: entrada 3.5.",
+            "precio": 30.699,
+            "boton": "Comprar"
+        },
+        {
+            "id": 4,
+            "img": "https://www.aiwaelectronics.com.ar/images/productos/aw-t2022/img2.png",
+            "titulo": "Parlante Aiwa Infinit",
+            "descripcion": "Parlante Bluetooth Aiwa AW-T2022.",
+            "caracteristicas": "¡Llevá la fiesta a donde sea que vayas! Con la Correa de fácil transporte podés moverte con tu música de la terraza, a la playa o en donde mas gustes. Práctica, liviana y portatil, con un sonido potente. Sus deslumbrantes efectos de luces le darán ese toque mágico a todos tus momentos..",
+            "precio": 31.099,
+            "boton": "Comprar"
+        }
+    ],
+    "productos-buscador": [
+        {
+            "id": 1,
+            "img": "https://armoto.vtexassets.com/arquivos/ids/163823-500-auto?v=1759093632&width=500&height=auto&aspect=true",
+            "titulo": "Motorola Edge 30",
+            "descripcion": "Motorola Edge 30 Fusion 256 GB opal 12 GB RAM",
+            "caracteristicas": "Celular con pantalla de 6.55 pOLED. Resolucion 1080 x 2400 FHD+, 402, HiD, 144Hz. Procesador Octa core Qualcomm Snapdragon 778G+ (2.5 GHz). Camara Principal: 50MP (84) F1.8. Gran angular y macro: 13MP (120) F2.2. Profundidad: 2MP (80.1) F2.4. Zoom, digital (8x picture / 6x video). Flash Dual LED / Camara frontal 32Mp. Flash frontal backlight. Capacidad 128 Gb / RAM 8 Gb.",
             "precio": "$ 129.999",
             "boton": "Comprar"
         },
@@ -37,9 +153,10 @@
             "boton": "Comprar"
         }
     ],
+
     "productos-tvs": [
         {
-            "id": 1,
+            "id": 5,
             "img": "https://medias.musimundo.com/medias/00562007-146614-146614-01-146614-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MjY5MHxpbWFnZS9qcGVnfGg1Ni9oNWMvMTA0NDA3NTAxMDQ2MDYvMDA1NjIwMDctMTQ2NjE0LTE0NjYxNF8wMS0xNDY2MTRfMDEuanBnX3NpemU1MTV8NGVjNmIxNzYyZTA3ODY2ZDg5M2MxMDM0MDhhZTBjMjlmMTU4ODM4YjE1NTJkOGFjYjFjM2E5ZDJjY2QxMjYyOQ",
             "titulo": "Smart Led Tv Philips 32''",
             "descripcion": "Smart Led Android Tv Philips 32 Pulgadas HD",
@@ -48,7 +165,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 2,
+            "id": 6,
             "img": "https://medias.musimundo.com/medias/00543027-146106-146106-01-146106-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w2NTU3NHxpbWFnZS9qcGVnfGgxZC9oMzYvMTA0NDEwMDA5NDM2NDYvMDA1NDMwMjctMTQ2MTA2LTE0NjEwNl8wMS0xNDYxMDZfMDEuanBnX3NpemU1MTV8Y2Y1ZmEyMWUxZTVkZWRkMmYyMTllYTQ0MWQ2NDJmZWM3Yzg0YjM2ZDkxNzM5NTUyNGQ3ZWM3MWQ2OWYxZjkxZQ",
             "titulo": "Smart Led Tv Quint 42''",
             "descripcion": "Smart Led Tv Quint 42 Pulgadas FULL HD",
@@ -57,7 +174,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 3,
+            "id": 7,
             "img": "https://medias.musimundo.com/medias/00313068-140728-140728-01-140728-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1ODAxM3xpbWFnZS9qcGVnfGgwZS9oOWEvMTAzNzk4MTkxODgyNTQvMDAzMTMwNjgtMTQwNzI4LTE0MDcyOF8wMS0xNDA3MjhfMDEuanBnX3NpemU1MTV8MmVhMzgxY2RiN2RhY2Q0NGQzMTA0NjdmMTA1OGM4NDk3ZDRiM2YxMzkxMmM4ZmI3NGQzNzk4YTRlNGU5ODY1YQ",
             "titulo": "Smart Led Tv Samsung 42''",
             "descripcion": "Smart Led Tv Samsung 42 Pulgadas FULL HD",
@@ -66,7 +183,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 4,
+            "id": 8,
             "img": "https://medias.musimundo.com/medias/00620057-147339-147339-01-147339-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w2OTQ2OHxpbWFnZS9qcGVnfGhhNS9oOTEvMTA0NDI5MTgyMzIwOTQvMDA2MjAwNTctMTQ3MzM5LTE0NzMzOV8wMS0xNDczMzlfMDEuanBnX3NpemU1MTV8OWEyOWVjOGUxYTZhZmRmNzA3ZDZiNzQ0Yjc1MTIzYTAxOWJmMTlmZDUwODNhNzM4ZDFlOWJiMmVhMDUyYzA3Yg",
             "titulo": "Smart Neo TV Samsung 42''",
             "descripcion": "Smart Neo QLED TV Samsung 43 Pulgadas 4K",
@@ -75,9 +192,10 @@
             "boton": "Comprar"
         }
     ],
+
     "productos-audio": [
         {
-            "id": 1,
+            "id": 9,
             "img": "https://www.aiwaelectronics.com.ar/images/productos/aw-t2008/parlante.png",
             "titulo": "Equipo de Audio AIWA T2008",
             "descripcion": "Parlante Torre Bluetooth Portátil Ring Aiwa Aw-t2008",
@@ -86,7 +204,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 2,
+            "id": 10,
             "img": "https://www.aiwaelectronics.com.ar/images/productos/p450d/preview.png",
             "titulo": "Parlante Portatil Aiwa",
             "descripcion": "Parlante Portatil Aiwa AW-P450D. Potencia de 1200W",
@@ -95,7 +213,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 3,
+            "id": 11,
             "img": "https://www.aiwaelectronics.com.ar/images/productos/p1200d/con-accesorios.png",
             "titulo": "Parlante Bluetooth Aiwa",
             "descripcion": "Parlante Bluetooth Carry-On Aiwa con Microfono",
@@ -104,7 +222,7 @@
             "boton": "Comprar"
         },
         {
-            "id": 4,
+            "id": 12,
             "img": "https://www.aiwaelectronics.com.ar/images/productos/aw-t2022/img2.png",
             "titulo": "Parlante Aiwa Infinit",
             "descripcion": "Parlante Bluetooth Aiwa AW-T2022.",
@@ -142,4 +260,5 @@
             "discount": "30% OFF"
         }
     ]
+
 }
