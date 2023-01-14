@@ -32,7 +32,6 @@ figure {
     margin-right: 20px;
 }
 
-
 .container-parrafo {
     color: #331D4A;
     font-family: 'Roboto', sans-serif;
@@ -48,8 +47,7 @@ figure {
     padding-top: 10px;
 }
 
-
-.container-parrafo p{
+.container-parrafo p {
     background-color: #CE7777;
     text-align: center;
     border-radius: 7px;
@@ -59,4 +57,94 @@ figure {
 
 .card-container:hover {
     height: 220px;
+}
+
+@media screen and (min-width: 576px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 150px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 440px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container-parrafo {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 440px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .container-parrafo {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 240px;
+        height: 300px;
+        margin: 50px 0;
+    }
+
+    .card-container:hover {
+        height: 400px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container-parrafo {
+        width: 100%;
+    }
 }
