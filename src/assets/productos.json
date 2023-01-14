@@ -151,10 +151,7 @@
             "caracteristicas": "Celular. Pantalla 6.5, 720 x 1600, HD+, 90 Hz. Almacenamiento: 32 Gb. Memoria RAM: 3 Gb. Procesador: Mediatek Helio G37 - Octa core 2.3 Ghz. Sistema Operativo: Android 12. Camara Principal: 16 MP (80) F2.2 Macro: 2MP (80.1) F2.4. Camara Frontal: 5MP (78) F2.4. Flash Led. Wifi. Bluetooth. Conector 3.5 mm. Bateria: 4020 mAh. Radio. Huella dactilar. Acelerometro.",
             "precio": "$ 42.999",
             "boton": "Comprar"
-        }
-    ],
-
-    "productos-tvs": [
+        },
         {
             "id": 5,
             "img": "https://medias.musimundo.com/medias/00562007-146614-146614-01-146614-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MjY5MHxpbWFnZS9qcGVnfGg1Ni9oNWMvMTA0NDA3NTAxMDQ2MDYvMDA1NjIwMDctMTQ2NjE0LTE0NjYxNF8wMS0xNDY2MTRfMDEuanBnX3NpemU1MTV8NGVjNmIxNzYyZTA3ODY2ZDg5M2MxMDM0MDhhZTBjMjlmMTU4ODM4YjE1NTJkOGFjYjFjM2E5ZDJjY2QxMjYyOQ",
@@ -190,10 +187,7 @@
             "caracteristicas": "Televisor gaming Smart, Neo QLED serie 9 con pantalla de 43, UHD 4K (3840x2160) Formato de pantalla wide. Tasa de refresco 144 Hz. Procesador Neo Quantum 4K. Mil millones de colores. PQI (indice de calidad de la imagen) 4500. Quantum HDR 24x. HLG. Contraste Quantum MatrixTecnhology, Volumen de color al 100 % con Quantum Dot. Deteccion de brillo y color. Atenuacion UHD definitiva. Motion Xcelerator Turbo Pro. LED Clear Motion. Reduccion de ruido. Calibracion experta. Modo cineasta (FMM). Audio Dolby Digital Plus MS12 2ch. Potencia 20W (RMS). Amplificador de voz activo.",
             "precio": "$ 251.999",
             "boton": "Comprar"
-        }
-    ],
-
-    "productos-audio": [
+        },
         {
             "id": 9,
             "img": "https://www.aiwaelectronics.com.ar/images/productos/aw-t2008/parlante.png",
