@@ -13,11 +13,8 @@ const initalState = {
   productosSmartphone: [],
   productosTvs: [],
   productosAudio: [],
-<<<<<<< HEAD
-  productosDestacados: []
-=======
+  productosDestacados: [],
   productosBuscador: [],
->>>>>>> 38f4e830c40399bed664335f8ffdad108edb0669
 }
 
 const App = () => {
@@ -29,38 +26,26 @@ const App = () => {
       smartphone: "http://localhost:5000/productos-smartphone",
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
-<<<<<<< HEAD
-      destacados: "http://localhost:5000/productos-destacados"
-=======
+      destacados: "http://localhost:5000/productos-destacados",
       buscador: "http://localhost:5000/productos-buscador"      
->>>>>>> 38f4e830c40399bed664335f8ffdad108edb0669
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
-<<<<<<< HEAD
       resDestacados = await axios.get(ENDPOINTS.destacados),
-      productosSmart = resSmartphone.data,
-      productosTvs = resTvs.data,
-      productosAudio = resAudio.data,
-      productosDestacados = resDestacados.data
-=======
       resBuscador = await axios.get(ENDPOINTS.buscador),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
       productosAudio = resAudio.data,
+      productosDestacados = resDestacados.data,
       productosBuscador = resBuscador.data
->>>>>>> 38f4e830c40399bed664335f8ffdad108edb0669
 
     setProductos({
       productosSmartphone: productosSmart,
       productosTvs: productosTvs,
       productosAudio: productosAudio,
-<<<<<<< HEAD
-      productosDestacados: productosDestacados
-=======
+      productosDestacados: productosDestacados,
       productosBuscador: productosBuscador
->>>>>>> 38f4e830c40399bed664335f8ffdad108edb0669
     })
   }
 
