@@ -67,7 +67,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                     mt="20px"
                     color="--white-color"
                     fontFamily="--first-font"
-                    >$ {prod.precio}</Text>
+                    >$ {props.prod.precio}</Text>
 
             </CardBody>
             <CardFooter

@@ -1,0 +1,8 @@
+
+
+@media (min-width: 576px) {
+    .cardListDestacados {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

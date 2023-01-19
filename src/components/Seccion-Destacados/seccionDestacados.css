@@ -1,0 +1,28 @@
+/* Colores */
+/* fondo #504375 */
+/* letra #F4F4F6 */
+
+/* Fonts */
+/* 'Nunito', sans-serif */
+/* 'Roboto', sans-serif */
+
+
+.seccionDestacados {
+    margin-top: -1px;
+    background-color: #504375;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seccionDestacados h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 7px;
+    color: #F4F4F6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+

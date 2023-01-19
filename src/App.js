@@ -7,9 +7,14 @@ import { useEffect, useReducer } from "react";
 import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
-import { TYPES } from "./hooks/actions/actionsCarrito";
 
-const {READ_STATE, ADD_TO_CART, REMOVE_ONE_PRODUCT, REMOVE_ALL_PRODUCT, CLEAR_CART} = TYPES
+
+const initalState = {
+  productosSmartphone: [],
+  productosTvs: [],
+  productosAudio: [],
+  productosBuscador: [],
+}
 
 const App = () => {
 
@@ -20,26 +25,24 @@ const App = () => {
       smartphone: "http://localhost:5000/productos-smartphone",
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
-      carrito: "http://localhost:5000/carrito"
+      buscador: "http://localhost:5000/productos-buscador"      
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
-      resCarrito = await axios.get(ENDPOINTS.carrito),
+      resBuscador = await axios.get(ENDPOINTS.buscador),
+      productosSmart = resSmartphone.data,
+      productosTvs = resTvs.data,
+      productosAudio = resAudio.data,
+      productosBuscador = resBuscador.data
 
-      productosSmart = await resSmartphone.data,
-      productosTvs = await resTvs.data,
-      productosAudio = await resAudio.data,
-      productosCarrito = await resCarrito.data
-
-    dispatch({type: READ_STATE, payload: {
-        productosSmart,
-        productosTvs,
-        productosAudio,
-        productosCarrito
-    }})  
-    
-  };
+    setProductos({
+      productosSmartphone: productosSmart,
+      productosTvs: productosTvs,
+      productosAudio: productosAudio,
+      productosBuscador: productosBuscador
+    })
+  }
 
   useEffect(() => {
     read_state()
@@ -71,9 +74,9 @@ const App = () => {
       <Box
         as="main">
           <HomeSlider/>
-          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
-          <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
-          <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
+          <SeccionSmartphone producto={Productos.productosSmartphone}/>
+          <SeccionTvs producto={Productos.productosTvs}/>
+          <SeccionAudio producto={Productos.productosAudio}/>
       </Box>
     </Box>
   )

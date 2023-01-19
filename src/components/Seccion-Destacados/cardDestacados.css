@@ -1,0 +1,150 @@
+/* Colores */
+/* Fondo Card #DCD9E2 */
+/* Letra Card #331D4A */
+/* discount #CE7777 */
+
+/* Fonts */
+/* 'Nunito', sans-serif */
+/* 'Roboto', sans-serif */
+
+
+
+.card-container {
+    background-color: #DCD9E2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.card-image {
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.container-parrafo {
+    color: #331D4A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 70%;
+}
+
+.parrafo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.container-parrafo p {
+    background-color: #CE7777;
+    text-align: center;
+    border-radius: 7px;
+    margin: auto;
+    width: 110px;
+}
+
+.card-container:hover {
+    height: 220px;
+}
+
+@media screen and (min-width: 576px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 150px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 440px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container-parrafo {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 440px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .container-parrafo {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 240px;
+        height: 300px;
+        margin: 50px 0;
+    }
+
+    .card-container:hover {
+        height: 400px;
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container-parrafo {
+        width: 100%;
+    }
+}

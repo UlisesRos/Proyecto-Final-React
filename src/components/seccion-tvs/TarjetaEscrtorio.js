@@ -95,7 +95,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                         fontFamily='--first-font'
                         display={visible ? "inline" : "none"}
                         textAlign="left"
-                            >$ {prod.precio}</Text>
+                            >$ {props.prod.precio}</Text>
 
                         <Button
                             onClick={() => modalCarrito(prod)}
