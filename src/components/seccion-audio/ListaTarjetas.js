@@ -4,7 +4,7 @@ import SwiperAudio from "./SwiperAudio";
 
 
 
-const ListaTarjetas = ({ producto, addToCart }) => {
+const ListaTarjetas = ({producto}) => {
 
 
     return (
@@ -20,7 +20,7 @@ const ListaTarjetas = ({ producto, addToCart }) => {
                 rowGap="150px"
                 >
                 {
-                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart}/>)
+                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod }/>)
                 }
             </Box>
             <Box

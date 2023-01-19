@@ -3,7 +3,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionAudio = ({ producto, addToCart }) => {
+const SeccionAudio = ({ producto }) => {
 
     return (
         <Box
@@ -56,7 +56,7 @@ const SeccionAudio = ({ producto, addToCart }) => {
                         color="--backg-color"
                         textShadow="1px 1px 2px #000000"
                         >¡Elegi el tuyo!</Heading>
-                    <ListaTarjetas producto={producto} addToCart={addToCart}/>
+                    <ListaTarjetas producto={producto}/>
             </Flex>
         </Box>
     )

@@ -2,7 +2,7 @@ import { Card, CardBody, Image, Heading, Text, Button, Link } from "@chakra-ui/r
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const TarjetaEscrtorio = ({ prod, addToCart }) => {
+const TarjetaEscrtorio = (props) => {
 
     const [visible, setVisible] = useState(false)
 
@@ -21,10 +21,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
             imageWidth: 250,
             imageHeight: 250,
             imageAlt: 'Custom image',
-        }) 
-
-        addToCart(prod.id)
-
+        })
     }
     const caracteristicas = (prod) => {
         Swal.fire({
@@ -59,8 +56,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                     >
                     <Image
                         borderRadius="10px"
-                        src={prod.img}
-                        alt={prod.alt}
+                        src={props.prod.img}
                         maxW="100%"
                         h="auto"
                         alignSelf="center"
@@ -74,7 +70,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                         color="--backg-color"
                         fontFamily='--first-font'
                         fontWeight="extrabold"
-                            >{prod.titulo}</Heading>
+                            >{props.prod.titulo}</Heading>
 
                     <Text
                         fontFamily="--first-font"
@@ -85,7 +81,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                         fontSize=".9rem"
                         textOverflow="ellipsis"
                         display={visible ? "inline" : "none"}
-                            >{prod.descripcion}</Text>
+                            >{props.prod.descripcion}</Text>
 
                     <Text
                         fontWeight="semibold"
@@ -95,10 +91,10 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                         fontFamily='--first-font'
                         display={visible ? "inline" : "none"}
                         textAlign="left"
-                            >$ {prod.precio}</Text>
+                            >{props.prod.precio}</Text>
 
                         <Button
-                            onClick={() => modalCarrito(prod)}
+                            onClick={() => modalCarrito(props.prod)}
                             borderRadius="20px"
                             color="--first-color"
                             bg="--backg-second-color"
@@ -111,7 +107,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                             alignSelf="center"
                             mt="20px"
                             display={visible ? "inline" : "none"}
-                                >{prod.boton}</Button>
+                                >{props.prod.boton}</Button>
                             
                         <Link
                             alignSelf="center"
@@ -124,7 +120,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                             _hover={{
                                 color:"--third-color"
                             }}
-                            onClick={() => caracteristicas(prod)}
+                            onClick={() => caracteristicas(props.prod)}
                             >
                                 Ver Detalles</Link>
                 </CardBody>
