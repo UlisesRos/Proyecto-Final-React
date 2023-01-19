@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,  } from "react";
 import { Link, Box, Flex, Stack } from "@chakra-ui/react";
 import '../../css/navBar.css'
 import Buscador from "./Buscador";
@@ -6,6 +6,9 @@ import BotonShopping from "./ShoppingBoton";
 import Logo from "./Logo";
 import menu from "../../img/NavIconos/menu.png";
 import close from "../../img/NavIconos/close.png"
+import ProductosBuscados from "./ProductosBuscados";
+import TarjetaBuscador from "./TarjetaBuscador";
+
 
 
     const MenuIcon = () => ( //menu hamburguesa icono
@@ -28,7 +31,7 @@ import close from "../../img/NavIconos/close.png"
     const MenuLinks = ({ isOpen }) => {
     return (
         <Box  
-            display={{ base: isOpen ? "812px" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
+            display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
                 spacing={[0, 0, 0, 7]}
@@ -39,7 +42,6 @@ import close from "../../img/NavIconos/close.png"
                 color="white"
                 fontFamily= "--first-font"
                 fontWeight="600"
-                boxSizing="border-box"
                 className="stackIn"
                 >
                 <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Destacados</Link> 
@@ -52,19 +54,33 @@ import close from "../../img/NavIconos/close.png"
     );
 };
 
-    const NavBar = () => {  //Componente NavBar principal
+    const NavBar = ({ producto }) => {  //Componente NavBar principal
         
         const [isOpen, setIsOpen] = useState(false);
         const toggle = () => setIsOpen(!isOpen);  //funcion manejadora de estado
 
+        //Funcion manejadora de estado para el buscador
+        const [searchValue, setSearchValue] = useState('');
+        let searchedProd = [];
+        if (!searchValue.length >= 1) {
+            searchedProd = []                                   //sino hay caracteres en el input devuelve el array vacio
+        } else {
+            searchedProd = producto.filter(prod => {
+                const prodName = prod.titulo.toLowerCase();     //const que guarda los titulos de cada producto
+                const searchText = searchValue.toLowerCase();   //const que guarda el valor que entra por input
+                return prodName.includes(searchText);           //se retornan los productos que coincidan con la entrada
+            });
+        }
+
 
     return (
+        
         <>
             <Flex
                 as="nav"
                 alignItems="center"
-                justify={["space-around", "space-between"]}
-                wrap= "wrap"
+                justify={["space-around","space-around","space-between", "space-between"]}
+                wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
                 p={6}
                 bg="--backg-color"
@@ -82,7 +98,7 @@ import close from "../../img/NavIconos/close.png"
                         px="20px"
                         alignItems="center"
                         >
-                        <Buscador />
+                        <Buscador searchValue={searchValue} setSearchValue={setSearchValue} />
                         <BotonShopping/>
                     </Box>
 
@@ -96,7 +112,7 @@ import close from "../../img/NavIconos/close.png"
                     display={["none", "none", "none", "flex"]}
                     alignItems="center"
                     >
-                    <Buscador />
+                    <Buscador searchValue={searchValue} setSearchValue={setSearchValue}/>
                     <BotonShopping/>
                 </Box>
             </Flex>
@@ -110,8 +126,15 @@ import close from "../../img/NavIconos/close.png"
                 <MenuLinks isOpen={isOpen}  //MenuLinks dentro del menu hambuerguesa, visible cuando isOpen es true entre sm y md
                 />                         
             </Box>
+            <ProductosBuscados producto={producto}>
+                {
+                searchedProd.map(prod => (<TarjetaBuscador key={ prod.id } prod={ prod } />))
+                }
+            </ProductosBuscados>
+
+
         </>
-    );
+            );
 };
 
 export default NavBar;
