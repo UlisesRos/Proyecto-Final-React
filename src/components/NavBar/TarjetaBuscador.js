@@ -77,7 +77,7 @@ return (
                     fontFamily='--first-font'
                     textOverflow="ellipsis"
                     fontWeight="semibold"
-                        >$ {props.prod.precio}</Text>
+                        >{props.prod.precio}</Text>
 
             </Box>
             <Flex
