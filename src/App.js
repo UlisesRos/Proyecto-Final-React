@@ -8,13 +8,7 @@ import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 
-
-const initalState = {
-  productosSmartphone: [],
-  productosTvs: [],
-  productosAudio: [],
-  productosBuscador: [],
-}
+const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
 
 const App = () => {
 
@@ -25,23 +19,24 @@ const App = () => {
       smartphone: "http://localhost:5000/productos-smartphone",
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
-      buscador: "http://localhost:5000/productos-buscador"      
+      carrito: "http://localhost:5000/carrito"      
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
-      resBuscador = await axios.get(ENDPOINTS.buscador),
+      resCarrito = await axios.get(ENDPOINTS.carrito),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
       productosAudio = resAudio.data,
-      productosBuscador = resBuscador.data
+      productosCarrito = resCarrito.data
 
-    setProductos({
+    dispatch({type: READ_STATE, payload: {
       productosSmartphone: productosSmart,
       productosTvs: productosTvs,
       productosAudio: productosAudio,
-      productosBuscador: productosBuscador
-    })
+      productosCarrito: productosCarrito
+  }})
+    
   }
 
   useEffect(() => {
