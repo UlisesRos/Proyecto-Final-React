@@ -4,7 +4,7 @@ import SwiperTvs from "./SwiperTvs";
 
 
 
-const ListaTarjetas = ({producto}) => {
+const ListaTarjetas = ({ producto, addToCart}) => {
 
 
     return (
@@ -20,7 +20,7 @@ const ListaTarjetas = ({producto}) => {
                 rowGap="150px"
                 >
                 {
-                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod }/>)
+                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart}/>)
                 }
             </Box>
             <Box
@@ -29,7 +29,7 @@ const ListaTarjetas = ({producto}) => {
                 w="350px"
                 m="50px 0 50px 0"
                 >
-                    <SwiperTvs producto={producto}/>
+                    <SwiperTvs producto={producto} addToCart={addToCart} />
             </Box>
         </Flex>
     )
