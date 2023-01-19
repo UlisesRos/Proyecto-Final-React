@@ -6,7 +6,7 @@ import ShoppingModal from "./ShoppingModal";
 
 
 
-const ShoppingBoton = () => {
+const ShoppingBoton = ({ carrito, addToCart, deleteFromCart, clearCart }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
@@ -24,7 +24,7 @@ const ShoppingBoton = () => {
             }} src={shopping} alt="" />
             <Box
                 >
-                <ShoppingModal toggle={toggle} isOpen={isOpen}/>
+                <ShoppingModal toggle={toggle} isOpen={isOpen} carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
             </Box>
         </Box>
     )
