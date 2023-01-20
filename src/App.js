@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados";
+import Nosotros from "./components/nosotros/Nosotros";
+import imagenes from './img/nosotros/imagenes';
 
 
 const initalState = {
@@ -16,6 +18,8 @@ const initalState = {
   productosDestacados: [],
   productosBuscador: [],
 }
+
+const image = imagenes;
 
 const App = () => {
 
@@ -66,7 +70,7 @@ const App = () => {
           <SeccionSmartphone producto={Productos.productosSmartphone}/>
           <SeccionTvs producto={Productos.productosTvs}/>
           <SeccionAudio producto={Productos.productosAudio}/>
-          
+          <Nosotros image={image}/>
 
       </Box>
     </Box>
