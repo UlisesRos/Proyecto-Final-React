@@ -25,7 +25,6 @@ const HomeSlider = () => {
             style={{
                 "--swiper-navigation-color": "black",
                 "--swiper-navigation-size": "1.3rem",
-                height: '32rem',
             }}
             centeredSlides={true}
             autoplay={{

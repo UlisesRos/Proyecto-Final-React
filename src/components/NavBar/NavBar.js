@@ -82,7 +82,6 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 justify={["space-around","space-around","space-between", "space-between"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
-                h="4rem"
                 p={6}
                 bg="--backg-color"
                 color="white"
