@@ -5,6 +5,8 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
 
     return (
         <Box
+            fontWeight="bold"
+            fontFamily="--second-font"
             p="20px"
             borderBottom="solid 1.5px black"
             w="100%"
@@ -22,12 +24,19 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                     fontSize="0.8rem"
                     color="--backg-color"
                     >{prod.titulo}</Heading>
+                <Text
+                    fontSize="0.8rem"
+                    w="65px"
+                    textAlign="center"
+                    color="--backg-color"
+                    >{(prod.precio * prod.cantidad).toFixed(2)}</Text>
                 <Flex
                     flexDir="column"
                     justify="center"
                     align="center"
                     >
                     <Button
+                        bg="--grey-light-color"
                         onClick={() => addToCart(prod.id)}
                         w="5px"
                         h="25px"
@@ -37,8 +46,9 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                         w="65px"
                         textAlign="center"
                         color="--backg-color"
-                        >{prod.precio * prod.cantidad}</Text>
+                        >{prod.cantidad}</Text>
                     <Button
+                        bg="--grey-light-color"
                         onClick={() => deleteFromCart(prod.id)}
                         w="5px"
                         h="25px"

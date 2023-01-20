@@ -2,7 +2,7 @@ import { Card, CardBody, Image, Heading, Text, Button, Link, Box, Flex } from "@
 import Swal from "sweetalert2";
 
 
-const TarjetaBuscador = (props) => {
+const TarjetaBuscador = ({ prod, addToCart }) => {
 
     const modalCarrito = (prod) => {
         Swal.fire({
@@ -13,6 +13,8 @@ const TarjetaBuscador = (props) => {
             imageHeight: 250,
             imageAlt: 'Custom image',
         })
+
+        addToCart(prod.id)
     }
     const caracteristicas = (prod) => {
         Swal.fire({
@@ -46,7 +48,7 @@ return (
             >
             <Image
                 borderRadius="10px"
-                src={props.prod.img}
+                src={prod.img}
                 maxW="50%"
                 h="130px"
                 objectFit="cover"
@@ -61,7 +63,7 @@ return (
                     fontFamily='--first-font'
                     fontWeight="extrabold"
                     py="5px"
-                        >{props.prod.titulo}</Heading>
+                        >{prod.titulo}</Heading>
 
                 <Text
                     fontFamily="--first-font"
@@ -69,7 +71,7 @@ return (
                     color="--backg-color"
                     fontSize=".9rem"
                     py="5px"
-                        >{props.prod.descripcion}</Text>
+                        >{prod.descripcion}</Text>
 
                 <Text
                     fontSize="1.25rem"
@@ -77,14 +79,14 @@ return (
                     fontFamily='--first-font'
                     textOverflow="ellipsis"
                     fontWeight="semibold"
-                        >$ {props.prod.precio}</Text>
+                        >$ {prod.precio}</Text>
 
             </Box>
             <Flex
                 justifyContent="center"
                 >
                 <Button
-                    onClick={() => modalCarrito(props.prod)}
+                    onClick={() => modalCarrito(prod)}
                     borderRadius="20px"
                     color="--first-color"
                     bg="--backg-second-color"
@@ -96,7 +98,7 @@ return (
                     w="100px"
                     alignSelf="center"
                     mx={2}
-                        >{props.prod.boton}</Button>
+                        >{prod.boton}</Button>
 
                 <Link
                     alignSelf="center"
@@ -109,7 +111,7 @@ return (
                     _hover={{
                         color:"--third-color"
                     }}
-                    onClick={() => caracteristicas(props.prod)}
+                    onClick={() => caracteristicas(prod)}
                     >
                         Ver Detalles</Link>
             </Flex>

@@ -7,6 +7,7 @@ import { useEffect, useReducer } from "react";
 import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
+import { TYPES } from "./hooks/actions/actionsCarrito";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
 
@@ -31,10 +32,10 @@ const App = () => {
       productosCarrito = resCarrito.data
 
     dispatch({type: READ_STATE, payload: {
-      productosSmartphone: productosSmart,
-      productosTvs: productosTvs,
-      productosAudio: productosAudio,
-      productosCarrito: productosCarrito
+        productosSmart,
+        productosTvs,
+        productosAudio,
+        productosCarrito
   }})
     
   }
@@ -69,9 +70,9 @@ const App = () => {
       <Box
         as="main">
           <HomeSlider/>
-          <SeccionSmartphone producto={Productos.productosSmartphone}/>
-          <SeccionTvs producto={Productos.productosTvs}/>
-          <SeccionAudio producto={Productos.productosAudio}/>
+          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
+          <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
+          <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
       </Box>
     </Box>
   )

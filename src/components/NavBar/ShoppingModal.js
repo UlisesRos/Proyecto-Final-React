@@ -3,6 +3,7 @@ import ShoppingTarjeta from "./ShoppingTarjeta";
 
 const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }) => {
 
+
     return (
         <Flex
             mt="20px"
@@ -19,12 +20,15 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
             rowGap="5px"
             display={isOpen ? "flex" : "none"}>
                 <Heading
+                    fontFamily="--second-font"
                     fontSize={["1rem", "1.5rem", "1.5rem"]}
                     color="--backg-color"
                     display={carrito.length === 0 ? "block" : "none"}
                     >
                     El carrito esta vacio.</Heading>
                 <Text
+                    fontWeight="bold"
+                    fontFamily="--second-font"
                     fontSize={[".8rem", "1rem", "1rem"]}
                     color="--backg-color"
                     display={carrito.length === 0 ? "block" : "none"}
@@ -48,10 +52,25 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                     w="100%"
                     color="--backg-color"
                     >
-                    <Text
-                        color="--backg-color"
-                        >Total: {carrito.reduce((ac, prod) => ac + prod.precio, 0 )}</Text>
+                    <Flex
+                        columnGap="10px">
+                        <Text
+                            fontFamily="--second-font"
+                            fontWeight="bold"
+                            color="--backg-color"
+                            >Total:
+                        </Text>
+                        <Text
+                            fontFamily="--second-font"
+                            fontWeight="bold"
+                            color="--backg-color"
+                            >{(carrito.reduce((ac, prod) => ac + prod.precioT, 0).toFixed(2))}
+                        </Text>
+                    </Flex>
                     <Button
+                        fontWeight="bold"
+                        fontFamily="--second-font"
+                        bg="--grey-light-color"
                         fontSize="0.9rem"
                         w="110px"
                         color="--backg-color"

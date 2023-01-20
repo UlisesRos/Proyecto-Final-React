@@ -132,7 +132,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
             </Box>
             <ProductosBuscados producto={producto}>
                 {
-                searchedProd.map(prod => (<TarjetaBuscador key={ prod.id } prod={ prod } />))
+                searchedProd.map(prod => (<TarjetaBuscador key={ prod.id } prod={ prod } addToCart={addToCart}/>))
                 }
             </ProductosBuscados>
 

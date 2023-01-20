@@ -39,13 +39,13 @@ export const shoppingReducer = (state, action) => {
                     ...state,
                     carrito: state.carrito.map(item =>  
                         item.id === nuevoProd.id
-                        ? { ...item, cantidad: item.cantidad + 1} 
+                        ? { ...item, cantidad: item.cantidad + 1, precioT: item.precio.toFixed(3) * (item.cantidad + 1)} 
                         : item
                         ),
                 }
                 : { // Si no existe agregamos el producto al carrito con 1 en la cantidad
                     ...state,
-                    carrito: [...state.carrito, { ...nuevoProd, cantidad: 1 }],
+                    carrito: [...state.carrito, { ...nuevoProd, cantidad: 1, precioT: nuevoProd.precio}],
                 }
         }
 
@@ -58,7 +58,7 @@ export const shoppingReducer = (state, action) => {
                 ...state,
                 carrito: state.carrito.map(item => 
                     item.id === action.payload
-                    ? {...item, cantidad: item.cantidad - 1}
+                    ? {...item, cantidad: item.cantidad - 1, precioT: item.precio.toFixed(3) * (item.cantidad - 1)}
                     : item
                 ),
             }
