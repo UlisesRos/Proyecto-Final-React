@@ -9,7 +9,7 @@ import TarjetaMobile from "./TarjetaMobile";
 
 
 
-const SwiperSmartphone = ({ producto, addToCart}) => {
+const SwiperSmartphone = ({producto}) => {
     return (
         <Swiper
             effect={"coverflow"}
@@ -34,7 +34,7 @@ const SwiperSmartphone = ({ producto, addToCart}) => {
                                     justify="center" 
                                     align="center"
                                     >
-                                    <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart} />;
+                                    <TarjetaMobile key={ prod.id } prod={ prod }/>
                                 </Flex>
                             </SwiperSlide>
                 })}

@@ -3,10 +3,9 @@ import TarjetaEscrtorio from "./TarjetaEscrtorio";
 import Swal from "sweetalert2";
 
 
-const TarjetaMobile = ({ prod, addToCart }) => {
+const TarjetaMobile = (props) => {
 
     const modalCarrito = (prod) => {
-
         Swal.fire({
             width: "300px",
             title: prod.titulo,
@@ -16,8 +15,6 @@ const TarjetaMobile = ({ prod, addToCart }) => {
             imageHeight: 200,
             imageAlt: 'Custom image',
         })
-
-        addToCart(prod.id)
     }
     const caracteristicas = (prod) => {
         Swal.fire({
@@ -30,7 +27,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
     return (
         <Box
             >
-            <TarjetaEscrtorio prod={prod} addToCart={addToCart}/>
+            <TarjetaEscrtorio prod={props.prod}/>
 
         <Card 
             maxW={["200px", "230px" ,"230px"]}
@@ -47,8 +44,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                 >
                 <Image
                     borderRadius="10px"
-                    src={prod.img}
-                    alt={prod.alt}
+                    src={props.prod.img}
                     maxW="100%"
                     h="auto"
                     alignSelf="center"
@@ -61,14 +57,14 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                     color="--white-color"
                     fontFamily="--first-font"
                     fontWeight="semibold"
-                    >{prod.titulo}</Heading>
+                    >{props.prod.titulo}</Heading>
                 <Text
                     fontWeight="semibold"
                     fontSize="1.25rem"
                     mt="20px"
                     color="--white-color"
                     fontFamily="--first-font"
-                    >$ {prod.precio}</Text>
+                    >{props.prod.precio}</Text>
 
             </CardBody>
             <CardFooter
@@ -78,7 +74,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                 justifyContent="center"
                 alignItems="center">
                 <Button
-                    onClick={() => modalCarrito(prod)}
+                    onClick={() => modalCarrito(props.prod)}
                     borderRadius="20px"
                     h="2rem"
                     w="5rem"
@@ -89,7 +85,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                     }}
                     fontFamily="--second-font"
                     fontSize="1rem"
-                    >{prod.boton}</Button>
+                    >{props.prod.boton}</Button>
 
                 <Link
                         textAlign="center"
@@ -101,7 +97,7 @@ const TarjetaMobile = ({ prod, addToCart }) => {
                         _hover={{
                             color:"--first-color"
                         }}
-                        onClick={() => caracteristicas(prod)}
+                        onClick={() => caracteristicas(props.prod)}
                         >
                             Ver Detalles</Link>
             </CardFooter>

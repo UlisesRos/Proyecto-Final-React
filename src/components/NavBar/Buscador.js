@@ -36,8 +36,8 @@ import '../../css/buscador.css'
         const toggle = () => setIsSearching(!isSearching);  //funcion manejadora de estado
 
 
-        const onSearchValueChange = (e) => {  
-            setSearchValue(e.target.value); // guarda el valor de entrada del input
+        const onSearchValueChange = (event) => {  
+            setSearchValue(event.target.value); // guarda el valor de entrada del input
         };
 
     return (
