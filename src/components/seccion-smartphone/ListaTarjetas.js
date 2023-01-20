@@ -4,7 +4,7 @@ import SwiperSmartphone from "./SwiperSmartphone";
 
 
 
-const ListaTarjetas = ({producto}) => {
+const ListaTarjetas = ({ producto, addToCart }) => {
 
 
     return (
@@ -24,7 +24,7 @@ const ListaTarjetas = ({producto}) => {
                 rowGap="50px"
                 >
                 {
-                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod }/>)
+                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart}/>)
                 }
             </Box>
             <Box

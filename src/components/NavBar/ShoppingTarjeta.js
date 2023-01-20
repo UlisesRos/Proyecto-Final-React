@@ -4,11 +4,12 @@ import { Box, Text, Heading, Image, Button, Flex, Link } from "@chakra-ui/react"
 const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
 
     return (
+        <Box>
+
         <Box
             fontWeight="bold"
             fontFamily="--second-font"
             p="20px"
-            borderBottom="solid 1.5px black"
             w="100%"
             display="flex"
             justifyContent="space-between"
@@ -19,17 +20,12 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                     src={prod.img}
                     />
                 <Heading
+                    w="100px"
                     as="h4"
                     textAlign="center"
                     fontSize="0.8rem"
                     color="--backg-color"
                     >{prod.titulo}</Heading>
-                <Text
-                    fontSize="0.8rem"
-                    w="65px"
-                    textAlign="center"
-                    color="--backg-color"
-                    >{(prod.precio * prod.cantidad).toFixed(2)}</Text>
                 <Flex
                     flexDir="column"
                     justify="center"
@@ -57,7 +53,30 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                 </Flex>
                 <Link
                     onClick={() => deleteFromCart(prod.id, true)}
-                    >🗑️</Link>
+                    >🗑️
+                </Link>
+        </Box>
+            <Flex
+                justify="center"
+                fontWeight="bold"
+                fontFamily="--second-font"
+                borderBottom="solid 1.5px black"
+                >
+                <Text
+                    p="0px 0px 10px 10px"        
+                    fontSize="0.8rem"
+                    w="65px"
+                    textAlign="center"
+                    color="--backg-color"
+                    >SubTotal: </Text>
+                <Text
+                    fontSize="0.8rem"
+                    w="65px"
+                    textAlign="center"
+                    color="--backg-color"
+                    >{(prod.precio * prod.cantidad).toFixed(2)}
+                </Text>
+            </Flex>
         </Box>
     )
 }
