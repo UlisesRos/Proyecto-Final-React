@@ -23,24 +23,25 @@ const App = () => {
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
       destacados: "http://localhost:5000/productos-destacados",
-      buscador: "http://localhost:5000/productos-buscador"      
+      carrito: "http://localhost:5000/carrito"    
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
       resDestacados = await axios.get(ENDPOINTS.destacados),
-      resBuscador = await axios.get(ENDPOINTS.buscador),
+      resCarrito = await axios.get(ENDPOINTS.carrito),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
       productosAudio = resAudio.data,
       productosDestacados = resDestacados.data,
-      productosBuscador = resBuscador.data
+      productosCarrito = resCarrito.data
 
     dispatch({type: READ_STATE, payload: {
         productosSmart,
         productosTvs,
         productosAudio,
-        productosCarrito
+        productosCarrito,
+        productosDestacados
   }})
     
   }
@@ -76,12 +77,11 @@ const App = () => {
         as="main">
           <HomeSlider/>
           <Whatsapp />
-          <SeccionDestacados producto={Productos.productosDestacados}/>
+          <SeccionDestacados producto={state.productosDestacados}/>
           <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
           <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
           
-
       </Box>
     </Box>
   )
