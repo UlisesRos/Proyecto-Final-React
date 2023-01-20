@@ -29,4 +29,18 @@ body {
   overflow-x: hidden;
   color: var(--white-color);
   background-color: var(--black-color);
+} 
+
+::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-color);        /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--backg-second-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid var(--white-color);  /* creates padding around scroll thumb */
 }

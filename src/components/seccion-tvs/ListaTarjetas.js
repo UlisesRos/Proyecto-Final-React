@@ -9,15 +9,19 @@ const ListaTarjetas = ({producto}) => {
 
     return (
         <Flex
+            mt="30px"
+            h="90vh"
+            w="100%"
             justify="center"
             align="center"
             >
             <Box
+                w="150%"
                 m="100px 0 150px 0"
-                display={["none", "none", "grid"]}
-                gridTemplateColumns="repeat(2, 600px)"
-                justifyItems="center"
-                rowGap="150px"
+                display={["none", "none", "flex"]}
+                justifyContent="space-around"
+                alignItems="center"
+                rowGap="50px"
                 >
                 {
                     producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod }/>)

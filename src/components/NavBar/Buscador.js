@@ -21,7 +21,7 @@ import '../../css/buscador.css'
 
 
     const SearchToggle = ({ toggle, isSearching}) => { 
-
+    
     return (
         <Box onClick={toggle}   //si isSearching es verdadero se muestra la lupa
         > 
