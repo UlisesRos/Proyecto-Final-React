@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados";
-
+import Whatsapp from "./components/Whatsapp/whatsapp";
 
 const initalState = {
   productosSmartphone: [],
@@ -62,6 +62,7 @@ const App = () => {
       <Box
         as="main">
           <HomeSlider/>
+          <Whatsapp />
           <SeccionDestacados producto={Productos.productosDestacados}/>
           <SeccionSmartphone producto={Productos.productosSmartphone}/>
           <SeccionTvs producto={Productos.productosTvs}/>

@@ -82,6 +82,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 justify={["space-around","space-around","space-between", "space-between"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
+                h="4rem"
                 p={6}
                 bg="--backg-color"
                 color="white"
@@ -96,7 +97,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     <Box    //este box se ve cuando  cuando aparece el menu hambuerguesa
                         display={["flex", "flex", "flex", "none"]} 
                         px="20px"
-                        alignItems="center"
+                        alignItems= "center"
                         >
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} />
                         <BotonShopping/>
