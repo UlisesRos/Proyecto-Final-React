@@ -54,8 +54,10 @@ import TarjetaBuscador from "./TarjetaBuscador";
     );
 };
 
-    const NavBar = ({ producto }) => {  //Componente NavBar principal
+    const NavBar = ({ producto, addToCart, deleteFromCart, clearCart }) => {  //Componente NavBar principal
         
+        const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio)
+
         const [isOpen, setIsOpen] = useState(false);
         const toggle = () => setIsOpen(!isOpen);  //funcion manejadora de estado
 
@@ -65,13 +67,14 @@ import TarjetaBuscador from "./TarjetaBuscador";
         if (!searchValue.length >= 1) {
             searchedProd = []                                   //sino hay caracteres en el input devuelve el array vacio
         } else {
-            searchedProd = producto.filter(prod => {
+            searchedProd = objetoBuscador.filter(prod => {
                 const prodName = prod.titulo.toLowerCase();     //const que guarda los titulos de cada producto
                 const searchText = searchValue.toLowerCase();   //const que guarda el valor que entra por input
                 return prodName.includes(searchText);           //se retornan los productos que coincidan con la entrada
             });
         }
 
+        const {carrito} = producto
 
     return (
         
@@ -99,7 +102,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                         alignItems= "center"
                         >
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} />
-                        <BotonShopping/>
+                        <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
 
                     <MenuToggle toggle={toggle} isOpen={isOpen} //toogle intercambia el boton de menu y el de close
@@ -113,7 +116,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     alignItems="center"
                     >
                     <Buscador searchValue={searchValue} setSearchValue={setSearchValue}/>
-                    <BotonShopping/>
+                    <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                 </Box>
             </Flex>
 

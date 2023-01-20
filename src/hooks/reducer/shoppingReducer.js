@@ -6,6 +6,7 @@ export const initialState = {
     productosSmartphone: [],
     productosTvs: [],
     productosAudio: [],
+    productosDestacados: [],
     carrito: []
 };
 
@@ -19,6 +20,7 @@ export const shoppingReducer = (state, action) => {
                 productosSmartphone: action.payload.productosSmart,
                 productosTvs: action.payload.productosTvs,
                 productosAudio: action.payload.productosAudio,
+                productosDestacados: action.payload.productosDestacados,
                 carrito: action.payload.productosCarrito
             }
         }

@@ -23,13 +23,13 @@ const App = () => {
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
       destacados: "http://localhost:5000/productos-destacados",
-      carrito: "http://localhost:5000/carrito"    
+      carrito: "http://localhost:5000/carrito"      
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
-      resDestacados = await axios.get(ENDPOINTS.destacados),
       resCarrito = await axios.get(ENDPOINTS.carrito),
+      resDestacados = await axios.get(ENDPOINTS.destacados),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
       productosAudio = resAudio.data,
@@ -40,8 +40,8 @@ const App = () => {
         productosSmart,
         productosTvs,
         productosAudio,
-        productosCarrito,
-        productosDestacados
+        productosDestacados,
+        productosCarrito
   }})
     
   }
@@ -81,7 +81,6 @@ const App = () => {
           <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
           <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
-          
       </Box>
     </Box>
   )
