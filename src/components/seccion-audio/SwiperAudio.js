@@ -34,7 +34,7 @@ const SwiperAudio = ({producto}) => {
                                     justify="center" 
                                     align="center"
                                     >
-                                    <TarjetaMobile key={ prod.id } prod={ prod }/>;
+                                    <TarjetaMobile key={ prod.id } prod={ prod }/>
                                 </Flex>
                             </SwiperSlide>
                 })}
