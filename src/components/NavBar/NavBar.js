@@ -44,10 +44,10 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 fontWeight="600"
                 className="stackIn"
                 >
-                <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Destacados</Link> 
-                <Link href="/" className="links" _hover={{ textDecoration: "none" }}>SmartPhone</Link>
-                <Link href="/" className="links" _hover={{ textDecoration: "none" }}>TV</Link>
-                <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Audio</Link>
+                <Link href="#SeccionDestacados" className="links" _hover={{ textDecoration: "none" }}>Destacados</Link> 
+                <Link href="#SeccionSmartphone" className="links" _hover={{ textDecoration: "none" }}>SmartPhone</Link>
+                <Link href="#SeccionTvs" className="links" _hover={{ textDecoration: "none" }}>TV</Link>
+                <Link href="#SeccionAudio" className="links" _hover={{ textDecoration: "none" }}>Audio</Link>
                 <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Nosotros</Link>
             </Stack>
         </Box>

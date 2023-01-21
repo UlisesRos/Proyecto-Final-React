@@ -6,7 +6,7 @@ import ListaTarjetas from "./ListaTarjetas";
 const SeccionSmartphone = ({ producto, addToCart }) => {
 
     return (
-        <Box
+        <Box id="SeccionSmartphone"
             display="flex"
             flexDir="column"
             flexWrap="wrap">

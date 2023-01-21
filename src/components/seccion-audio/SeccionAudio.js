@@ -6,7 +6,7 @@ import ListaTarjetas from "./ListaTarjetas";
 const SeccionAudio = ({ producto, addToCart }) => {
 
     return (
-        <Box
+        <Box id="SeccionAudio"
             display="flex"
             flexDir="column"
             flexWrap="wrap">
