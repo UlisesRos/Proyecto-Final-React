@@ -1,4 +1,8 @@
 
+    .cardListDestacados {
+        align-items: center;
+    }
+
 
 @media (min-width: 576px) {
     .cardListDestacados {

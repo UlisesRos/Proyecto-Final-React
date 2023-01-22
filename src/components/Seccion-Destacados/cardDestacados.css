@@ -15,9 +15,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 7px;
+    padding: 20px 10px;
     margin-bottom: 10px;
     border-radius: 7px;
+    align-items: center;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
 }
 
 figure {
@@ -44,7 +49,7 @@ figure {
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     font-size: 15px;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 .container-parrafo p {
@@ -53,10 +58,6 @@ figure {
     border-radius: 7px;
     margin: auto;
     width: 110px;
-}
-
-.card-container:hover {
-    height: 220px;
 }
 
 @media screen and (min-width: 576px) {
@@ -70,7 +71,8 @@ figure {
     }
 
     .card-container:hover {
-        height: 440px;
+        height: 400px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
@@ -101,6 +103,7 @@ figure {
 
     .card-container:hover {
         height: 440px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
@@ -125,12 +128,13 @@ figure {
         flex-direction: column;
         align-items: center;
         width: 240px;
-        height: 300px;
+        height: 320px;
         margin: 50px 0;
     }
 
     .card-container:hover {
-        height: 400px;
+        height: 440px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
