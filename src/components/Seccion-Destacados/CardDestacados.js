@@ -1,5 +1,6 @@
 
 
+
 import React from 'react'
 import { useState } from 'react';
 import './cardDestacados.css'
@@ -22,11 +23,11 @@ const CardDestacados = ({ prod }) => {
                     <figcaption className='container-parrafo'>
                         <h3>{prod.titulo}</h3>
                         <div className='parrafo'>
-                            {mostrar && <div className="descripcion">{prod.descripcion}</div>}
-                            {mostrar && <div className="precio">{prod.precio}</div>}
+                            {mostrar && <div className="precio"><strong>{prod.precio}</strong></div>}
                             {mostrar && <div className="antes">Antes <strike>{prod.antes}</strike></div>}
                         </div>
-                        <p>{prod.discount}</p>
+                        <p className='discount'>{prod.discount}</p>
+                        
                     </figcaption>
                 </figure>
             </div>
