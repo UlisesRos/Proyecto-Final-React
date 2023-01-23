@@ -21,7 +21,7 @@ const CardDestacados = ({ prod, addToCart }) => {
             >
                 <figure>
                     <div className='card-image'>
-                        <img src={require(`${prod.img}`)} alt="iamgen"></img>
+                        <img src={prod.img} alt="iamgen"></img>
                     </div>
                     <figcaption className='container-parrafo'>
                         <h3>{prod.titulo}</h3>
