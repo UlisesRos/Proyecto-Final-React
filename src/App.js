@@ -8,10 +8,14 @@ import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSlider from "./components/Home/HomeSlider";
 import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados";
+import Nosotros from "./components/nosotros/Nosotros";
+import imagenes from './img/nosotros/imagenes';
 import Whatsapp from "./components/Whatsapp/whatsapp";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
+
+const image = imagenes;
 
 const App = () => {
 
@@ -75,12 +79,13 @@ const App = () => {
       </Box>
       <Box
         as="main">
-          <HomeSlider/>
+          <HomeSlider/>       
           <Whatsapp />
           <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
           <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
           <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
+          <Nosotros image={image}/>
       </Box>
     </Box>
   )
