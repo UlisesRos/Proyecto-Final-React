@@ -2,6 +2,7 @@
 /* Fondo Card #DCD9E2 */
 /* Letra Card #331D4A */
 /* discount #CE7777 */
+/* fondo Button Comprar #504375 */
 
 /* Fonts */
 /* 'Nunito', sans-serif */
@@ -15,9 +16,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 7px;
+    padding: 20px 10px;
     margin-bottom: 10px;
     border-radius: 7px;
+    align-items: center;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
 }
 
 figure {
@@ -44,10 +50,10 @@ figure {
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     font-size: 15px;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
-.container-parrafo p {
+.container-parrafo .discount {
     background-color: #CE7777;
     text-align: center;
     border-radius: 7px;
@@ -55,9 +61,30 @@ figure {
     width: 110px;
 }
 
-.card-container:hover {
-    height: 220px;
+.button {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
 }
+
+.button-comprar {
+    color: #CE7777;
+    background-color:#504375;
+    padding: 5px 10px;
+    border-radius: 30px;
+    /* font-size: 16px; */
+}
+
+.button-detalles {
+    color: #504375;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+
 
 @media screen and (min-width: 576px) {
     .card-container {
@@ -70,7 +97,8 @@ figure {
     }
 
     .card-container:hover {
-        height: 440px;
+        height: 400px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
@@ -86,6 +114,16 @@ figure {
 
     .container-parrafo {
         width: 100%;
+        font-size: 16px;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-detalles {
+        font-size: 20px;
     }
 }
 
@@ -101,6 +139,7 @@ figure {
 
     .card-container:hover {
         height: 440px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
@@ -116,6 +155,7 @@ figure {
     
     .container-parrafo {
         width: 100%;
+        font-size: 18px;
     }
 }
 
@@ -125,12 +165,13 @@ figure {
         flex-direction: column;
         align-items: center;
         width: 240px;
-        height: 300px;
+        height: 320px;
         margin: 50px 0;
     }
 
     .card-container:hover {
-        height: 400px;
+        height: 440px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
     figure {
@@ -146,5 +187,10 @@ figure {
 
     .container-parrafo {
         width: 100%;
+    }
+
+    .button {
+        height: 50px;
+        margin-top: 40px;
     }
 }

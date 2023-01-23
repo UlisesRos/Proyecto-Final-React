@@ -9,7 +9,7 @@ import TarjetaMobile from "./TarjetaMobile";
 
 
 
-const SwiperAudio = ({producto}) => {
+const SwiperAudio = ( { producto, addToCart }) => {
     return (
         <Swiper
             effect={"coverflow"}
@@ -34,7 +34,7 @@ const SwiperAudio = ({producto}) => {
                                     justify="center" 
                                     align="center"
                                     >
-                                    <TarjetaMobile key={ prod.id } prod={ prod }/>;
+                                    <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart} />;
                                 </Flex>
                             </SwiperSlide>
                 })}
@@ -44,4 +44,3 @@ const SwiperAudio = ({producto}) => {
 }
 
 export default SwiperAudio
-

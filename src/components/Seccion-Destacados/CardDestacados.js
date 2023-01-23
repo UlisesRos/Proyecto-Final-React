@@ -3,11 +3,15 @@
 import React from 'react'
 import { useState } from 'react';
 import './cardDestacados.css'
+import Modal from './Modal';
+import ModalComprar from './ModalComprar';
 
 
 
-const CardDestacados = ({ prod }) => {
+const CardDestacados = ({ prod, addToCart }) => {
     const [mostrar, setMostrar] = useState(false);
+    const [modal, setModal] = useState(false);
+    const [modalComprar, setModalComprar] = useState(false)
 
     return (
         <>
@@ -22,11 +26,17 @@ const CardDestacados = ({ prod }) => {
                     <figcaption className='container-parrafo'>
                         <h3>{prod.titulo}</h3>
                         <div className='parrafo'>
-                            {mostrar && <div className="descripcion">{prod.descripcion}</div>}
-                            {mostrar && <div className="precio">{prod.precio}</div>}
-                            {mostrar && <div className="antes">Antes <strike>{prod.antes}</strike></div>}
+                            {mostrar && <div className="precio"><strong>$ {prod.precio}</strong></div>}
+                            {mostrar && <div className="antes">Antes <strike>$ {prod.antes}</strike></div>}
                         </div>
-                        <p>{prod.discount}</p>
+                        <p className='discount'>{prod.discount}</p>
+                        <div className='button'>
+                            {mostrar && <button className='button-comprar' onClick={() => setModalComprar(true)}>Comprar</button>}
+                            <ModalComprar modalComprar={modalComprar} setModalComprar={setModalComprar} prod={prod} addToCart={addToCart}/>
+                            {mostrar && <button className='button-detalles' onClick={() => setModal(true)}>Ver Detalles</button>}
+                            <Modal modal={modal} setModal={setModal} prod={prod} />
+                        </div>
+
                     </figcaption>
                 </figure>
             </div>

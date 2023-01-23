@@ -3,10 +3,10 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionTvs = ({ producto }) => {
+const SeccionTvs = ({ producto, addToCart }) => {
 
     return (
-        <Box
+        <Box id="SeccionTvs"
             display="flex"
             flexDir="column"
             flexWrap="wrap">
@@ -18,20 +18,20 @@ const SeccionTvs = ({ producto }) => {
                 bgSize="cover"
                 bgPosition="center"
                 w="100%"
-                h={["40vh", "50vh", "100vh"]}
+                h={["30vh", "40vh", "70vh"]}
                 >
                     <Flex
                         flexDirection="column"
                         justify="center"
                         align="center"
-                        rowGap={["65px" ,"70px", "130px"]}
+                        rowGap={["30px" ,"50px", "100px"]}
                         >
                             <Heading
                                 as="h2"
                                 color="--white-color"
                                 fontFamily='--first-font'
-                                fontSize={["3rem", "3.5rem", "6rem"]}
-                                mt={["40px", "70px", "150px"]}
+                                fontSize={["2rem", "3rem", "4rem"]}
+                                mt={["50px", "40px", "80px"]}
                                 letterSpacing="8px"
                                 textAlign="center"
                                 textShadow="1px 1px 2px #000000"
@@ -40,7 +40,7 @@ const SeccionTvs = ({ producto }) => {
                                 color="--white-color"
                                 fontFamily='--first-font'
                                 fontWeight="semibold"
-                                fontSize={["1.4rem", "1.7rem", "3rem"]}
+                                fontSize={["1rem", "1.5rem", "2rem"]}
                                 letterSpacing="4px"
                                 textAlign="center"
                                     >Descubre aquí un interés que te asombrará</Text>
@@ -58,7 +58,7 @@ const SeccionTvs = ({ producto }) => {
                         color="--white-color"
                         textShadow="1px 1px 2px #000000"
                         >¡Elegi el tuyo!</Heading>
-                    <ListaTarjetas producto={producto}/>
+                    <ListaTarjetas producto={producto} addToCart={addToCart} />
             </Flex>
         </Box>
     )

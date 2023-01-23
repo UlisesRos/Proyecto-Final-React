@@ -3,11 +3,11 @@
 import CardListDestacados from './CardListDestacados'
 import './seccionDestacados.css'
 
-const SeccionDestacados = ({producto}) => {
+const SeccionDestacados = ({producto, addToCart}) => {
     return (
-        <div className='seccionDestacados'>
+        <div className='seccionDestacados' id="SeccionDestacados">
             <h2>Destacados</h2>
-            <CardListDestacados producto={ producto }/>
+            <CardListDestacados producto={ producto} addToCart={addToCart}/>
         </div>
     )
 }

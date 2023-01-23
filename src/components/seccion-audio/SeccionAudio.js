@@ -3,10 +3,10 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionAudio = ({ producto }) => {
+const SeccionAudio = ({ producto, addToCart }) => {
 
     return (
-        <Box
+        <Box id="SeccionAudio"
             display="flex"
             flexDir="column"
             flexWrap="wrap">
@@ -17,20 +17,20 @@ const SeccionAudio = ({ producto }) => {
                 bgSize="cover"
                 bgPosition="center"
                 w="100%"
-                h={["40vh", "50vh", "100vh"]}
+                h={["30vh", "40vh", "70vh"]}
                 >
                     <Flex
                         flexDirection="column"
                         justify="center"
                         align="center"
-                        rowGap={["65px" ,"70px", "130px"]}
+                        rowGap={["30px" ,"50px", "100px"]}
                         >
                             <Heading
                                 as="h2"
                                 color="--backg-color"
                                 fontFamily='--first-font'
-                                fontSize={["3rem", "3.5rem", "6rem"]}
-                                mt={["40px", "70px", "150px"]}
+                                fontSize={["2rem", "3rem", "4rem"]}
+                                mt={["50px", "40px", "80px"]}
                                 letterSpacing="8px"
                                 textAlign="center"
                                 textShadow="1px 1px 2px #000000"
@@ -39,7 +39,7 @@ const SeccionAudio = ({ producto }) => {
                                 color="--backg-color"
                                 fontFamily='--first-font'
                                 fontWeight="semibold"
-                                fontSize={["1.4rem", "1.7rem", "3rem"]}
+                                fontSize={["1rem", "1.5rem", "2rem"]}
                                 letterSpacing="4px"
                                 textAlign="center"
                                     >Tú pulsas el botón, nosotros hacemos el resto</Text>
@@ -56,7 +56,7 @@ const SeccionAudio = ({ producto }) => {
                         color="--backg-color"
                         textShadow="1px 1px 2px #000000"
                         >¡Elegi el tuyo!</Heading>
-                    <ListaTarjetas producto={producto}/>
+                    <ListaTarjetas producto={producto} addToCart={addToCart}/>
             </Flex>
         </Box>
     )

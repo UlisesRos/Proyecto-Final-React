@@ -24,7 +24,7 @@ const HomeSlider = () => {
             <Swiper
             style={{
                 "--swiper-navigation-color": "black",
-                "--swiper-navigation-size": "1.3rem"
+                "--swiper-navigation-size": "1.3rem",
             }}
             centeredSlides={true}
             autoplay={{
@@ -69,7 +69,7 @@ const HomeSlider = () => {
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={img3} style={{width: '100%'}} alt="" />
+                <img src={img3} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
                         flexDirection: "column",
@@ -82,7 +82,7 @@ const HomeSlider = () => {
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={img4} style={{width: '100%'}} alt="" />
+                <img src={img4} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
                         flexDirection: "column",
