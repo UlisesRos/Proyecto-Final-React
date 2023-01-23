@@ -11,7 +11,7 @@
 
 
 .card-container {
-    background-color: #DCD9E2;
+    background-color: #ffffff;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -29,13 +29,15 @@
 figure {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     text-align: center;
 }
 
 .card-image {
     object-fit: cover;
-    margin-right: 20px;
+    margin-right: 10px;
+    width: 50%;
 }
 
 .container-parrafo {
@@ -110,11 +112,12 @@ figure {
     .card-image {
         margin-right: 0;
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .container-parrafo {
         width: 100%;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .button {
@@ -165,12 +168,12 @@ figure {
         flex-direction: column;
         align-items: center;
         width: 240px;
-        height: 320px;
+        height: 360px;
         margin: 50px 0;
     }
 
     .card-container:hover {
-        height: 440px;
+        height: 480px;
         box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
 
