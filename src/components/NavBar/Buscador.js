@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, Image, Input } from "@chakra-ui/react";
 import search from "../../img/NavIconos/Search.png";
 import back from "../../img/NavIconos/volver.png";
@@ -13,32 +12,37 @@ import '../../css/buscador.css'
     );
 
     const BackIcon = () => ( //icono para volver al estado inicial del buscador
+    <button>
     <Image src={back} alt="back" className="hoverIcon"
         width={["45px", "70px", "70px"]} 
         cursor="pointer"
+        type="reset"
         />
+        </button>
     );
 
 
-    const SearchToggle = ({ toggle, isSearching}) => { 
+    const SearchToggle = ({ toggle, openSearch}) => { 
     
     return (
         <Box onClick={toggle}   //si isSearching es verdadero se muestra la lupa
         > 
-            {isSearching ? <SearchIcon /> : <BackIcon />}
+            {openSearch ? <SearchIcon /> : <BackIcon />}
         </Box>
     );
     };
 
-    const Buscador = ({searchValue, setSearchValue}) => {
+    const Buscador = ({searchValue, setSearchValue, openSearch, setOpenSearch }) => {
 
-        const [isSearching, setIsSearching] = useState(true)
-        const toggle = () => setIsSearching(!isSearching);  //funcion manejadora de estado
+        const toggle = () => setOpenSearch(!openSearch);  //funcion manejadora de estado
 
 
         const onSearchValueChange = (event) => {  
-            setSearchValue(event.target.value); // guarda el valor de entrada del input
-        };
+             // trae el valor de entrada del input
+                setSearchValue(event.target.value);
+        }
+
+
 
     return (
         <Box
@@ -50,7 +54,7 @@ import '../../css/buscador.css'
         >
 
             <Input
-                type="text"
+                type="search"
                 autoFocus={true}
                 placeholder="Search..."
                 padding="0 0 10px 10px"
@@ -60,12 +64,12 @@ import '../../css/buscador.css'
                 borderRadius="none"
                 borderBottom="1px solid grey"
                 size="lg"
-                className={isSearching ? "close" : "open"}  //si isSearching es verdadero la clase sera close que oculta el input
+                className={openSearch ? "close" : "open"}  //si isSearching es verdadero la clase sera close que oculta el input
                 value={searchValue}
-                onChange={onSearchValueChange}
+                onChange={ onSearchValueChange}
             />
 
-           <SearchToggle toggle={toggle} isSearching={isSearching} //Searchtoogle intercambia el boton de lupa y el de back
+           <SearchToggle toggle={toggle} openSearch={openSearch} //Searchtoogle intercambia el boton de lupa y el de back
             />
     
         </Box>
