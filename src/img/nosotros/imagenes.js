@@ -4,14 +4,16 @@ import img3 from './ulises-ros.jpg'
 import img4 from './leandro.jpg'
 import img5 from './catalina.jpg'
 import img6 from './pablo.jpeg'
-export default [
+const imag =[
     {
+        id: 1,
         img: img1,
         nombre: "Augusto",
         apellido: "Fons",
         github:    "https://github.com/AugustoFons"
     },
     {
+        id: 2,
         img: img2,
         nombre: "Stefania ",
         apellido: "Gentile",
@@ -19,6 +21,7 @@ export default [
     
     },
     {
+        id: 3,
         img: img3,
         nombre: "Ulises",
         apellido: "Ros",
@@ -26,18 +29,21 @@ export default [
     
     },
     {
+        id: 4,
         img: img4,
         nombre: "Leandro",
         apellido: "Biancuzzo",
         github:    "https://github.com/leanbbc"
     },
     {
+        id: 5,
         img: img5,
         nombre: "Catalina",
         apellido: "Astudillo",
         github:    "https://github.com/Catalina-Astudillo"
     },
     {
+        id: 6,
         img: img6,
         nombre: "Pablo",
         apellido: "Ayoroa",
@@ -46,4 +52,5 @@ export default [
 
     }
 ]
+export default imag
 
