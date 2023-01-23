@@ -20,6 +20,9 @@ figure{
     border-radius:2px;
     
 }
+figure:hover{
+    transform: scale(1.2);
+}
 .github{
     position:absolute;
     right:1rem;

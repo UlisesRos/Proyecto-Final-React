@@ -34,7 +34,7 @@ const HomeSlider = () => {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             >
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75vh'}}>
                     <img src={img1} style={{width: '100%', background: 'cover',}} alt="" />
                     <div style={{
                         display: 'flex',
@@ -55,7 +55,7 @@ const HomeSlider = () => {
                 }}><b>Tu futuro a sólo un click</b></p>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75vh'}}>
                 <img src={img2} style={{width: '100%', background: 'cover'}} alt="" />
                 <div className="divsMobile" style={{
                         display: 'flex',
@@ -68,7 +68,7 @@ const HomeSlider = () => {
                 <BotonOfertas/>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75vh'}}>
                 <img src={img3} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
@@ -81,7 +81,7 @@ const HomeSlider = () => {
                 <BotonPediLaTuya/>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75vh'}}>
                 <img src={img4} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
