@@ -8,7 +8,7 @@ import ModalComprar from './ModalComprar';
 
 
 
-const CardDestacados = ({ prod }) => {
+const CardDestacados = ({ prod, addToCart }) => {
     const [mostrar, setMostrar] = useState(false);
     const [modal, setModal] = useState(false);
     const [modalComprar, setModalComprar] = useState(false)
@@ -26,13 +26,13 @@ const CardDestacados = ({ prod }) => {
                     <figcaption className='container-parrafo'>
                         <h3>{prod.titulo}</h3>
                         <div className='parrafo'>
-                            {mostrar && <div className="precio"><strong>{prod.precio}</strong></div>}
-                            {mostrar && <div className="antes">Antes <strike>{prod.antes}</strike></div>}
+                            {mostrar && <div className="precio"><strong>$ {prod.precio}</strong></div>}
+                            {mostrar && <div className="antes">Antes <strike>$ {prod.antes}</strike></div>}
                         </div>
                         <p className='discount'>{prod.discount}</p>
                         <div className='button'>
                             {mostrar && <button className='button-comprar' onClick={() => setModalComprar(true)}>Comprar</button>}
-                            <ModalComprar modalComprar={modalComprar} setModalComprar={setModalComprar} prod={prod} />
+                            <ModalComprar modalComprar={modalComprar} setModalComprar={setModalComprar} prod={prod} addToCart={addToCart}/>
                             {mostrar && <button className='button-detalles' onClick={() => setModal(true)}>Ver Detalles</button>}
                             <Modal modal={modal} setModal={setModal} prod={prod} />
                         </div>

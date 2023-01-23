@@ -77,7 +77,7 @@ const App = () => {
         as="main">
           <HomeSlider/>
           <Whatsapp />
-          <SeccionDestacados producto={state.productosDestacados}/>
+          <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
           <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
           <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
