@@ -56,20 +56,21 @@ import TarjetaBuscador from "./TarjetaBuscador";
 
     const NavBar = ({ producto, addToCart, deleteFromCart, clearCart }) => {  //Componente NavBar principal
         
-        const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio)
+        const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio, producto.productosDestacados)
 
         const [isOpen, setIsOpen] = useState(false);
         const toggle = () => setIsOpen(!isOpen);  //funcion manejadora de estado
 
         //Funcion manejadora de estado para el buscador
+        const [openSearch, setOpenSearch] = useState(true);
         const [searchValue, setSearchValue] = useState('');
         let searchedProd = [];
-        if (!searchValue.length >= 1) {
+        if (!searchValue.length >= 1 || openSearch) {
             searchedProd = []                                   //sino hay caracteres en el input devuelve el array vacio
         } else {
             searchedProd = objetoBuscador.filter(prod => {
                 const prodName = prod.titulo.toLowerCase();     //const que guarda los titulos de cada producto
-                const searchText = searchValue.toLowerCase();   //const que guarda el valor que entra por input
+                let searchText = searchValue.toLowerCase();   //const que guarda el valor que entra por input
                 return prodName.includes(searchText);           //se retornan los productos que coincidan con la entrada
             });
         }
@@ -101,7 +102,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                         px="20px"
                         alignItems= "center"
                         >
-                        <Buscador searchValue={searchValue} setSearchValue={setSearchValue} />
+                        <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
 
@@ -115,7 +116,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     display={["none", "none", "none", "flex"]}
                     alignItems="center"
                     >
-                    <Buscador searchValue={searchValue} setSearchValue={setSearchValue}/>
+                    <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch}/>
                     <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                 </Box>
             </Flex>

@@ -29,7 +29,7 @@ export const shoppingReducer = (state, action) => {
         case ADD_TO_CART:{
 
             //Unifico el estado
-            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio)
+            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
 
             //Buscar el producto
             let nuevoProd = objetoUnificador.find(producto => producto.id === action.payload)
