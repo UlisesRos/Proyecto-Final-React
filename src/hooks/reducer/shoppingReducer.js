@@ -23,19 +23,19 @@ export const shoppingReducer = (state, action) => {
                 productosDestacados: action.payload.productosDestacados,
                 carrito: action.payload.productosCarrito
             }
+
         }
 
         case ADD_TO_CART:{
+
             //Unifico el estado
             const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
 
             //Buscar el producto
             let nuevoProd = objetoUnificador.find(producto => producto.id === action.payload)
 
-
             //Ver si el producto existe en el carrito
             let itemInCarrito = state.carrito.find(item => item.id === nuevoProd.id)
-
             return itemInCarrito
                 ? {  //Si existe el producto en el carrito, incremento la cantidad
                     ...state,
