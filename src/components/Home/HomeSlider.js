@@ -20,11 +20,11 @@ import BotonPromoTv from './BotonPromoTv';
 const HomeSlider = () => {
     return (
     <>
-        <div style={{width: '100%', heigth: '100vh', overflow: 'hidden', position: 'fixed',backgroundColor: 'var(--backg-second-color)',}}>
+        <div style={{width: '100%', heigth: '100vh', overflow: 'hidden',backgroundColor: 'var(--backg-second-color)',}}>
             <Swiper
             style={{
                 "--swiper-navigation-color": "black",
-                "--swiper-navigation-size": "1.3rem"
+                "--swiper-navigation-size": "1.3rem",
             }}
             centeredSlides={true}
             autoplay={{
@@ -34,11 +34,13 @@ const HomeSlider = () => {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             >
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75'}}>
                     <img src={img1} style={{width: '100%', background: 'cover',}} alt="" />
                     <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems: "center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
@@ -50,36 +52,42 @@ const HomeSlider = () => {
                     width: '70%',
                     heigth: '2rem',
                     textAlign: 'center',
-                }}>Tu futuro a sólo un click</p>
+                }}><b>Tu futuro a sólo un click</b></p>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{height:'75'}}>
                 <img src={img2} style={{width: '100%', background: 'cover'}} alt="" />
                 <div className="divsMobile" style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
                 <BotonOfertas/>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                <img src={img3} style={{width: '100%'}} alt="" />
+                <SwiperSlide style={{height:'75'}}>
+                <img src={img3} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
                 <BotonPediLaTuya/>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                <img src={img4} style={{width: '100%'}} alt="" />
+                <SwiperSlide style={{height:'75'}}>
+                <img src={img4} style={{width: '100%',}} alt="" />
                 <div style={{
                         display: 'flex',
+                        flexDirection: "column",
                         justifyContent: 'center',
+                        alignItems:"center",
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
