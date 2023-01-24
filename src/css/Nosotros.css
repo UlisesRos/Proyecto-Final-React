@@ -20,6 +20,9 @@ figure{
     border-radius:2px;
     
 }
+figure:hover{
+    transform: scale(1.2);
+}
 .github{
     position:absolute;
     right:1rem;
@@ -60,7 +63,7 @@ figure{
         flex-direction:column;
         margin: 1rem;
         align-items:center;
-        width:100px;
+        width:9rem;
         border: solid 2px #000;
         box-shadow: 10px 5px 5px #000;
         border-radius:2px;
