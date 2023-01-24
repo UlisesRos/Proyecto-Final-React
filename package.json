@@ -6,14 +6,20 @@
     "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/nunito": "^4.5.11",
+    "@fontsource/roboto": "^4.5.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.2",
     "framer-motion": "^8.0.2",
+    "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.5",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "sweetalert2": "^11.6.16",
+    "sweetalert2-react-content": "^5.0.7",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "apiproductos": "json-server --port 5000 --watch src/assets/productos.json"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,199 @@
+/* Colores */
+/* Fondo Card #DCD9E2 */
+/* Letra Card #331D4A */
+/* discount #CE7777 */
+/* fondo Button Comprar #504375 */
+
+/* Fonts */
+/* 'Nunito', sans-serif */
+/* 'Roboto', sans-serif */
+
+
+
+.card-container {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    align-items: center;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.card-image {
+    object-fit: cover;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.container-parrafo {
+    color: #331D4A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 70%;
+}
+
+.parrafo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.container-parrafo .discount {
+    background-color: #CE7777;
+    text-align: center;
+    border-radius: 7px;
+    margin: auto;
+    width: 110px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.button-comprar {
+    color: #CE7777;
+    background-color:#504375;
+    padding: 5px 10px;
+    border-radius: 30px;
+    /* font-size: 16px; */
+}
+
+.button-detalles {
+    color: #504375;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 150px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 400px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .container-parrafo {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-detalles {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .card-container:hover {
+        height: 440px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .container-parrafo {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 240px;
+        height: 360px;
+        margin: 50px 0;
+    }
+
+    .card-container:hover {
+        height: 480px;
+        box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
+    }
+
+    figure {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container-parrafo {
+        width: 100%;
+    }
+
+    .button {
+        height: 50px;
+        margin-top: 40px;
+    }
+}

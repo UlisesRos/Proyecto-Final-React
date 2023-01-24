@@ -1,0 +1,11 @@
+.appWhatsapp{
+    position: fixed;
+    right: 22px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.appWhatsapp:hover{
+    transform: scale(1.5);
+}
+
