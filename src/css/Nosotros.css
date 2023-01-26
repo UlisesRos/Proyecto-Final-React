@@ -8,7 +8,7 @@
     padding: 20px;
     
 }
-figure{
+.figureNosotros{
     background-color:#504375;
     display:flex;
     flex-direction:row;
@@ -20,7 +20,7 @@ figure{
     border-radius:2px;
     
 }
-figure:hover{
+.figureNosotros:hover{
     transform: scale(1.2);
 }
 .github{
@@ -57,7 +57,7 @@ figure:hover{
         margin: 0.5rem;
 
     }
-    figure{
+    .figureNosotros{
         background-color:#504375;
         display:flex;
         flex-direction:column;

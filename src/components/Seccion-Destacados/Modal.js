@@ -6,7 +6,7 @@ const Modal = ({ modal, setModal, prod }) => {
     return (
         <>
             {modal &&
-                <div className="container">
+                <div className="container-Exterior">
                     <div className="containerModal">
                         <h3 className='titulo'>Caracteristicas Generales</h3>
                         <div>

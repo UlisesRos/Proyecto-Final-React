@@ -19,7 +19,7 @@ const CardDestacados = ({ prod, addToCart }) => {
                 onMouseEnter={() => setMostrar(true)}
                 onMouseLeave={() => setMostrar(false)}
             >
-                <figure>
+                <figure className='card-figure' >
                     <div className='card-image'>
                         <img src={prod.img} alt="iamgen"></img>
                     </div>

@@ -116,31 +116,31 @@
   "productos-destacados": [
     {
       "id": 13,
-      "img": "./img/Samsung_Galaxy_S20.png",
+      "img": "https://medias.musimundo.com/medias/00550016-146186-146186-01-146186-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w3NTAxM3xpbWFnZS9qcGVnfGhmYi9oODkvMTAzOTA2ODA2MzMzNzQvMDA1NTAwMTYtMTQ2MTg2LTE0NjE4Nl8wMS0xNDYxODZfMDEuanBnX3NpemU1MTV8ZjQ2YmYyNzU1ZTc2OTYzNDM0MmIwMzMxN2UyMDIxNmE0NjVjZGMyYzk5ZWQyYmE5NzgyODhhNjA4NjY0ZjEwNA",
       "titulo": "Samsung Galaxy S20",
-      "descripcion": "Smartphone Galaxy S20 FE 5G 256GB Cloud Navy Liberado",
+      "descripcion": "Celular. Pantalla Super AMOLED de 6.5''. Procesador: Octa-Core 2.8GHz,2.4GHz,1.8GHz. Bateria: 4,500mAh / 25W Fast Charging. Camara: 12.0 MP + 12.0 MP + 8.0 MP. Camara Frontal: 32.0 MP. Optical Zoom at 3x , Digital Zoom up to 30x. NFC. USB. WIFI. Micro SD. Bluetooth. Almacenamiento: 128 Gb. RAM: 6 Gb. 5G. FOD. Galaxy Experience. IP68. Sensores: Acelerometro / Sensor de huellas dactilares / Sensor giroscopico / Sensor geomagnetico / Sensor Hall / Sensor de luz RGB / Deteccion de proximidad virtual.",
       "precio": 149.999,
-      "antes": 187.498,
+      "antes" : 187.498,
       "discount": "25% OFF"
-    },
-    {
+  },
+  {
       "id": 14,
-      "img": "./img/Smart_TV_LG.png",
-      "titulo": "Smart TV LG 4K",
-      "descripcion": "LG UHD AI ThinQ 55 pulgadas UP75 4K, a5 AI Processor",
+      "img": "https://medias.musimundo.com/medias/00431006-144267-144267-01-144267-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MTUyOHxpbWFnZS9qcGVnfGgyOS9oNjEvMTA0NDA3MzI1NzM3MjYvMDA0MzEwMDYtMTQ0MjY3LTE0NDI2N18wMS0xNDQyNjdfMDEuanBnX3NpemU1MTV8ODg4MWMwN2EzMmFmYWUyZjA0Njg5OGYyMzBlOGE0OWNjNTMxZjA0YjFjN2I1ZjdlN2JiNmU4MGI3MDMxOWZmZg",
+      "titulo": "Smart TV LG 4K UHD",
+      "descripcion": "Televisor Android Smart de 55''. Pantalla LED. Frecuencia de barrido 60 Hz. Potencia RMS 20W. Resolucion 4K UHD 3840 x 2160. 2 Salidas de audio. Bluetooth. Wi Fi. Sintonizador TDA. Tecnologia Android TV 10. 2 USB. 4 HDMI. Incluye Control remoto, 2 pilas AAA, Cable de alimentacion, Guia de inicio rapida, Folleto legal y de seguridad, Soporte para la mesa. Contraste dinamico HDR 10+. Entrada de pc (HDMI). Vision y sonido cinematograficos Dolby Vision y Dolby Atmos. Relacion de aspecto 16:9",
       "precio": 115.999,
-      "antes": 162.398,
+      "antes" : 162.398,
       "discount": "40% OFF"
-    },
-    {
+  },
+  {
       "id": 15,
-      "img": "./img/parlante_jbl.png",
+      "img": "https://medias.musimundo.com/medias/00520003-145660-145660-01-145660-01.jpg-size300?context=bWFzdGVyfGltYWdlc3wyMjQ4OHxpbWFnZS9qcGVnfGhiMS9oMjcvMTAzODE2MDE4NjU3NTgvMDA1MjAwMDMtMTQ1NjYwLTE0NTY2MF8wMS0xNDU2NjBfMDEuanBnX3NpemUzMDB8NTkzZTNhM2M1OTI1MDA2ZjVjN2Y0OTgzMDY3YWI2ZGI5MTMxZWU2MjFkNDgzMzIxMTI5N2Q2OTA3YjRjODJiOQ",
       "titulo": "JBL Party Box 110",
-      "descripcion": "Altavoz portátil con sonido de 160W, luces incorporadas y diseño a prueba de salpicaduras.",
+      "descripcion": "Altavoz portátil con sonido de 160W, luces incorporadas y diseño a prueba de salpicaduras. 160 W RMS de potente sonido JBL Original Pro. Espectaculo de luces dinamico, colorido y personalizable. Indice de proteccion IPX4. Vincula tus altavoces para obtener un sonido aun mayor. Asa comoda y ruedas robustas. Entradas para microfono y guitarra .Aplicacion PartyBox. Bluetooth. Cable de alimentacion de CA . Longitud del cable: 2 m.",
       "precio": 99.999,
-      "antes": 129.998,
+      "antes" : 129.998,
       "discount": "30% OFF"
-    }
+  }
   ],
   "carrito": []
 }
