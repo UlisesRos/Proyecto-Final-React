@@ -5,6 +5,7 @@ import ListaTarjetas from "./ListaTarjetas";
 
 const SeccionTvs = ({ producto, addToCart }) => {
 
+
     return (
         <Box id="SeccionTvs"
             display="flex"
