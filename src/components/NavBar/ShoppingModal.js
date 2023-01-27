@@ -64,7 +64,7 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                             fontFamily="--second-font"
                             fontWeight="bold"
                             color="--backg-color"
-                            >{(carrito.reduce((ac, prod) => ac + prod.precioT, 0).toFixed(2))}
+                            >{(carrito.reduce((ac, prod) => ac + prod.precioT, 0).toFixed(3))}
                         </Text>
                     </Flex>
                     <Button
