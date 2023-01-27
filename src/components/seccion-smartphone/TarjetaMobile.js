@@ -1,9 +1,13 @@
 import { Box, Card, CardBody, Image, Heading, Text, CardFooter, Button, Link} from "@chakra-ui/react";
 import TarjetaEscrtorio from "./TarjetaEscrtorio";
 import Swal from "sweetalert2";
+import { useState } from "react";
+import BotonFav from "../Favoritos/BotonFav";
 
 
 const TarjetaMobile = ({ prod, addToCart }) => {
+
+    const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
 
     const modalCarrito = (prod) => {
         Swal.fire({
@@ -39,6 +43,9 @@ const TarjetaMobile = ({ prod, addToCart }) => {
             align="center"
             bg="rgba(80, 67, 117, .8)"
             >
+            <Box>
+                <BotonFav fav={fav} setFav={setFav}/>
+            </Box>
             <CardBody
                 display="flex"
                 flexDirection="column"

@@ -1,8 +1,11 @@
-import { Card, CardBody, Image, Heading, Text, Button, Link } from "@chakra-ui/react";
+import { Card, CardBody, Image, Heading, Text, Button, Link, Box } from "@chakra-ui/react";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import BotonFav from "../Favoritos/BotonFav";
 
 const TarjetaEscrtorio = ({ prod, addToCart }) => {
+
+    const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
 
     const [visible, setVisible] = useState(false)
 
@@ -51,6 +54,13 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                 align="center"
                 bg="--white-color"
                 >
+                <Box
+                    visibility={visible ? "visible" : "hidden"}
+                    filter={ fav ? "brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(10%) hue-rotate(279deg) brightness(93%) contrast(101%)" : null}
+                    >
+                    <BotonFav fav={fav} setFav={setFav}
+                    />
+                </Box>
                 <CardBody
                     display="flex"
                     flexDirection="column"

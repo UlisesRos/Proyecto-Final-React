@@ -12,7 +12,7 @@ const ModalComprar = ({ modalComprar, setModalComprar, prod, addToCart }) => {
     return (
         <>
             {modalComprar &&
-                <div className="container">
+                <div className="container-Exterior">
                     <div className="containerModal">
                         <div className="containerImg">
                             <img src={prod.img} alt="iamgen"></img>
