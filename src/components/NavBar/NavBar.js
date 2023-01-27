@@ -48,7 +48,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 <Link href="#SeccionSmartphone" className="links" _hover={{ textDecoration: "none" }}>SmartPhone</Link>
                 <Link href="#SeccionTvs" className="links" _hover={{ textDecoration: "none" }}>TV</Link>
                 <Link href="#SeccionAudio" className="links" _hover={{ textDecoration: "none" }}>Audio</Link>
-                <Link href="/" className="links" _hover={{ textDecoration: "none" }}>Nosotros</Link>
+                <Link href="#SeccionNosotros" className="links" _hover={{ textDecoration: "none" }}>Nosotros</Link>
             </Stack>
         </Box>
     );

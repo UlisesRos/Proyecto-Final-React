@@ -8,40 +8,94 @@
     padding: 20px;
     
 }
-figure{
-    background-color:#504375;
-    display:flex;
-    flex-direction:row;
-    position: relative;
-    align-items:center;
-    width:100%;
-    border: solid 2px #000;
-    box-shadow: 10px 5px 5px #000;
-    border-radius:2px;
-    
+
+.seccionNostoros{
+    background-color: var(--backg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-figure:hover{
-    transform: scale(1.2);
+
+.seccionNostoros h2 {
+    padding-top: 25px;
+    font-family: var(--first-font);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white-color);
+    letter-spacing: 5px;
+}
+
+.card {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 150px;
+        background: #07182E;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+    }
+    
+    .card::before {
+        content: '';
+        position: absolute;
+        width: 550px;
+        background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+        height: 120px;
+        animation: rotBGimg 3s linear infinite;
+        transition: all 0.2s linear;
+    }
+    
+    @keyframes rotBGimg {
+        from {
+        transform: rotate(0deg);
+        }
+    
+        to {
+        transform: rotate(360deg);
+        }
+    }
+    
+    .card::after {
+        content: '';
+        position: absolute;
+        background: #07182E;
+        inset: 5px;
+        border-radius: 15px;
+    }
+
+figure img {
+    z-index: 1;
+    color: white;
 }
 .github{
     position:absolute;
     right:1rem;
     top:27.5%;
-    color:#fff;
+    color: var(--white-color);
     width:25px;
-    margin:10px;
+    margin: 20px 10px 0px 0px;
+    z-index: 1;
 }
+
+.github:hover {
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
 .nombre{
-    color:#fff;
-    margin-Left:1rem;
+    color: var(--white-color);
+    width: 150px;
+    padding-right: 30px;
     pointer-events:none;
+    z-index: 1;
+    font-size: 1.5rem;
 }
-.apellido{
-    color:#fff;
-    margin:0.5rem;
-    pointer-events:none;
-}
+
 @media screen and (min-width: 576px) {
+
     .container{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
@@ -50,35 +104,117 @@ figure:hover{
         background-color: #331d4a;
         
     }
-    .nombre{
-        margin: 0;
-    }
-     .apellido{
-        margin: 0.5rem;
 
+    .seccionNostoros{
+        height: 115vh;
+        background-color: var(--backg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
-    figure{
-        background-color:#504375;
-        display:flex;
-        flex-direction:column;
-        margin: 1rem;
-        align-items:center;
-        width:9rem;
-        border: solid 2px #000;
+    
+    .seccionNostoros h2 {
+        font-family: var(--first-font);
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--white-color);
+        letter-spacing: 5px;
+    }
+    
+    .card {
+        width: 190px;
+        height: 254px;
+        background: #331d4a;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 20px;
         box-shadow: 10px 5px 5px #000;
-        border-radius:2px;
-        
-        height: 80%;
     }
+    
+    .card::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+        height: 130%;
+        animation: rotBGimg 3s linear infinite;
+        transition: all 0.2s linear;
+    }
+    
+    @keyframes rotBGimg {
+        from {
+        transform: rotate(0deg);
+        }
+    
+        to {
+        transform: rotate(360deg);
+        }
+    }
+    
+    .card::after {
+        content: '';
+        position: absolute;
+        background: #331d4a;
+        inset: 5px;
+        border-radius: 15px;
+    }
+
+    figure:hover{
+        transform: scale(1.1);
+        transition: all 0.4s;
+    }
+    
+    figure img {
+        z-index: 1;
+        color: white;
+        object-position: center;
+    }
+
+    .nombre{
+        margin-left: 30px;
+        z-index: 1;
+        color: var(--white-color);
+        font-size: 1.5em;
+    }
+
     .github{
+        margin: 0 0 10px 2px;
+        z-index: 1;
+        color: white;
         position: relative;
         top: auto;
         right: auto;
+    }
+    .github:hover {
+        transform: scale(1.2);
+        transition: all 0.2s;
     }
     
 }
 
 @media screen and (min-width: 768px) {
+
+    .seccionNostoros{
+        height: 80vh;
+        background-color: var(--backg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .seccionNostoros h2 {
+        font-family: var(--first-font);
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--white-color);
+        letter-spacing: 5px;
+    }
+
     .container{
         display:grid;
         grid-template-columns: repeat(6, 1fr);
@@ -88,4 +224,5 @@ figure:hover{
         
     }
 }
+
 

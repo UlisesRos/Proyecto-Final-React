@@ -33,7 +33,7 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                     >
                     <Button
                         bg="--grey-light-color"
-                        onClick={() => addToCart(prod.id)}
+                        onClick={() => addToCart(prod)}
                         w="5px"
                         h="25px"
                         color="--backg-color"
@@ -45,14 +45,14 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                         >{prod.cantidad}</Text>
                     <Button
                         bg="--grey-light-color"
-                        onClick={() => deleteFromCart(prod.id)}
+                        onClick={() => deleteFromCart(prod)}
                         w="5px"
                         h="25px"
                         color="--backg-color"
                         >-</Button>
                 </Flex>
                 <Link
-                    onClick={() => deleteFromCart(prod.id, true)}
+                    onClick={() => deleteFromCart(prod, true)}
                     >🗑️
                 </Link>
         </Box>
@@ -74,7 +74,7 @@ const ShoppingTarjeta = ({ prod, addToCart, deleteFromCart }) => {
                     w="65px"
                     textAlign="center"
                     color="--backg-color"
-                    >{(prod.precio * prod.cantidad).toFixed(2)}
+                    >{(prod.precio * prod.cantidad).toFixed(3)}
                 </Text>
             </Flex>
         </Box>

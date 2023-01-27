@@ -54,20 +54,109 @@ const App = () => {
     read_state()
   }, []);
 
-  const addToCart = async (id) => {
+  const addToCart = async (data) => {
 
-    dispatch({type: ADD_TO_CART, payload: id});
-  };
+    //Unifico el estado
+    const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
 
-  const deleteFromCart = (id, all = false) => {
-    if(all) {
-      dispatch({type: REMOVE_ALL_PRODUCT, payload: id});
-    } else {
-      dispatch({type: REMOVE_ONE_PRODUCT, payload:id});
+    //Buscar el producto
+    let nuevoProd = objetoUnificador.find(producto => producto.id === data.id)
+
+    //Ver si el producto existe en el carrito
+    let itemInCarrito = state.carrito.find(item => item.id === nuevoProd.id)
+
+    if(itemInCarrito){
+      let ENDPOINTS = `http://localhost:5000/carrito/${data.id}`
+
+      let OPTIONS = {
+        method: 'PUT',
+        headers: {"content-type": "application/json"},
+        data: JSON.stringify({...data, cantidad: itemInCarrito.cantidad + 1, precioT: itemInCarrito.precio.toFixed(3) * (itemInCarrito.cantidad + 1)})
+      },
+      res = await axios(ENDPOINTS, OPTIONS),
+      itemData = await res.data
+
+      dispatch({type: ADD_TO_CART, payload: {itemData}});
+    }
+    else {
+      let OPTIONS = {
+        method: 'POST',
+        headers: {"content-type": "application/json"},
+        data: JSON.stringify({ ...data, cantidad: 1, precioT: data.precio})
+      };
+      let res = await axios("http://localhost:5000/carrito", OPTIONS),
+      itemData = await res.data
+
+      dispatch({type: ADD_TO_CART, payload: {itemData}});
     }
   };
 
-  const clearCart = () => {
+  const deleteFromCart = async (data, all = false) => {
+
+    if(all) {
+    
+      let ENDPOINTS = `http://localhost:5000/carrito/${data.id}`
+
+      let OPTIONS = {
+        method: 'DELETE',
+        headers: {"content-type": "application/json"},
+      },
+      
+      res = await axios(ENDPOINTS, OPTIONS)
+
+      dispatch({type: REMOVE_ALL_PRODUCT, payload: data.id});
+    } 
+    else {
+    
+      let itemAEliminar = state.carrito.find(item => item.id === data.id);
+
+      if(itemAEliminar.cantidad > 1){
+
+        let ENDPOINTS = `http://localhost:5000/carrito/${data.id}`
+
+        let OPTIONS = {
+          method: 'PUT',
+          headers: {"content-type": "application/json"},
+          data: JSON.stringify({...data, cantidad: itemAEliminar.cantidad - 1, precioT: itemAEliminar.precio.toFixed(3) * (itemAEliminar.cantidad - 1)})
+        },
+
+        res = await axios(ENDPOINTS, OPTIONS)
+
+        dispatch({type: REMOVE_ONE_PRODUCT, payload: data.id});
+      }
+      else {
+
+        let ENDPOINTS = `http://localhost:5000/carrito/${data.id}`
+
+        let OPTIONS = {
+          method: 'DELETE',
+          headers: {"content-type": "application/json"},
+        },
+
+        res = await axios(ENDPOINTS, OPTIONS)
+
+        dispatch({type: REMOVE_ONE_PRODUCT, payload: data.id});
+
+      }
+    }
+  };
+
+  const clearCart = async () => {
+
+
+    state.carrito.map((prod) => {
+
+      let ENDPOINTS = `http://localhost:5000/carrito/${prod.id}`
+
+      let OPTIONS = {
+        method: 'DELETE',
+        headers: {"content-type": "application/json"},
+      },
+
+      res = axios(ENDPOINTS, OPTIONS)
+
+    })
+
     dispatch({type: CLEAR_CART});
   }
 

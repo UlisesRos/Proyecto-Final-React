@@ -24,7 +24,7 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
             imageAlt: 'Custom image',
         })
 
-        addToCart(prod.id)
+        addToCart(prod)
 
     }
     const caracteristicas = (prod) => {
