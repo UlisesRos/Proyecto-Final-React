@@ -11,8 +11,8 @@
 
 .links:hover {
     color: var(--third-color);
-    border-bottom: 2px solid var(--third-color);
-    padding-bottom: 13px;
+/*     border-bottom: 2px solid var(--third-color);
+    padding-bottom: 8px; */
 }
 
 .stackIn {

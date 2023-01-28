@@ -1,5 +1,5 @@
 import React, { useState,  } from "react";
-import { Link, Box, Flex, Stack } from "@chakra-ui/react";
+import { Link, Box, Flex, Stack, Image } from "@chakra-ui/react";
 import '../../css/navBar.css'
 import Buscador from "./Buscador";
 import BotonShopping from "./ShoppingBoton";
@@ -12,7 +12,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
 
 
     const MenuIcon = () => ( //menu hamburguesa icono
-        <img className="hoverIcon" src={menu} alt="Menu" title="Menú" width={["35px", "55px","55px"]} />
+        <img className="hoverIcon" src={menu} alt="Menu" title="Menú" width={["35px", "55px","55px"]}/>
     );
 
     const CloseIcon = () => ( //close menu hamburguesa icono
@@ -34,10 +34,10 @@ import TarjetaBuscador from "./TarjetaBuscador";
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
-                spacing={[0, 0, 0, 7]}
+                spacing={[0, 0, 0, 6]}
                 align="center"
                 direction={["column", "column", "column", "row"]}   //entre sm y lg los links se agrupan en columnas (menu hamburguesa) a partir de lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
-                fontSize={["24px", "24px", "24px", "20px"]}
+                fontSize={["24px", "24px", "24px", "18px"]}
                 letterSpacing="2px"
                 color="white"
                 fontFamily= "--first-font"
@@ -86,7 +86,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 justify={["space-around","space-around","space-between", "space-between"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
-                p={6}
+                p={3}
                 bg="--backg-color"
                 color="white"
                 rowGap="15px"
