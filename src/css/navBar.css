@@ -53,3 +53,87 @@
     cursor: pointer;
     filter:brightness(0) saturate(100%) invert(36%) sepia(9%) saturate(3673%) hue-rotate(289deg) brightness(97%) contrast(83%);
 }
+
+.flag {
+    display: none;
+}
+
+.botonMenu {
+    position: relative;
+    display: block;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background: #331d4a;
+}
+
+.botonMenu span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 2em;
+    height: .2em;
+    margin: auto;
+    background: #fff;
+}
+
+.botonMenu span:before,
+.botonMenu span:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    content: '';
+    background: #fff;
+}
+
+.botonMenu span:before {
+    top: -0.7em;
+}
+
+.botonMenu span:after {
+    bottom: -0.7em;
+}
+
+.botonMenu span {
+    transition: background 0s .25s;
+}
+
+.botonMenu span:before,
+.botonMenu span:after {
+    transition-delay: .25s, 0s;
+    transition-duration: .25s, .25s;
+}
+
+.botonMenu span:before {
+    transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+.botonMenu span:after {
+    transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+}
+
+.flag:checked + span {
+    background: none;
+}
+
+.flag:checked + span:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.flag:checked + span:after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.flag:checked + span:before,
+.flag:checked + span:after {
+    transition-delay: 0s, .25s;
+}
+

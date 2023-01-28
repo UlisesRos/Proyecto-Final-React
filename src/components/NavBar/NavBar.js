@@ -1,29 +1,20 @@
 import React, { useState,  } from "react";
-import { Link, Box, Flex, Stack, Image } from "@chakra-ui/react";
+import { Link, Box, Flex, Stack } from "@chakra-ui/react";
 import '../../css/navBar.css'
 import Buscador from "./Buscador";
 import BotonShopping from "./ShoppingBoton";
 import Logo from "./Logo";
-import menu from "../../img/NavIconos/menu.png";
 import close from "../../img/NavIconos/close.png"
 import ProductosBuscados from "./ProductosBuscados";
 import TarjetaBuscador from "./TarjetaBuscador";
 
-
-
-    const MenuIcon = () => ( //menu hamburguesa icono
-        <img className="hoverIcon" src={menu} alt="Menu" title="Menú" width={["35px", "55px","55px"]}/>
-    );
-
-    const CloseIcon = () => ( //close menu hamburguesa icono
-        <img className="hoverIcon" src={close} alt="close" title="close" width={["35px", "55px"]} />
-    );
-
-
-    const MenuToggle = ({ toggle, isOpen}) => { 
+    const MenuToggle = ({ toggle }) => { 
     return ( //entre sm y lg es visible el icono menu, si isOpen es verdadero es visible el boton close
-            <Box display={{ base: "block", lg: "none" }} onClick={toggle}>
-                {isOpen ? <CloseIcon /> : <MenuIcon />}
+            <Box display={{ base: "block", lg: "none" }} onClick={toggle} >
+                <label  className="botonMenu">
+                    <input type="checkbox" className="flag" onInput={toggle} />
+                    <span></span>
+                </label>
             </Box>
     );
 };
@@ -83,7 +74,8 @@ import TarjetaBuscador from "./TarjetaBuscador";
             <Flex
                 as="nav"
                 alignItems="center"
-                justify={["space-around","space-around","space-between", "space-between"]}
+                justify={["space-around","space-between","space-between", "space-between"]}
+                columnGap="50px"
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
                 p={3}
@@ -99,14 +91,14 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     
                     <Box    //este box se ve cuando  cuando aparece el menu hambuerguesa
                         display={["flex", "flex", "flex", "none"]} 
-                        px="20px"
+                        px="10px"
                         alignItems= "center"
                         >
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
 
-                    <MenuToggle toggle={toggle} isOpen={isOpen} //toogle intercambia el boton de menu y el de close
+                    <MenuToggle toggle={toggle} //toogle intercambia el boton de menu y el de close
                     /> 
                     <MenuLinks  //solo visible entre md y lg
                     /> 
