@@ -12,7 +12,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
     return ( //entre sm y lg es visible el icono menu, si isOpen es verdadero es visible el boton close
             <Box display={{ base: "block", lg: "none" }} onClick={toggle} >
                 <label  className="botonMenu">
-                    <input type="checkbox" className="flag" onInput={toggle} />
+                    <input type="checkbox" className="check" onInput={toggle} />
                     <span></span>
                 </label>
             </Box>
@@ -75,7 +75,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 as="nav"
                 alignItems="center"
                 justify={["space-around","space-between","space-between", "space-between"]}
-                columnGap="50px"
+                columnGap={["120px","150px","0px"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
                 p={3}
@@ -91,7 +91,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     
                     <Box    //este box se ve cuando  cuando aparece el menu hambuerguesa
                         display={["flex", "flex", "flex", "none"]} 
-                        px="10px"
+                        px="5px"
                         alignItems= "center"
                         >
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
@@ -118,6 +118,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 borderBottom="2px solid"
                 borderBottomColor="--backg-color"
                 bg="--backg-second-color"
+                py={3}
                 >
                 <MenuLinks isOpen={isOpen}  //MenuLinks dentro del menu hambuerguesa, visible cuando isOpen es true entre sm y md
                 />                         

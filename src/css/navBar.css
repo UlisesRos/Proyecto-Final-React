@@ -49,12 +49,12 @@
 }
 
 
-.hoverIcon:hover {
+.hoverIcon:hover, .botonMenu span:hover {
     cursor: pointer;
     filter:brightness(0) saturate(100%) invert(36%) sepia(9%) saturate(3673%) hue-rotate(289deg) brightness(97%) contrast(83%);
 }
 
-.flag {
+.check {
     display: none;
 }
 
@@ -62,9 +62,9 @@
     position: relative;
     display: block;
     width: 2em;
-    height: 2em;
+    height: 2.5em;
     cursor: pointer;
-    background: #331d4a;
+    background: transparent;
 }
 
 .botonMenu span {
@@ -74,9 +74,10 @@
     bottom: 0;
     left: 0;
     width: 2em;
-    height: .2em;
+    height: .25em;
     margin: auto;
     background: #fff;
+    border-radius: 55px;
 }
 
 .botonMenu span:before,
@@ -89,11 +90,13 @@
 }
 
 .botonMenu span:before {
-    top: -0.7em;
+    top: -0.65em;
+    border-radius: 55px;
 }
 
 .botonMenu span:after {
-    bottom: -0.7em;
+    bottom: -0.68em;
+    border-radius: 55px;
 }
 
 .botonMenu span {
@@ -116,24 +119,24 @@
     transition-property: bottom, transform;
 }
 
-.flag:checked + span {
+.check:checked + span {
     background: none;
 }
 
-.flag:checked + span:before {
+.check:checked + span:before {
     top: 0;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.flag:checked + span:after {
+.check:checked + span:after {
     bottom: 0;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
 
-.flag:checked + span:before,
-.flag:checked + span:after {
+.check:checked + span:before,
+.check:checked + span:after {
     transition-delay: 0s, .25s;
 }
 

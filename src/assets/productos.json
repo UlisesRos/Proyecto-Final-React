@@ -142,17 +142,5 @@
       "discount": "30% OFF"
     }
   ],
-  "carrito": [
-    {
-      "id": 5,
-      "img": "https://medias.musimundo.com/medias/00562007-146614-146614-01-146614-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MjY5MHxpbWFnZS9qcGVnfGg1Ni9oNWMvMTA0NDA3NTAxMDQ2MDYvMDA1NjIwMDctMTQ2NjE0LTE0NjYxNF8wMS0xNDY2MTRfMDEuanBnX3NpemU1MTV8NGVjNmIxNzYyZTA3ODY2ZDg5M2MxMDM0MDhhZTBjMjlmMTU4ODM4YjE1NTJkOGFjYjFjM2E5ZDJjY2QxMjYyOQ",
-      "titulo": "Smart Led Tv Philips 32''",
-      "descripcion": "Smart Led Android Tv Philips 32 Pulgadas HD",
-      "caracteristicas": "Televisor Smart / Android. Pantalla: TV LED HD. Resolucion de panel: 1366 x 768 p. Relacion de aspecto: 16:9. Optimizacion de la imagen: HDR10, HLG (Hybrid Log Gamma), Pixel Plus alta definicion. Tamano diagonal de pantalla: 32 pulgadas / 80 cm. Cantidad de conexiones HDMI: 3. Cantidad de puertos USB: 2. WIFI. Bluetooth.",
-      "precio": 64.499,
-      "boton": "Comprar",
-      "cantidad": 1,
-      "precioT": 64.499
-    }
-  ]
+  "carrito": []
 }
