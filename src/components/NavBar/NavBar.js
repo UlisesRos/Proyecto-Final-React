@@ -118,7 +118,6 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 borderBottom="2px solid"
                 borderBottomColor="--backg-color"
                 bg="--backg-second-color"
-                py={3}
                 >
                 <MenuLinks isOpen={isOpen}  //MenuLinks dentro del menu hambuerguesa, visible cuando isOpen es true entre sm y md
                 />                         
