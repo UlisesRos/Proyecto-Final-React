@@ -66,7 +66,7 @@
         border-radius: 15px;
     }
 
-figure img {
+    .card img {
     z-index: 1;
     color: white;
 }
@@ -163,12 +163,12 @@ figure img {
         border-radius: 15px;
     }
 
-    figure:hover{
+    .card:hover{
         transform: scale(1.1);
         transition: all 0.4s;
     }
     
-    figure img {
+    .card img {
         z-index: 1;
         color: white;
         object-position: center;
