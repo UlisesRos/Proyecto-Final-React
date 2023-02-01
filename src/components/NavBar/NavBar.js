@@ -4,26 +4,17 @@ import '../../css/navBar.css'
 import Buscador from "./Buscador";
 import BotonShopping from "./ShoppingBoton";
 import Logo from "./Logo";
-import menu from "../../img/NavIconos/menu.png";
 import close from "../../img/NavIconos/close.png"
 import ProductosBuscados from "./ProductosBuscados";
 import TarjetaBuscador from "./TarjetaBuscador";
 
-
-
-    const MenuIcon = () => ( //menu hamburguesa icono
-        <img className="hoverIcon" src={menu} alt="Menu" title="Menú" width={["35px", "55px","55px"]} />
-    );
-
-    const CloseIcon = () => ( //close menu hamburguesa icono
-        <img className="hoverIcon" src={close} alt="close" title="close" width={["35px", "55px"]} />
-    );
-
-
-    const MenuToggle = ({ toggle, isOpen}) => { 
+    const MenuToggle = ({ toggle }) => { 
     return ( //entre sm y lg es visible el icono menu, si isOpen es verdadero es visible el boton close
-            <Box display={{ base: "block", lg: "none" }} onClick={toggle}>
-                {isOpen ? <CloseIcon /> : <MenuIcon />}
+            <Box display={{ base: "block", lg: "none" }} onClick={toggle} >
+                <label  className="botonMenu">
+                    <input type="checkbox" className="check" onInput={toggle} />
+                    <span></span>
+                </label>
             </Box>
     );
 };
@@ -34,10 +25,10 @@ import TarjetaBuscador from "./TarjetaBuscador";
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
-                spacing={[0, 0, 0, 7]}
+                spacing={[0, 0, 0, 6]}
                 align="center"
                 direction={["column", "column", "column", "row"]}   //entre sm y lg los links se agrupan en columnas (menu hamburguesa) a partir de lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
-                fontSize={["24px", "24px", "24px", "20px"]}
+                fontSize={["24px", "24px", "24px", "18px"]}
                 letterSpacing="2px"
                 color="white"
                 fontFamily= "--first-font"
@@ -83,10 +74,11 @@ import TarjetaBuscador from "./TarjetaBuscador";
             <Flex
                 as="nav"
                 alignItems="center"
-                justify={["space-around","space-around","space-between", "space-between"]}
+                justify={["space-around","space-between","space-between", "space-between"]}
+                columnGap={["120px","150px","0px"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
-                p={6}
+                p={3}
                 bg="--backg-color"
                 color="white"
                 rowGap="15px"
@@ -101,14 +93,14 @@ import TarjetaBuscador from "./TarjetaBuscador";
                     
                     <Box    //este box se ve cuando  cuando aparece el menu hambuerguesa
                         display={["flex", "flex", "flex", "none"]} 
-                        px="20px"
+                        px="5px"
                         alignItems= "center"
                         >
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
 
-                    <MenuToggle toggle={toggle} isOpen={isOpen} //toogle intercambia el boton de menu y el de close
+                    <MenuToggle toggle={toggle} //toogle intercambia el boton de menu y el de close
                     /> 
                     <MenuLinks  //solo visible entre md y lg
                     /> 
