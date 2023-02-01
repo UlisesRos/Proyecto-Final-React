@@ -20,7 +20,7 @@ import BotonPromoTv from './BotonPromoTv';
 const HomeSlider = () => {
     return (
     <>
-        <div style={{width: '100%', heigth: '100vh', overflow: 'hidden',backgroundColor: 'var(--backg-second-color)',}}>
+        <div className='home' style={{ width: '100%', heigth: '100vh', overflow: 'hidden',backgroundColor: 'var(--backg-second-color)',}}>
             <Swiper
             style={{
                 "--swiper-navigation-color": "black",
