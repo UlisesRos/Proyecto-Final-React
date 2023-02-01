@@ -12,6 +12,7 @@ import Nosotros from "./components/nosotros/Nosotros";
 import imagenes from './img/nosotros/imagenes';
 import Whatsapp from "./components/Whatsapp/whatsapp";
 import Rutas from "./components/Routes/Rutas";
+import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 
 
@@ -182,6 +183,7 @@ const App = () => {
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
           <Nosotros image={image}/>
       </Box>
+      <BotonDeslizante />
     </Box>
   )
 }

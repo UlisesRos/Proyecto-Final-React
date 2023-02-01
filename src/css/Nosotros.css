@@ -3,10 +3,10 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     height: 100%;
     background-color: #331d4a;
     padding: 20px;
-    
 }
 
 .seccionNostoros{
@@ -26,19 +26,20 @@
     letter-spacing: 5px;
 }
 
-.card {
+.cardAnimation {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         width: 100%;
         height: 150px;
-        background: #07182E;
+        background: #331d4a;
         position: relative;
         overflow: hidden;
         border-radius: 20px;
         box-shadow: 5px 5px 5px #000;
     }
     
-    .card::before {
+    .cardAnimation::before {
         content: '';
         position: absolute;
         width: 550px;
@@ -58,18 +59,32 @@
         }
     }
     
-    .card::after {
+    .cardAnimation::after {
         content: '';
         position: absolute;
-        background: #07182E;
+        background: #331d4a;
         inset: 5px;
         border-radius: 15px;
     }
 
-    .card img {
+    .cardAnimation img {
     z-index: 1;
     color: white;
 }
+
+.imagenPersona:hover{
+    animation: 1s ease 0s infinite alternate none running transform4;
+}
+@keyframes transform4 {
+    from {
+    transform: perspective(400px) rotateY(0deg)
+    }
+
+    to {
+    transform: perspective(400px) rotateY(360deg)
+    }
+}
+
 .github{
     position:absolute;
     right:1rem;
@@ -81,8 +96,16 @@
 }
 
 .github:hover {
-    transform: scale(1.2);
-    transition: all 0.2s;
+    animation: 1s ease 0s infinite alternate none running transform6
+}
+@keyframes transform6 {
+    from {
+    transform: perspective(400px) rotateY(0deg);
+    }
+
+    to {
+    transform: perspective(400px) translateZ(150px) rotateY(180deg);
+    }
 }
 
 .nombre{
@@ -92,6 +115,9 @@
     pointer-events:none;
     z-index: 1;
     font-size: 1.5rem;
+    font-family: var(--first-font);
+    font-weight: bold;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 5);
 }
 
 @media screen and (min-width: 576px) {
@@ -122,12 +148,13 @@
         letter-spacing: 5px;
     }
     
-    .card {
+    .cardAnimation {
         width: 190px;
         height: 254px;
         background: #331d4a;
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         overflow: hidden;
@@ -135,7 +162,7 @@
         box-shadow: 10px 5px 5px #000;
     }
     
-    .card::before {
+    .cardAnimation::before {
         content: '';
         position: absolute;
         width: 100px;
@@ -155,7 +182,7 @@
         }
     }
     
-    .card::after {
+    .cardAnimation::after {
         content: '';
         position: absolute;
         background: #331d4a;
@@ -163,15 +190,28 @@
         border-radius: 15px;
     }
 
-    .card:hover{
+    .cardAnimation:hover{
         transform: scale(1.1);
         transition: all 0.4s;
     }
     
-    .card img {
+    .cardAnimation img {
         z-index: 1;
         color: white;
         object-position: center;
+    }
+
+    .imagenPersona:hover{
+        animation: 1s ease 0s infinite alternate none running transform4;
+    }
+    @keyframes transform4 {
+        from {
+        transform: perspective(400px) rotateY(0deg)
+        }
+    
+        to {
+        transform: perspective(400px) rotateY(360deg)
+        }
     }
 
     .nombre{
@@ -179,6 +219,7 @@
         z-index: 1;
         color: var(--white-color);
         font-size: 1.5em;
+        text-align: center;
     }
 
     .github{
@@ -190,8 +231,16 @@
         right: auto;
     }
     .github:hover {
-        transform: scale(1.2);
-        transition: all 0.2s;
+        animation: 1s ease 0s infinite alternate none running transform6
+    }
+    @keyframes transform6 {
+        from {
+        transform: perspective(400px) rotateY(0deg);
+        }
+    
+        to {
+        transform: perspective(400px) translateZ(150px) rotateY(180deg);
+        }
     }
     
 }
@@ -221,7 +270,6 @@
         height: 50vh;
         justify-items: center;
         background-color: #331d4a;
-        
     }
 }
 
