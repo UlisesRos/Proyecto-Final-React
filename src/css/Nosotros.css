@@ -26,7 +26,7 @@
     letter-spacing: 5px;
 }
 
-.card {
+.cardAnimation {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -39,7 +39,7 @@
         box-shadow: 5px 5px 5px #000;
     }
     
-    .card::before {
+    .cardAnimation::before {
         content: '';
         position: absolute;
         width: 550px;
@@ -59,7 +59,7 @@
         }
     }
     
-    .card::after {
+    .cardAnimation::after {
         content: '';
         position: absolute;
         background: #331d4a;
@@ -67,7 +67,7 @@
         border-radius: 15px;
     }
 
-    .card img {
+    .cardAnimation img {
     z-index: 1;
     color: white;
 }
@@ -115,6 +115,9 @@
     pointer-events:none;
     z-index: 1;
     font-size: 1.5rem;
+    font-family: var(--first-font);
+    font-weight: bold;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 5);
 }
 
 @media screen and (min-width: 576px) {
@@ -145,7 +148,7 @@
         letter-spacing: 5px;
     }
     
-    .card {
+    .cardAnimation {
         width: 190px;
         height: 254px;
         background: #331d4a;
@@ -159,7 +162,7 @@
         box-shadow: 10px 5px 5px #000;
     }
     
-    .card::before {
+    .cardAnimation::before {
         content: '';
         position: absolute;
         width: 100px;
@@ -179,7 +182,7 @@
         }
     }
     
-    .card::after {
+    .cardAnimation::after {
         content: '';
         position: absolute;
         background: #331d4a;
@@ -187,12 +190,12 @@
         border-radius: 15px;
     }
 
-    .card:hover{
+    .cardAnimation:hover{
         transform: scale(1.1);
         transition: all 0.4s;
     }
     
-    .card img {
+    .cardAnimation img {
         z-index: 1;
         color: white;
         object-position: center;

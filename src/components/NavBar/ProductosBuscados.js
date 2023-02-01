@@ -7,7 +7,7 @@ return (
     <Flex
         justify="center"
         align="center"
-        pt={openSearch ? "0px" : ["0px","0px","110px"]}
+        pt={openSearch ? "0px" : ["0px","0px","85px"]}
         display={searchValue === "" ? "none" : "block"}
         >
         <Box
