@@ -11,9 +11,9 @@ import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados
 import Nosotros from "./components/nosotros/Nosotros";
 import imagenes from './img/nosotros/imagenes';
 import Whatsapp from "./components/Whatsapp/whatsapp";
-import Rutas from "./components/Routes/Rutas";
 import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
+import Rutas from "./components/Routes/Rutas";
 
 
 
@@ -170,8 +170,8 @@ const App = () => {
     <Box>
       <Box
         as="header">
-          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
           <Rutas/> 
+          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
       </Box>
       <Box
         as="main">
