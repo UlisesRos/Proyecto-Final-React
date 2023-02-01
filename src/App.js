@@ -11,6 +11,7 @@ import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados
 import Nosotros from "./components/nosotros/Nosotros";
 import imagenes from './img/nosotros/imagenes';
 import Whatsapp from "./components/Whatsapp/whatsapp";
+import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
@@ -176,6 +177,7 @@ const App = () => {
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
           <Nosotros image={image}/>
       </Box>
+      <BotonDeslizante />
     </Box>
   )
 }

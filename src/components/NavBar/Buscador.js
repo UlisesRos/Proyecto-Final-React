@@ -69,7 +69,7 @@ import '../../css/buscador.css'
                 onChange={ onSearchValueChange}
             />
 
-           <SearchToggle toggle={toggle} openSearch={openSearch} //Searchtoogle intercambia el boton de lupa y el de back
+           <SearchToggle toggle={toggle} openSearch={openSearch}  //Searchtoogle intercambia el boton de lupa y el de back
             />
     
         </Box>

@@ -30,7 +30,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
 
     const MenuLinks = ({ isOpen }) => {
     return (
-        <Box  
+        <Box
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
@@ -90,6 +90,8 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 bg="--backg-color"
                 color="white"
                 rowGap="15px"
+                position={["initial", "initial", "fixed"]}
+                zIndex="2"
                 >
                 <Logo />  
                 <Box       
@@ -130,13 +132,11 @@ import TarjetaBuscador from "./TarjetaBuscador";
                 <MenuLinks isOpen={isOpen}  //MenuLinks dentro del menu hambuerguesa, visible cuando isOpen es true entre sm y md
                 />                         
             </Box>
-            <ProductosBuscados producto={producto}>
+            <ProductosBuscados producto={producto} openSearch={openSearch} searchValue={searchValue}>
                 {
                 searchedProd.map(prod => (<TarjetaBuscador key={ prod.id } prod={ prod } addToCart={addToCart}/>))
                 }
             </ProductosBuscados>
-
-
         </>
             );
 };

@@ -1,12 +1,14 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-  const ProductosBuscados = ({children}) => {
+  const ProductosBuscados = ({children, openSearch, searchValue}) => {
 
 
 return (
-    <Flex           
+    <Flex
         justify="center"
-        align="center"    
+        align="center"
+        pt={openSearch ? "0px" : ["0px","0px","110px"]}
+        display={searchValue === "" ? "none" : "block"}
         >
         <Box
             display="block"

@@ -1,18 +1,19 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import pineapple from "../../img/NavIconos/Pineapple.png";
 
 
 const Logo = () => {
     return (
-        <Box
+        <Link
+        href="#"
         width={["50px", "55px", "58px","67"]}
         >
-            <img className="hoverIcon" 
+            <img className="hoverIcon"
                 style={{
                 cursor: "pointer"
             }}  src={pineapple} alt="" />
-        </Box>
+        </Link>
     )
 }
 

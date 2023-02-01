@@ -14,6 +14,7 @@ const ListaTarjetas = ({ producto, addToCart}) => {
             w="100%"
             justify="center"
             align="center"
+            data-aos="zoom-in-up"
             >
             <Box
                 w="150%"

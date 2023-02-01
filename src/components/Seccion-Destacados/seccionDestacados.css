@@ -26,3 +26,27 @@
     text-align: center;
 }
 
+.errorTarjetas{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height:50vh;
+    width:100%;
+    color:var(--white-color);
+    font-family: var(--first-font);
+    font-weight: bold;
+    font-size: 3rem
+}
+
+@media screen and (max-width: 480px){
+    .errorTarjetas{
+        font-size: 2rem
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .seccionDestacados {
+        padding-top: 80px
+    }
+}

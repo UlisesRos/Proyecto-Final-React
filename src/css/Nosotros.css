@@ -71,6 +71,20 @@ figure img {
     z-index: 1;
     color: white;
 }
+
+.imagenPersona:hover{
+    animation: 1s ease 0s infinite alternate none running transform4;
+}
+@keyframes transform4 {
+    from {
+    transform: perspective(400px) rotateY(0deg)
+    }
+
+    to {
+    transform: perspective(400px) rotateY(360deg)
+    }
+}
+
 .github{
     position:absolute;
     right:1rem;
@@ -82,8 +96,16 @@ figure img {
 }
 
 .github:hover {
-    transform: scale(1.2);
-    transition: all 0.2s;
+    animation: 1s ease 0s infinite alternate none running transform6
+}
+@keyframes transform6 {
+    from {
+    transform: perspective(400px) rotateY(0deg);
+    }
+
+    to {
+    transform: perspective(400px) translateZ(150px) rotateY(180deg);
+    }
 }
 
 .nombre{
@@ -176,11 +198,25 @@ figure img {
         object-position: center;
     }
 
+    .imagenPersona:hover{
+        animation: 1s ease 0s infinite alternate none running transform4;
+    }
+    @keyframes transform4 {
+        from {
+        transform: perspective(400px) rotateY(0deg)
+        }
+    
+        to {
+        transform: perspective(400px) rotateY(360deg)
+        }
+    }
+
     .nombre{
         margin-left: 30px;
         z-index: 1;
         color: var(--white-color);
         font-size: 1.5em;
+        text-align: center;
     }
 
     .github{
@@ -192,8 +228,16 @@ figure img {
         right: auto;
     }
     .github:hover {
-        transform: scale(1.2);
-        transition: all 0.2s;
+        animation: 1s ease 0s infinite alternate none running transform6
+    }
+    @keyframes transform6 {
+        from {
+        transform: perspective(400px) rotateY(0deg);
+        }
+    
+        to {
+        transform: perspective(400px) translateZ(150px) rotateY(180deg);
+        }
     }
     
 }
