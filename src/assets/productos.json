@@ -142,28 +142,5 @@
       "discount": "30% OFF"
     }
   ],
-  "carrito": [
-    {
-      "id": 14,
-      "img": "https://medias.musimundo.com/medias/00431006-144267-144267-01-144267-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4MTUyOHxpbWFnZS9qcGVnfGgyOS9oNjEvMTA0NDA3MzI1NzM3MjYvMDA0MzEwMDYtMTQ0MjY3LTE0NDI2N18wMS0xNDQyNjdfMDEuanBnX3NpemU1MTV8ODg4MWMwN2EzMmFmYWUyZjA0Njg5OGYyMzBlOGE0OWNjNTMxZjA0YjFjN2I1ZjdlN2JiNmU4MGI3MDMxOWZmZg",
-      "titulo": "Smart TV LG 4K UHD",
-      "descripcion": "Televisor Android Smart de 55''. Pantalla LED. Frecuencia de barrido 60 Hz. Potencia RMS 20W. Resolucion 4K UHD 3840 x 2160. 2 Salidas de audio. Bluetooth. Wi Fi. Sintonizador TDA. Tecnologia Android TV 10. 2 USB. 4 HDMI. Incluye Control remoto, 2 pilas AAA, Cable de alimentacion, Guia de inicio rapida, Folleto legal y de seguridad, Soporte para la mesa. Contraste dinamico HDR 10+. Entrada de pc (HDMI). Vision y sonido cinematograficos Dolby Vision y Dolby Atmos. Relacion de aspecto 16:9",
-      "precio": 115.999,
-      "antes": 162.398,
-      "discount": "40% OFF",
-      "cantidad": 2,
-      "precioT": 231.998
-    },
-    {
-      "id": 2,
-      "img": "https://armoto.vtexassets.com/arquivos/ids/163931-800-auto?v=638083712992000000&width=800&height=auto&aspect=true",
-      "titulo": "Moto G32",
-      "descripcion": "Celular Motorola Moto G32 4/128gb Plata Satinado",
-      "caracteristicas": "Celular. Pantalla IPS de 6.49. Relacion aspecto 20:9. Resolucion 1080 x 2400, FHD+, 405, Mid-HiD, 90Hz. Procesador Qualcomm Snapdragon 680 Octa core (2.4GHz). Capacidad 128 Gb (expandible hasta 1Tb) / RAM 4 Gb. Camara Principal: 50MP (74.26)F1.8Gran Angular: 8MP (118) F2.2Macro: 2MP (88) F2.2. Zoom digital (8x picture / 8x video). Flash LED. Camara frontal 16MP (118) F2.2. Flash frontal backlight. Conexiones: USB C 2.0.",
-      "precio": 65.999,
-      "boton": "Comprar",
-      "cantidad": 1,
-      "precioT": 65.999
-    }
-  ]
+  "carrito": []
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
-import { Link } from '@chakra-ui/layout';
+
 //import style
 import 'swiper/css';
 import '../../css/Home.css';
@@ -65,7 +65,7 @@ const HomeSlider = () => {
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
-                <Link href="#SeccionDestacados" className="links"> <BotonOfertas/> </Link>
+                <BotonOfertas/>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide style={{height:'75vh'}}>
@@ -91,7 +91,7 @@ const HomeSlider = () => {
                         padding: '5%',
                         background: 'linear-gradient(-45deg, #504375 0, #504375 50%, #331d4a 0, #331d4a 50%)',
                     }}>
-                <Link href="#SeccionTvs" className="links"> <BotonPromoTv/> </Link>
+                <BotonPromoTv/>
                 </div>
                 </SwiperSlide>
             </Swiper>

@@ -15,8 +15,6 @@ import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
 
-
-
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
 
 const image = imagenes;
@@ -163,9 +161,7 @@ const App = () => {
 
     dispatch({type: CLEAR_CART});
   }
-     //Subo el componente Rutas simplemente para ver renderizado el formulario 
-     //y poder mostrarlo en la tutoria, luego de subidos todos los componentes, 
-     //reacomodare con react router
+
   return (
     <Box>
       <Box
@@ -175,7 +171,7 @@ const App = () => {
       </Box>
       <Box
         as="main">
-          <HomeSlider/>   
+          <HomeSlider/>       
           <Whatsapp />
           <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
           <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
