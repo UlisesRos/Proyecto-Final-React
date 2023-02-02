@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { Button } from '@chakra-ui/button'
 import Swal from "sweetalert2"
 import Cards from 'react-credit-cards-2'
 import 'react-credit-cards-2/es/styles-compiled.css'
 import '../../css/PaymentForm.css'
+
 
 
 const PaymentForm = () => {
@@ -34,9 +36,12 @@ const PaymentForm = () => {
             title: "El pago se ha procesado correctamente",
         })
     }
+    const volverAinicio = () =>{
+        //display none?
+    }
 
     return (
-        <div className="layout">
+            <div className="layout" id="PaymentForm">
             <div className="card1">
             <div className="card-body">
                 <Cards
@@ -115,10 +120,18 @@ const PaymentForm = () => {
                     </div>
                     <button onClick={pagoExitoso} type="button" className="btn btn-success btn-block btn-lg">Pagar</button>
                 </form>
+                <Button fontWeight="bold"
+                        fontFamily="--second-font"
+                        bg="--grey-light-color"
+                        fontSize="0.9rem"
+                        w="auto"
+                        color="--backg-color"
+                        marginTop={"1rem"}
+                        onClick={volverAinicio}>VOLVER AL SITIO
+                        </Button>
             </div>
         </div>
         </div>
-        
     )
 }
 
