@@ -99,6 +99,7 @@
     }
 
     .card-container:hover {
+        transition: all 0.2s;
         height: 400px;
         box-shadow: 0 0 13px 12px rgb(0, 0, 0, 0.2)
     }
