@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { Button } from '@chakra-ui/button'
 import Swal from "sweetalert2"
 import Cards from 'react-credit-cards-2'
 import 'react-credit-cards-2/es/styles-compiled.css'
 import '../../css/PaymentForm.css'
-
 
 
 const PaymentForm = () => {
@@ -36,12 +34,9 @@ const PaymentForm = () => {
             title: "El pago se ha procesado correctamente",
         })
     }
-    const volverAinicio = () =>{
-        //display none?
-    }
 
     return (
-            <div className="layout" id="PaymentForm">
+        <div className="layout">
             <div className="card1">
             <div className="card-body">
                 <Cards
@@ -52,7 +47,7 @@ const PaymentForm = () => {
                     focused={state.focus}
                 />
                 <form>
-                    <div className="form-group">
+                    <div>
                         <label htmlFor="number">Número de la tarjeta</label>
                         <input
                             type="text"
@@ -76,8 +71,8 @@ const PaymentForm = () => {
                             onFocus={handleFocusChange}
                         />
                     </div>
-                    <div className="form-row">
-                        <div className="form-group col-md-4">
+                    <div>
+                        <div>
                             <label htmlFor="expiry">Fecha de vencimiento</label>
                             <input
                                 type="text"
@@ -89,7 +84,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div className="form-group col-md-4">
+                        <div>
                             <label htmlFor="cvc">CVC (código de sguridad)</label>
                             <input
                                 type="text"
@@ -101,7 +96,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div className="form-group col-md-4">
+                        <div>
                             <label htmlFor="cuotas">Cantidad de cuotas</label>
                             <select 
                                 type="text"
@@ -118,20 +113,12 @@ const PaymentForm = () => {
                             </select>
                         </div>
                     </div>
-                    <button onClick={pagoExitoso} type="button" className="btn btn-success btn-block btn-lg">Pagar</button>
+                    <button onClick={pagoExitoso} type="button" className="btn">Pagar</button>
                 </form>
-                <Button fontWeight="bold"
-                        fontFamily="--second-font"
-                        bg="--grey-light-color"
-                        fontSize="0.9rem"
-                        w="auto"
-                        color="--backg-color"
-                        marginTop={"1rem"}
-                        onClick={volverAinicio}>VOLVER AL SITIO
-                        </Button>
             </div>
         </div>
         </div>
+        
     )
 }
 

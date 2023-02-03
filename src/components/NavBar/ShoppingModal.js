@@ -1,13 +1,12 @@
 import { Flex, Heading, Text, Box, Button } from "@chakra-ui/react";
 import ShoppingTarjeta from "./ShoppingTarjeta";
-
 const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }) => {
 
 
     return (
         <Flex
             mt="20px"
-            w="300px"
+            w="auto"
             h="400px"
             zIndex="modal"
             position="absolute"
@@ -77,6 +76,16 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                         onClick={clearCart}
                         >
                         Limpiar Carrito
+                    </Button>
+                    <Button
+                        fontWeight="bold"
+                        fontFamily="--second-font"
+                        bg="--grey-light-color"
+                        fontSize="0.9rem"
+                        w="110px"
+                        color="--backg-color"
+                        >
+                        Pagar
                     </Button>
                 </Box>
         </Flex>
