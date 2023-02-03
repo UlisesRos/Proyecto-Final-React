@@ -1,8 +1,5 @@
 import { Flex, Heading, Text, Box, Button } from "@chakra-ui/react";
 import ShoppingTarjeta from "./ShoppingTarjeta";
-
-
-
 const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }) => {
 
 
@@ -55,8 +52,7 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                     color="--backg-color"
                     >
                     <Flex
-                        columnGap="10px"
-                        >
+                        columnGap="10px">
                         <Text
                             fontFamily="--second-font"
                             fontWeight="bold"

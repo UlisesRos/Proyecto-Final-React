@@ -47,7 +47,7 @@ const PaymentForm = () => {
                     focused={state.focus}
                 />
                 <form>
-                    <div className="form-group">
+                    <div>
                         <label htmlFor="number">Número de la tarjeta</label>
                         <input
                             type="text"
@@ -71,8 +71,8 @@ const PaymentForm = () => {
                             onFocus={handleFocusChange}
                         />
                     </div>
-                    <div className="form-row">
-                        <div className="form-group col-md-4">
+                    <div>
+                        <div>
                             <label htmlFor="expiry">Fecha de vencimiento</label>
                             <input
                                 type="text"
@@ -84,7 +84,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div className="form-group col-md-4">
+                        <div>
                             <label htmlFor="cvc">CVC (código de sguridad)</label>
                             <input
                                 type="text"
@@ -96,7 +96,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div className="form-group col-md-4">
+                        <div>
                             <label htmlFor="cuotas">Cantidad de cuotas</label>
                             <select 
                                 type="text"
@@ -113,7 +113,7 @@ const PaymentForm = () => {
                             </select>
                         </div>
                     </div>
-                    <button onClick={pagoExitoso} type="button" className="btn btn-success btn-block btn-lg">Pagar</button>
+                    <button onClick={pagoExitoso} type="button" className="btn">Pagar</button>
                 </form>
             </div>
         </div>
