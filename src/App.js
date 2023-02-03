@@ -170,8 +170,8 @@ const App = () => {
     <Box>
       <Box
         as="header">
-          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
           <Rutas/> 
+          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
       </Box>
       <Box
         as="main">
