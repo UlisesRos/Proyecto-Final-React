@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import Swal from "sweetalert2"
-import Cards from 'react-credit-cards-2'
-import 'react-credit-cards-2/es/styles-compiled.css'
-import '../../css/PaymentForm.css'
+import React, { useState } from 'react';
+import Swal from "sweetalert2";
+import Cards from 'react-credit-cards-2';
+import BotonVolver from "../Routes/BotonVolver";
+import 'react-credit-cards-2/es/styles-compiled.css';
+import '../../css/PaymentForm.css';
 
 
 const PaymentForm = () => {
@@ -30,13 +31,30 @@ const PaymentForm = () => {
 
     const pagoExitoso = () => {
         Swal.fire({
-            width: "500px",
-            title: "El pago se ha procesado correctamente",
+            title: 'Desea confirmar la compra?',
+            text: "Este paso no podra ser revertido",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Confirmar pago!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+            Swal.fire(
+                'Pago Confirmado!',
+                'Muchas gracias por confiar en nosotros!.',
+                'success'
+            )
+            }
         })
     }
 
+
+
     return (
         <div className="layout">
+            <p>EL MONDO A ABONAR ES DE :</p>
+            <p></p>
             <div className="card1">
             <div className="card-body">
                 <Cards
@@ -47,7 +65,7 @@ const PaymentForm = () => {
                     focused={state.focus}
                 />
                 <form>
-                    <div>
+                    <div className='marginLabel'> 
                         <label htmlFor="number">Número de la tarjeta</label>
                         <input
                             type="text"
@@ -59,7 +77,7 @@ const PaymentForm = () => {
                             onFocus={handleFocusChange}
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group marginLabel" >
                         <label htmlFor="name">Nombre (como aparece en la tarjeta) </label>
                         <input
                             type="text"
@@ -72,7 +90,7 @@ const PaymentForm = () => {
                         />
                     </div>
                     <div>
-                        <div>
+                        <div className='marginLabel'>
                             <label htmlFor="expiry">Fecha de vencimiento</label>
                             <input
                                 type="text"
@@ -84,7 +102,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div>
+                        <div className='marginLabel'>
                             <label htmlFor="cvc">CVC (código de sguridad)</label>
                             <input
                                 type="text"
@@ -96,7 +114,7 @@ const PaymentForm = () => {
                                 onFocus={handleFocusChange}
                             />
                         </div>
-                        <div>
+                        <div className='marginLabel'>
                             <label htmlFor="cuotas">Cantidad de cuotas</label>
                             <select 
                                 type="text"
@@ -105,7 +123,7 @@ const PaymentForm = () => {
                                 className="form-control"
                                 onChange={handleInputChange}
                                 onFocus={handleFocusChange}>
-                                <option value="1">1 (sin interés) </option>
+                                <option value="1">1 (sin interés)  </option>
                                 <option value="2">2 (sin interés) </option>
                                 <option selected value="3">3 (sin interés)</option>
                                 <option value="4">Ahora10 (10% de recargo) </option>
@@ -114,6 +132,7 @@ const PaymentForm = () => {
                         </div>
                     </div>
                     <button onClick={pagoExitoso} type="button" className="btn">Pagar</button>
+                    <BotonVolver />
                 </form>
             </div>
         </div>

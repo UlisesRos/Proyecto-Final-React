@@ -1,8 +1,13 @@
 .layout{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: 30px;
     min-height: 100vh;
+    margin: 100px;
+    font-family: var(--second-font);
+    font-weight: 600;
     }
 
 .card1{
@@ -11,6 +16,7 @@
     box-shadow: 0 0 10px #dadada;
     padding: 10%;
     justify-content: center;
+    text-align: center;
     }
 
 .form-control{
@@ -20,6 +26,7 @@
     display: flex;
     justify-content: flex-end;
     width: 20rem;
+
 }
 .btn{
     background-color: #504375;
@@ -33,5 +40,21 @@
     justify-content: center;
     font-size: 1.5rem;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.9rem;
+}
+
+.layout input {
+    border: solid gray 0.5px;
+    font-weight: 600;
+}
+
+.layout select {
+    border: solid gray 0.5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.marginLabel {
+    margin-top: 15px;
 }

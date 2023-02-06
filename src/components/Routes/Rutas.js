@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PaymentForm from "../PaymentForm/PaymentForm";
-import BotonPayment from "./BotonPayment";
+import RouterHome from "../RouterHome/RouterHome";
 
-const Rutas = () => {
+const Rutas = ({state, addToCart, deleteFromCart, clearCart, image}) => {
+
     return (
         <Router>
-            <BotonPayment/>
             <Routes>
                 <Route path="/PaymentForm" element={<PaymentForm />}/>
+                <Route path="/" element={<RouterHome state={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} image={image}/>}/>
             </Routes>
         </Router>
     )

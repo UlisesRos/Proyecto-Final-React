@@ -18,7 +18,7 @@ const TarjetaFav = ({ prod, addToCart, addToFav }) => {
             imageAlt: 'Custom image',
         })
 
-        addToCart(prod.id)
+        addToCart(prod)
     }
     const caracteristicas = (prod) => {
         Swal.fire({

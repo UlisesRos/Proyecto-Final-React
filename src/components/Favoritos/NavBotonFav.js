@@ -45,9 +45,9 @@ const NavBotonFav = () => {
                     <DrawerCloseButton />
                     <DrawerHeader>keee</DrawerHeader>
                     <DrawerBody>
-{/*                         {
-                            carrito.map((prod, index) => <TarjetaFav key={index} prod={prod} addToFav={addToFav}/>)
-                        } */}
+                        {/*{
+                            favoritos.map((prod, index) => <TarjetaFav key={index} prod={prod} addToFav={addToFav}/>)
+                        }*/}
                     </DrawerBody>
                     </DrawerContent>
                 </Drawer>

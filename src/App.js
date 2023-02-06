@@ -14,6 +14,7 @@ import Whatsapp from "./components/Whatsapp/whatsapp";
 import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
+import RouterHome from "./components/RouterHome/RouterHome";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
 
@@ -164,22 +165,7 @@ const App = () => {
 
   return (
     <Box>
-      <Box
-        as="header">
-          <Rutas/>
-          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
-      </Box>
-      <Box
-        as="main">
-          <HomeSlider/>       
-          <Whatsapp />
-          <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
-          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
-          <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
-          <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
-          <Nosotros image={image}/>
-      </Box>
-      <BotonDeslizante />
+        <Rutas state={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} image={image}/>
     </Box>
   )
 }
