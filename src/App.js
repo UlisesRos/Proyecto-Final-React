@@ -15,7 +15,7 @@ import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
 
-const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
+const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART, ADD_TO_FAV} = TYPES
 
 const image = imagenes;
 
@@ -29,25 +29,29 @@ const App = () => {
       tvs: "http://localhost:5000/productos-tvs",
       audio: "http://localhost:5000/productos-audio",
       destacados: "http://localhost:5000/productos-destacados",
-      carrito: "http://localhost:5000/carrito"      
+      carrito: "http://localhost:5000/carrito",
+      favoritos: "http://localhost:5000/favoritos"     
     };
     const resSmartphone = await axios.get(ENDPOINTS.smartphone),
       resTvs = await axios.get(ENDPOINTS.tvs),
       resAudio = await axios.get(ENDPOINTS.audio),
       resCarrito = await axios.get(ENDPOINTS.carrito),
+      resFavoritos = await axios.get(ENDPOINTS.favoritos),
       resDestacados = await axios.get(ENDPOINTS.destacados),
       productosSmart = resSmartphone.data,
       productosTvs = resTvs.data,
       productosAudio = resAudio.data,
       productosDestacados = resDestacados.data,
-      productosCarrito = resCarrito.data
+      productosCarrito = resCarrito.data,
+      productosFavoritos = resFavoritos.data
 
     dispatch({type: READ_STATE, payload: {
         productosSmart,
         productosTvs,
         productosAudio,
         productosDestacados,
-        productosCarrito
+        productosCarrito,
+        productosFavoritos
   }})
     
   }
@@ -162,21 +166,37 @@ const App = () => {
     dispatch({type: CLEAR_CART});
   }
 
+  const addToFav = async (data) => {
+
+    const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+
+    let OPTIONS = {
+      method: 'POST',
+      headers: {"content-type": "application/json"},
+      data: JSON.stringify({ ...data })
+    };
+    let res = await axios("http://localhost:5000/favoritos", OPTIONS),
+    itemData = await res.data
+
+    dispatch({type: ADD_TO_FAV, payload: {itemData}});
+
+  }
+
   return (
     <Box>
       <Box
         as="header">
           <Rutas/>
-          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
+          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} addToFav={addToFav} />
       </Box>
       <Box
         as="main">
           <HomeSlider/>       
           <Whatsapp />
-          <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
-          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
-          <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
-          <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
+          <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart} addToFav={addToFav}/>
+          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart} addToFav={addToFav}/>
+          <SeccionTvs producto={state.productosTvs} addToCart={addToCart} addToFav={addToFav}/>
+          <SeccionAudio producto={state.productosAudio} addToCart={addToCart} addToFav={addToFav}/>
           <Nosotros image={image}/>
       </Box>
       <BotonDeslizante />
