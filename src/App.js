@@ -14,6 +14,7 @@ import Whatsapp from "./components/Whatsapp/whatsapp";
 import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
+import Footer from "./components/Footer/Footer";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART} = TYPES
 
@@ -178,6 +179,7 @@ const App = () => {
           <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
           <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
           <Nosotros image={image}/>
+          <Footer/>
       </Box>
       <BotonDeslizante />
     </Box>
