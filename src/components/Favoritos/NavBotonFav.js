@@ -5,7 +5,7 @@ import TarjetaFav from "./TarjetaFav";
 
 
 
-const NavBotonFav = () => {
+const NavBotonFav = (addToFav, favoritos) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
@@ -46,7 +46,7 @@ const NavBotonFav = () => {
                     <DrawerHeader>keee</DrawerHeader>
                     <DrawerBody>
 {/*                         {
-                            carrito.map((prod, index) => <TarjetaFav key={index} prod={prod} addToFav={addToFav}/>)
+                            favoritos.map((prod, index) => <TarjetaFav  prod={prod} addToFav={addToFav}/>)
                         } */}
                     </DrawerBody>
                     </DrawerContent>
