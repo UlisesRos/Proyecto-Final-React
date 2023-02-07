@@ -11,7 +11,7 @@
     ],
     "routes": [
     {
-        "src": "/(.assets/productos.json)", 
+        "src": "json-server --port 5000 --watch src/assets/productos.json", 
         "dest": "server.js"
     }
     ]
