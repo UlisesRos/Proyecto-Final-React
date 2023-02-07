@@ -19,7 +19,7 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
     );
 };
 
-    const MenuLinks = ({ isOpen }) => {
+    const MenuLinks = ({ isOpen, addToFav, favoritos }) => {
     return (
         <Box  
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
@@ -46,14 +46,14 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
                     display={["flex", "flex", "flex", "none"]}
                     py="10px"
                     >
-                    <NavBotonFav isOpen={isOpen} />  
+                    <NavBotonFav isOpen={isOpen} favoritos={favoritos} addToFav={addToFav} />  
                 </Box>              
             </Stack>
         </Box>
     );
 };
 
-    const NavBar = ({ producto, addToCart, deleteFromCart, clearCart }) => {  //Componente NavBar principal
+    const NavBar = ({ producto, addToCart, deleteFromCart, clearCart, addToFav }) => {  //Componente NavBar principal
         
         const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio, producto.productosDestacados)
 
@@ -74,7 +74,7 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
             });
         }
 
-        const {carrito} = producto
+        const { carrito, favoritos } = producto
 
     return (
         
@@ -110,10 +110,10 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
 
                     <MenuToggle toggle={toggle} //toogle intercambia el boton de menu y el de close
                     /> 
-                    <MenuLinks  //solo visible entre md y lg
+                    <MenuLinks addToFav={addToFav} favoritos={favoritos}  //solo visible entre md y lg
                     /> 
                     <Box display={["none", "none", "none", "flex"]}>
-                        <NavBotonFav />
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} />
                     </Box>
                 </Box>
                 <Box  //se llama dos veces este box ya que la version mobile y la de escritorio intercambian sus lugares 
