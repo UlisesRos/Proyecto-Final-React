@@ -1,4 +1,5 @@
 import { Flex, Heading, Text, Box, Button } from "@chakra-ui/react";
+import BotonPayment from "../Routes/BotonPayment";
 import ShoppingTarjeta from "./ShoppingTarjeta";
 
 
@@ -71,16 +72,9 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                         flexDir="column"
                         rowGap="5px"
                         >
-                        <Button
-                            fontWeight="bold"
-                            fontFamily="--second-font"
-                            bg="--grey-light-color"
-                            fontSize="0.9rem"
-                            w="110px"
-                            color="--backg-color"
-                            >
-                            Pagar
-                        </Button>
+                        
+                        <BotonPayment />
+
                         <Button
                             fontWeight="bold"
                             fontFamily="--second-font"

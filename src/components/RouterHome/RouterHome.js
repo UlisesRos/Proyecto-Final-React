@@ -9,16 +9,40 @@ import NavBar from '../NavBar/NavBar';
 import Whatsapp from '../Whatsapp/whatsapp';
 import BotonDeslizante from '../BotonDeslizante/BotonDeslizante';
 
-const RouterHome = ({state, addToCart, deleteFromCart, clearCart, image}) => {
+const RouterHome = ({producto, addToCart, addToFav, deleteFromCart, deleteFromFav, clearCart, image}) => {
     return (
         <Box>
-            <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} />
+            <NavBar 
+                producto={producto} 
+                addToCart={addToCart} 
+                deleteFromCart={deleteFromCart} 
+                deleteFromFav={deleteFromFav} 
+                clearCart={clearCart} 
+                addToFav={addToFav}
+                />
             <HomeSlider/>
-            <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart}/>
-            <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart}/>
-            <SeccionTvs producto={state.productosTvs} addToCart={addToCart}/>
-            <SeccionAudio producto={state.productosAudio} addToCart={addToCart}/>
-            <Nosotros image={image}/>
+            <SeccionDestacados 
+                producto={producto.productosDestacados} 
+                addToCart={addToCart}
+                />
+            <SeccionSmartphone 
+                producto={producto.productosSmartphone} 
+                addToCart={addToCart} 
+                addToFav={addToFav}
+                />
+            <SeccionTvs 
+                producto={producto.productosTvs} 
+                addToCart={addToCart}
+                addToFav={addToFav}
+                />
+            <SeccionAudio 
+                producto={producto.productosAudio} 
+                addToCart={addToCart} 
+                addToFav={addToFav}
+                />
+            <Nosotros 
+                image={image}
+                />
             <Whatsapp />
             <BotonDeslizante />
         </Box>
