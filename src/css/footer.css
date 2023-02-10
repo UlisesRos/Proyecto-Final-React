@@ -1,0 +1,162 @@
+footer {
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.generalDiv {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0px 0px 0px;
+}
+
+.divProdSer {
+    width: 33.33%;
+}
+
+.divProdSer h4 {
+    text-decoration: underline;
+    margin: 0px 0px 0px 10px;
+    font-weight: bold;
+}
+
+.ulProdSer {
+    list-style: none;
+    padding: 0px;
+    margin: 20px 0px 0px 10px;
+    font-size: 12px;
+}
+
+.divSoporte {
+    text-align: center;
+    width: 33.33%;
+}
+
+.divSoporte h4 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.ulSoporte {
+    list-style: none;
+    padding: 0%;
+    margin: 45px 0px 0px 0px;
+    font-size: 12px;
+}
+
+.divAcercaDeNos {
+    width: 33.33%;
+}
+
+.divAcercaDeNos h4 {
+    text-decoration: underline;
+    text-align: right;
+    font-weight: bold;
+}
+
+.ulAcercaDeNos {
+    list-style: none;
+    text-align: right;
+    font-size: 12px;
+    text-decoration-color: none;
+    margin: 20px 0px 0px 10px
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    
+ }   
+
+ .lastDiv {
+    display: flex;
+    gap: 30px;
+    justify-content: right;
+    padding: 0px 10px 60px 0px;
+ }
+
+  p {
+    font-size: 15px
+ }
+
+ .divSocialMedia {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+ }
+
+ .twitterImg {
+    width: 25px;
+    height: 25px
+ }
+
+ .instagramImg {
+    width: 25px;
+    height: 25px
+ }
+
+ .facebookImg {
+    width: 25px;
+    height: 25px
+ }
+
+ .youtubeImg {
+    width: 25px;
+    height: 25px
+ }
+
+@media screen and (min-width: 720px) {  
+    
+    .ulSoporte {
+        margin: 20px 0 0 0;
+    }
+    
+    div h4 {
+        font-size: 22px  
+    }
+
+    div ul li {
+        font-size:large
+    }
+
+    div ul li:hover {
+        transform: translateX(-1px) scale(1.02);
+    }
+
+    p {
+        font-size: 20px
+   }
+
+   .divSocialMedia {
+    gap: 35px;
+   }
+
+   .lastDiv {
+    display: flex;
+    margin: 70px 0px 0px 0px
+   }
+
+   .twitterImg {
+    width: 35px;
+    height: 35px
+ }
+
+ .instagramImg {
+    width: 35px;
+    height: 35px;
+ }
+
+ .divSocialMedia a:hover {
+    transform: translateY(-3px) scale(1.10)
+ }
+
+ .facebookImg {
+    width: 35px;
+    height: 35px
+ }
+
+ .youtubeImg {
+    width: 35px;
+    height: 35px
+ }
+
+}
