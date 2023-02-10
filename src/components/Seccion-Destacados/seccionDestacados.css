@@ -42,6 +42,10 @@
     .errorTarjetas{
         font-size: 2rem
     }
+
+    .seccionDestacados h2 {
+        font-size: 30px;
+    }
 }
 
 

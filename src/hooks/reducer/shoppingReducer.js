@@ -1,6 +1,6 @@
 import { TYPES } from "../actions/actionsCarrito";
 
-const {READ_STATE, ADD_TO_CART, REMOVE_ONE_PRODUCT, REMOVE_ALL_PRODUCT, CLEAR_CART, ADD_TO_FAV} = TYPES
+const {READ_STATE, ADD_TO_CART, REMOVE_ONE_PRODUCT, REMOVE_ALL_PRODUCT, CLEAR_CART, ADD_TO_FAV, REMOVE_FAV} = TYPES
 
 export const initialState = {
     productosSmartphone: [],
@@ -30,7 +30,7 @@ export const shoppingReducer = (state, action) => {
         case ADD_TO_CART:{
 
             //Unifico el estado
-            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados, state.productosFavoritos)
 
             //Buscar el producto
             let nuevoProd = objetoUnificador.find(producto => producto.id === action.payload.itemData.id)
@@ -96,6 +96,16 @@ export const shoppingReducer = (state, action) => {
             return {
                 ...state,
                 favoritos: [...state.favoritos, { ...nuevoProd }],
+            }
+        }
+
+        case REMOVE_FAV:{
+
+            window.location.reload(true)
+
+            return {
+                ...state,
+                carrito: state.favoritos.filter(item => item.id !== action.payload)
             }
         }
     

@@ -5,7 +5,7 @@ import { useState } from "react";
 import BotonFav from "../Favoritos/BotonFav";
 
 
-const TarjetaMobile = ({ prod, addToCart}) => {
+const TarjetaMobile = ({ prod, addToCart, addToFav }) => {
 
     const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
 
@@ -33,7 +33,7 @@ const TarjetaMobile = ({ prod, addToCart}) => {
     return (
         <Box
             >
-            <TarjetaEscrtorio prod={prod} addToCart={addToCart}/>
+            <TarjetaEscrtorio prod={prod} addToCart={addToCart} addToFav={addToFav}/>
 
         <Card 
             maxW={["200px", "230px" ,"230px"]}
@@ -45,7 +45,7 @@ const TarjetaMobile = ({ prod, addToCart}) => {
             <Box
                 filter={ fav ? "brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(10%) hue-rotate(279deg) brightness(93%) contrast(101%)" : null}
                 >
-                <BotonFav fav={fav} setFav={setFav}/>
+                <BotonFav fav={fav} setFav={setFav} addToFav={addToFav} prod={prod}/> 
             </Box>
             <CardBody
                 display="flex"

@@ -1,12 +1,19 @@
 import { Card, CardBody, Image, Heading, Text, Button, Link, Box, Flex } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 import { useState } from "react";
-import BotonFav from "../Favoritos/BotonFav";
 
 
 
-const TarjetaFav = ({ prod, addToCart, addToFav }) => {
+const TarjetaFav = ({ prod, addToCart, deleteFromFav }) => {
     const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
+
+    const refres = () => {
+
+        deleteFromFav(prod)
+
+        return window.location.reload(true)
+    }
+
 
     const modalCarrito = (prod) => {
         Swal.fire({
@@ -18,7 +25,7 @@ const TarjetaFav = ({ prod, addToCart, addToFav }) => {
             imageAlt: 'Custom image',
         })
 
-        addToCart(prod.id)
+        addToCart(prod)
     }
     const caracteristicas = (prod) => {
         Swal.fire({
@@ -30,6 +37,7 @@ const TarjetaFav = ({ prod, addToCart, addToFav }) => {
 
     return (
         <Card
+        mt="5px"
         w="100%"
         h="max-content"
         boxShadow= "dark-lg"
@@ -37,25 +45,29 @@ const TarjetaFav = ({ prod, addToCart, addToFav }) => {
         display="flex"
         bg="--white-color"
         borderRadius="none"
-
         >
-        <Box
-            position={"relative"}
-            right={["120px", "100px", "185px"]}
-            top="10px"
-            filter={ fav ? "brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(10%) hue-rotate(279deg) brightness(93%) contrast(101%)" : null}           >
-            <BotonFav fav={fav} setFav={setFav} addToFav={addToFav} prod={prod}
-            />
-        </Box>
+            <Link
+                textAlign="center"
+                _hover={{
+                    bg:"--grey-light-color"
+                }}
+                borderRadius="50px"
+                w="30px"
+                h="30px"
+                position="absolute"
+                right="10px"
+                top="5px"
+                onClick={() => refres()}
+                >
+                    <Text>x</Text>
+            </Link>
         <CardBody
             display="flex"
             flexDirection={["column","column","row"]}
             columnGap="40px"
             rowGap={["10px"]}
             justifyContent={"space-between"}
-            align="center"
             alignItems="center"
-            px={["10px", "10px", "80px"]}
             >
             <Image
                 borderRadius="10px"
@@ -77,19 +89,12 @@ const TarjetaFav = ({ prod, addToCart, addToFav }) => {
                         >{prod.titulo}</Heading>
 
                 <Text
-                    fontFamily="--first-font"
-                    fontWeight="semibold"
-                    color="--backg-color"
-                    fontSize=".9rem"
-                    py="5px"
-                        >{prod.descripcion}</Text>
-
-                <Text
                     fontSize="1.25rem"
                     color="--backg-color"
                     fontFamily='--first-font'
                     textOverflow="ellipsis"
                     fontWeight="semibold"
+
                         >$ {prod.precio}</Text>
 
             </Box>

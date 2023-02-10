@@ -19,7 +19,8 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
     );
 };
 
-    const MenuLinks = ({ isOpen, addToFav, favoritos }) => {
+    const MenuLinks = ({ isOpen }) => {
+
     return (
         <Box  
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
@@ -41,19 +42,13 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
                 <Link href="#SeccionSmartphone" className="links" >SmartPhone</Link>
                 <Link href="#SeccionTvs" className="links" >TV</Link>
                 <Link href="#SeccionAudio" className="links" >Audio</Link>
-                <Link href="#SeccionNosotros" className="links" >Nosotros</Link>
-                <Box 
-                    display={["flex", "flex", "flex", "none"]}
-                    py="10px"
-                    >
-                    <NavBotonFav isOpen={isOpen} favoritos={favoritos} addToFav={addToFav} />  
-                </Box>              
+                <Link href="#SeccionNosotros" className="links" >Nosotros</Link>           
             </Stack>
         </Box>
     );
 };
 
-    const NavBar = ({ producto, addToCart, deleteFromCart, clearCart, addToFav }) => {  //Componente NavBar principal
+    const NavBar = ({ producto, addToCart, deleteFromCart, deleteFromFav, clearCart, addToFav }) => {  //Componente NavBar principal
         
         const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio, producto.productosDestacados)
 
@@ -104,6 +99,7 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
                         px="5px"
                         alignItems= "center"
                         >
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} /> 
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
@@ -113,7 +109,7 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
                     <MenuLinks addToFav={addToFav} favoritos={favoritos}  //solo visible entre md y lg
                     /> 
                     <Box display={["none", "none", "none", "flex"]}>
-                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} />
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} />
                     </Box>
                 </Box>
                 <Box  //se llama dos veces este box ya que la version mobile y la de escritorio intercambian sus lugares 

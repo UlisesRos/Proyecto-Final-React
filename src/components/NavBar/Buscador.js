@@ -42,7 +42,7 @@ import '../../css/buscador.css'
                 setSearchValue(event.target.value);
         }
 
-
+        
 
     return (
         <Box

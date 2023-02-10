@@ -1,11 +1,12 @@
-import { Link, Button, Text,   Drawer, DrawerBody, DrawerHeader ,DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import React from "react";
+import { Box, Link, Button, Text, Drawer, DrawerBody, DrawerHeader ,DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import heartNav from "../../img/NavIconos/heartNav.png"
 import { useRef } from "react";
 import TarjetaFav from "./TarjetaFav";
 
 
 
-const NavBotonFav = (addToFav, favoritos) => {
+const NavBotonFav = ({addToFav, favoritos, deleteFromFav, addToCart }) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
@@ -13,7 +14,6 @@ const NavBotonFav = (addToFav, favoritos) => {
     return (
 
         <>
-            
             <Link
                 _hover={{ 
                             textDecoration: "none" ,
@@ -34,20 +34,39 @@ const NavBotonFav = (addToFav, favoritos) => {
                     ref={btnRef}
                     onClick={onOpen}
                     >
-                        <div><img src={heartNav} alt="" /></div>
-                        <div>
-                            <Text mt={['0px','0px','0px','2px']}>Favoritos</Text>
-                        </div>                       
+                        <Box><img src={heartNav} alt="" /></Box>
+                        <Box
+                            display={["none", "none", "none", "block"]}
+                            >
+                            <Text mt={['0px','0px','0px','2px']}>Favoritos</Text>                      
+                        </Box>
                 </Button>
                 <Drawer onClose={onClose} isOpen={isOpen} size='lg'>
                     <DrawerOverlay />
                     <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader>keee</DrawerHeader>
+                    <DrawerHeader
+                        fontFamily="--second-font"
+                        fontSize="2rem"
+                        fontWeight="bold"
+                        >
+                            Favoritos</DrawerHeader>
                     <DrawerBody>
-{/*                         {
-                            favoritos.map((prod, index) => <TarjetaFav  prod={prod} addToFav={addToFav}/>)
-                        } */}
+                        {
+                            favoritos.length === 0 
+                            ?
+                            <Text
+                                h="60vh"
+                                display="flex"
+                                justifyContent="start"
+                                alignItems="center"
+                                fontFamily="--second-font"
+                                fontSize="1.5rem"
+                                fontWeight="bold"
+                                >Agregar productos a favoritos</Text>
+                            :
+                            favoritos.map((prod, index) => <TarjetaFav key={index} prod={prod} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart}/>)
+                        }
                     </DrawerBody>
                     </DrawerContent>
                 </Drawer>

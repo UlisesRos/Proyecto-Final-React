@@ -4,7 +4,7 @@ import SwiperSmartphone from "./SwiperSmartphone";
 
 
 
-const ListaTarjetas = ({ producto, addToCart }) => {
+const ListaTarjetas = ({ producto, addToCart, addToFav }) => {
 
 
     return (
@@ -25,7 +25,7 @@ const ListaTarjetas = ({ producto, addToCart }) => {
                 rowGap="50px"
                 >
                 {
-                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart}/>)
+                    producto.map(prod => <TarjetaMobile key={ prod.id } prod={ prod } addToCart={addToCart} addToFav={addToFav}/>)
                 }
             </Box>
             <Box
@@ -34,7 +34,7 @@ const ListaTarjetas = ({ producto, addToCart }) => {
                 w="350px"
                 m="50px 0 50px 0"
                 >
-                    <SwiperSmartphone producto={producto} addToCart={addToCart}/>
+                    <SwiperSmartphone producto={producto} addToCart={addToCart} addToFav={addToFav}/>
             </Box>
         </Flex>
     )

@@ -1,21 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import axios from "axios";
-import SeccionSmartphone from "./components/seccion-smartphone/SeccionSmartphone";
-import SeccionTvs from "./components/seccion-tvs/SeccionTvs";
-import SeccionAudio from "./components/seccion-audio/SeccionAudio";
 import { useEffect, useReducer } from "react";
 import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
-import NavBar from "./components/NavBar/NavBar";
-import HomeSlider from "./components/Home/HomeSlider";
-import SeccionDestacados from "./components/Seccion-Destacados/SeccionDestacados";
-import Nosotros from "./components/nosotros/Nosotros";
 import imagenes from './img/nosotros/imagenes';
-import Whatsapp from "./components/Whatsapp/whatsapp";
-import BotonDeslizante from "./components/BotonDeslizante/BotonDeslizante";
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
 
-const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART, ADD_TO_FAV} = TYPES
+const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART, ADD_TO_FAV, REMOVE_FAV} = TYPES
 
 const image = imagenes;
 
@@ -63,7 +54,7 @@ const App = () => {
   const addToCart = async (data) => {
 
     //Unifico el estado
-    const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+    const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados, state.productosFavoritos)
 
     //Buscar el producto
     let nuevoProd = objetoUnificador.find(producto => producto.id === data.id)
@@ -168,38 +159,63 @@ const App = () => {
 
   const addToFav = async (data) => {
 
-    const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+    let itemInCarrito = state.favoritos.find(item => item.id === data.id)
 
-    let OPTIONS = {
-      method: 'POST',
-      headers: {"content-type": "application/json"},
-      data: JSON.stringify({ ...data })
-    };
-    let res = await axios("http://localhost:5000/favoritos", OPTIONS),
-    itemData = await res.data
+    if(itemInCarrito){
 
-    dispatch({type: ADD_TO_FAV, payload: {itemData}});
+      let ENDPOINTS = `http://localhost:5000/favoritos/${data.id}`
 
+        let OPTIONS = {
+          method: 'DELETE',
+          headers: {"content-type": "application/json"},
+        },
+
+        res = await axios(ENDPOINTS, OPTIONS)
+
+        dispatch({type: REMOVE_FAV, payload: data.id});
+        
+    }
+    else{
+      let OPTIONS = {
+        method: 'POST',
+        headers: {"content-type": "application/json"},
+        data: JSON.stringify({ ...data })
+      };
+      let res = await axios("http://localhost:5000/favoritos", OPTIONS),
+      itemData = await res.data
+  
+      dispatch({type: ADD_TO_FAV, payload: {itemData}});
+    }
+    
   }
+
+  const deleteFromFav = async (data) => {
+
+        let ENDPOINTS = `http://localhost:5000/favoritos/${data.id}`
+
+        let OPTIONS = {
+          method: 'DELETE',
+          headers: {"content-type": "application/json"},
+        },
+
+        res = await axios(ENDPOINTS, OPTIONS)
+
+        dispatch({type: REMOVE_FAV, payload: data.id});
+
+  };
+
 
   return (
     <Box>
-      <Box
-        as="header">
-          <Rutas/>
-          <NavBar producto={state} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart} addToFav={addToFav} />
-      </Box>
-      <Box
-        as="main">
-          <HomeSlider/>       
-          <Whatsapp />
-          <SeccionDestacados producto={state.productosDestacados} addToCart={addToCart} addToFav={addToFav}/>
-          <SeccionSmartphone producto={state.productosSmartphone} addToCart={addToCart} addToFav={addToFav}/>
-          <SeccionTvs producto={state.productosTvs} addToCart={addToCart} addToFav={addToFav}/>
-          <SeccionAudio producto={state.productosAudio} addToCart={addToCart} addToFav={addToFav}/>
-          <Nosotros image={image}/>
-      </Box>
-      <BotonDeslizante />
+        <Rutas 
+          producto={state} 
+          addToCart={addToCart} 
+          deleteFromCart={deleteFromCart}
+          deleteFromFav={deleteFromFav} 
+          clearCart={clearCart} 
+          addToFav={addToFav} 
+          image={image}
+          />
     </Box>
   )
 }

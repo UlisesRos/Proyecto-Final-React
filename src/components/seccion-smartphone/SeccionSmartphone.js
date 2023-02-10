@@ -3,7 +3,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import ListaTarjetas from "./ListaTarjetas";
 
 
-const SeccionSmartphone = ({ producto, addToCart }) => {
+const SeccionSmartphone = ({ producto, addToCart, addToFav }) => {
 
     return (
         <Box id="SeccionSmartphone"
@@ -75,7 +75,7 @@ const SeccionSmartphone = ({ producto, addToCart }) => {
                             ERROR: LOS DATOS NO SE PUEDEN VER
                         </Text>
                         :
-                        <ListaTarjetas producto={producto} addToCart={addToCart} />
+                        <ListaTarjetas producto={producto} addToCart={addToCart} addToFav={addToFav} />
                     }
             </Flex>
         </Box>

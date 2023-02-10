@@ -57,9 +57,9 @@ const TarjetaEscrtorio = ({ prod, addToCart, addToFav }) => {
                 >
                 <Box
                     visibility={visible ? "visible" : "hidden"}
+                    onClick={() => addToFav(prod)}
                     >
                     <BotonFav fav={fav} setFav={setFav} addToFav={addToFav} prod={prod}
-                    onClick={() => addToFav(prod)}
                     />
                 </Box>
                 <CardBody
