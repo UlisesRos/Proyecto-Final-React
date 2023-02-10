@@ -1,10 +1,10 @@
-import {  Box, Image, ring } from "@chakra-ui/react";
-import { useState } from "react";
+import {  Box, Image } from "@chakra-ui/react";
+import '../../css/botonFav.css'
 import heart from "../../img/favoritos/heart.png"
 import heartColor from "../../img/favoritos/heartColor.png"
 
 
-const BotonFav = ({fav, setFav}) => {
+const BotonFav = ({fav, setFav, addToFav, deleteFromFav, prod }) => {
 
     const handleFav = () => {
         setFav(!fav);
@@ -20,11 +20,10 @@ const BotonFav = ({fav, setFav}) => {
         p={["6px", "7px", "10px"]}
         borderRadius="100%"
         bg="rgba(203, 213, 224, 0.2)"
-
+        onClick={() => addToFav(prod)} 
             >
-                <Image src={ fav ? heart : heartColor} onClick={handleFav}
-                        borderRadius="100%"
-
+                <Image src={ fav ? heart : heartColor} onClick={handleFav} className={fav ? "" : "botonFav"}
+                borderRadius="100%"
                 w="25px"
                 h="25px"
                 zIndex={10}

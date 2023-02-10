@@ -142,5 +142,6 @@
       "discount": "30% OFF"
     }
   ],
-  "carrito": []
+  "carrito": [],
+  "favoritos": []
 }

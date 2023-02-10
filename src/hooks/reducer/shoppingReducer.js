@@ -1,13 +1,14 @@
 import { TYPES } from "../actions/actionsCarrito";
 
-const {READ_STATE, ADD_TO_CART, REMOVE_ONE_PRODUCT, REMOVE_ALL_PRODUCT, CLEAR_CART} = TYPES
+const {READ_STATE, ADD_TO_CART, REMOVE_ONE_PRODUCT, REMOVE_ALL_PRODUCT, CLEAR_CART, ADD_TO_FAV, REMOVE_FAV} = TYPES
 
 export const initialState = {
     productosSmartphone: [],
     productosTvs: [],
     productosAudio: [],
     productosDestacados: [],
-    carrito: []
+    carrito: [],
+    favoritos: []
 };
 
 
@@ -21,14 +22,15 @@ export const shoppingReducer = (state, action) => {
                 productosTvs: action.payload.productosTvs,
                 productosAudio: action.payload.productosAudio,
                 productosDestacados: action.payload.productosDestacados,
-                carrito: action.payload.productosCarrito
+                carrito: action.payload.productosCarrito,
+                favoritos: action.payload.productosFavoritos
             }
         }
 
         case ADD_TO_CART:{
 
             //Unifico el estado
-            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados, state.productosFavoritos)
 
             //Buscar el producto
             let nuevoProd = objetoUnificador.find(producto => producto.id === action.payload.itemData.id)
@@ -82,6 +84,28 @@ export const shoppingReducer = (state, action) => {
             return {
                 ...state,
                 carrito: initialState.carrito
+            }
+        }
+
+        case ADD_TO_FAV:{
+
+            const objetoUnificador = state.productosSmartphone.concat(state.productosTvs, state.productosAudio, state.productosDestacados)
+
+            let nuevoProd = objetoUnificador.find(producto => producto.id === action.payload.itemData.id)
+
+            return {
+                ...state,
+                favoritos: [...state.favoritos, { ...nuevoProd }],
+            }
+        }
+
+        case REMOVE_FAV:{
+
+            window.location.reload(true)
+
+            return {
+                ...state,
+                carrito: state.favoritos.filter(item => item.id !== action.payload)
             }
         }
     

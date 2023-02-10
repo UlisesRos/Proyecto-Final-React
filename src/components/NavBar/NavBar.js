@@ -4,9 +4,9 @@ import '../../css/navBar.css'
 import Buscador from "./Buscador";
 import BotonShopping from "./ShoppingBoton";
 import Logo from "./Logo";
-import close from "../../img/NavIconos/close.png"
 import ProductosBuscados from "./ProductosBuscados";
 import TarjetaBuscador from "./TarjetaBuscador";
+import NavBotonFav from "../Favoritos/NavBotonFav";
 
     const MenuToggle = ({ toggle }) => { 
     return ( //entre sm y lg es visible el icono menu, si isOpen es verdadero es visible el boton close
@@ -20,32 +20,35 @@ import TarjetaBuscador from "./TarjetaBuscador";
 };
 
     const MenuLinks = ({ isOpen }) => {
+
     return (
-        <Box
+        <Box  
             display={{ base: isOpen ? "block" : "none", lg: "block" }}  //MenuLinks es visible si estamos en los breakpoints md/lg o si isOpen es true, si isOpen es true es visible el segundo llamado de MenuLinks
             >
             <Stack
                 spacing={[0, 0, 0, 6]}
                 align="center"
                 direction={["column", "column", "column", "row"]}   //entre sm y lg los links se agrupan en columnas (menu hamburguesa) a partir de lg se agrupan en fila (antes de que aparezca el menu hamburguesa)
-                fontSize={["24px", "24px", "24px", "18px"]}
+                fontSize={["22px", "22px", "22px", "18px"]}
                 letterSpacing="2px"
                 color="white"
                 fontFamily= "--first-font"
                 fontWeight="600"
+                textDecoration={'none'}
+                _hover={{ textDecoration: "none" }}
                 className="stackIn"
                 >
-                <Link href="#SeccionDestacados" className="links" _hover={{ textDecoration: "none" }}>Destacados</Link> 
-                <Link href="#SeccionSmartphone" className="links" _hover={{ textDecoration: "none" }}>SmartPhone</Link>
-                <Link href="#SeccionTvs" className="links" _hover={{ textDecoration: "none" }}>TV</Link>
-                <Link href="#SeccionAudio" className="links" _hover={{ textDecoration: "none" }}>Audio</Link>
-                <Link href="#SeccionNosotros" className="links" _hover={{ textDecoration: "none" }}>Nosotros</Link>
+                <Link href="#SeccionDestacados" className="links" >Destacados</Link> 
+                <Link href="#SeccionSmartphone" className="links" >SmartPhone</Link>
+                <Link href="#SeccionTvs" className="links" >TV</Link>
+                <Link href="#SeccionAudio" className="links" >Audio</Link>
+                <Link href="#SeccionNosotros" className="links" >Nosotros</Link>           
             </Stack>
         </Box>
     );
 };
 
-    const NavBar = ({ producto, addToCart, deleteFromCart, clearCart }) => {  //Componente NavBar principal
+    const NavBar = ({ producto, addToCart, deleteFromCart, deleteFromFav, clearCart, addToFav }) => {  //Componente NavBar principal
         
         const objetoBuscador = producto.productosSmartphone.concat(producto.productosTvs, producto.productosAudio, producto.productosDestacados)
 
@@ -66,7 +69,7 @@ import TarjetaBuscador from "./TarjetaBuscador";
             });
         }
 
-        const {carrito} = producto
+        const { carrito, favoritos } = producto
 
     return (
         
@@ -74,8 +77,8 @@ import TarjetaBuscador from "./TarjetaBuscador";
             <Flex
                 as="nav"
                 alignItems="center"
-                justify={["space-around","space-between","space-between", "space-between"]}
-                columnGap={["120px","150px","0px"]}
+                justify={["space-around","space-around","space-between", "space-between"]}
+                columnGap={["100px","200px","180px", "0px"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
                 p={3}
@@ -96,14 +99,18 @@ import TarjetaBuscador from "./TarjetaBuscador";
                         px="5px"
                         alignItems= "center"
                         >
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} /> 
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
 
                     <MenuToggle toggle={toggle} //toogle intercambia el boton de menu y el de close
                     /> 
-                    <MenuLinks  //solo visible entre md y lg
+                    <MenuLinks addToFav={addToFav} favoritos={favoritos}  //solo visible entre md y lg
                     /> 
+                    <Box display={["none", "none", "none", "flex"]}>
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} />
+                    </Box>
                 </Box>
                 <Box  //se llama dos veces este box ya que la version mobile y la de escritorio intercambian sus lugares 
                     //el menu con el buscador y el boton, este box se ve antes que aparezca el menu hamburguesa

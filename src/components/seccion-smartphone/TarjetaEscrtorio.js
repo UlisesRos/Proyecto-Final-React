@@ -3,7 +3,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import BotonFav from "../Favoritos/BotonFav";
 
-const TarjetaEscrtorio = ({ prod, addToCart }) => {
+const TarjetaEscrtorio = ({ prod, addToCart, addToFav }) => {
 
     const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
 
@@ -57,8 +57,9 @@ const TarjetaEscrtorio = ({ prod, addToCart }) => {
                 >
                 <Box
                     visibility={visible ? "visible" : "hidden"}
+                    onClick={() => addToFav(prod)}
                     >
-                    <BotonFav fav={fav} setFav={setFav}
+                    <BotonFav fav={fav} setFav={setFav} addToFav={addToFav} prod={prod}
                     />
                 </Box>
                 <CardBody

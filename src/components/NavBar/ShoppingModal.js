@@ -1,12 +1,14 @@
 import { Flex, Heading, Text, Box, Button } from "@chakra-ui/react";
+import BotonPayment from "../Routes/BotonPayment";
 import ShoppingTarjeta from "./ShoppingTarjeta";
-const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }) => {
 
+
+const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }) => {
 
     return (
         <Flex
             mt="20px"
-            w="auto"
+            w="300px"
             h="400px"
             zIndex="modal"
             position="absolute"
@@ -66,27 +68,25 @@ const ShoppingModal = ({ carrito, isOpen, addToCart, deleteFromCart, clearCart }
                             >{(carrito.reduce((ac, prod) => ac + prod.precioT, 0).toFixed(3))}
                         </Text>
                     </Flex>
-                    <Button
-                        fontWeight="bold"
-                        fontFamily="--second-font"
-                        bg="--grey-light-color"
-                        fontSize="0.9rem"
-                        w="110px"
-                        color="--backg-color"
-                        onClick={clearCart}
+                    <Flex
+                        flexDir="column"
+                        rowGap="5px"
                         >
-                        Limpiar Carrito
-                    </Button>
-                    <Button
-                        fontWeight="bold"
-                        fontFamily="--second-font"
-                        bg="--grey-light-color"
-                        fontSize="0.9rem"
-                        w="110px"
-                        color="--backg-color"
-                        >
-                        Pagar
-                    </Button>
+                        
+                        <BotonPayment />
+
+                        <Button
+                            fontWeight="bold"
+                            fontFamily="--second-font"
+                            bg="--grey-light-color"
+                            fontSize="0.9rem"
+                            w="110px"
+                            color="--backg-color"
+                            onClick={clearCart}
+                            >
+                            Limpiar Carrito
+                        </Button>
+                    </Flex>
                 </Box>
         </Flex>
     )
