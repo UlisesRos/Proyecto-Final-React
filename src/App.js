@@ -5,7 +5,6 @@ import { shoppingReducer, initialState } from "./hooks/reducer/shoppingReducer";
 import imagenes from './img/nosotros/imagenes';
 import { TYPES } from "./hooks/actions/actionsCarrito";
 import Rutas from "./components/Routes/Rutas";
-import Footer from "./components/Footer/Footer";
 
 const {READ_STATE ,ADD_TO_CART, REMOVE_ALL_PRODUCT, REMOVE_ONE_PRODUCT, CLEAR_CART, ADD_TO_FAV, REMOVE_FAV} = TYPES
 
@@ -205,7 +204,7 @@ const App = () => {
 
   };
 
- return (
+return (
     <Box>
         <Rutas 
           producto={state} 

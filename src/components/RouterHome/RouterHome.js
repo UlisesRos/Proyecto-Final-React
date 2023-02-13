@@ -8,6 +8,7 @@ import Nosotros from "../nosotros/Nosotros";
 import NavBar from '../NavBar/NavBar';
 import Whatsapp from '../Whatsapp/whatsapp';
 import BotonDeslizante from '../BotonDeslizante/BotonDeslizante';
+import Footer from '../Footer/Footer';
 
 const RouterHome = ({producto, addToCart, addToFav, deleteFromCart, deleteFromFav, clearCart, image}) => {
     return (
@@ -43,6 +44,7 @@ const RouterHome = ({producto, addToCart, addToFav, deleteFromCart, deleteFromFa
             <Nosotros 
                 image={image}
                 />
+            <Footer />
             <Whatsapp />
             <BotonDeslizante />
         </Box>
