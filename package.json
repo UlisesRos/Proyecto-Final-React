@@ -2,6 +2,7 @@
   "name": "proyecto-ecommerce",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
@@ -30,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "apiproductos": "json-server --port 5000 --watch src/assets/productos.json"
+    "apiproductos": "json-server --port 5000 --watch src/assets/productos.json",
+    "publish": "npm run build && npx vercel --prod"
   },
   "eslintConfig": {
     "extends": [

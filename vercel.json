@@ -5,7 +5,7 @@
         "src": "server.js",
         "use": "@vercel/node",
         "config": {
-          "includeFiles": ["productos.json"]
+          "includeFiles": ["./src/assets/productos.json"]
         }
       }
     ],
