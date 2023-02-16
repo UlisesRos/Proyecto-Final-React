@@ -7,12 +7,6 @@ import { useState } from "react";
 const TarjetaFav = ({ prod, addToCart, deleteFromFav }) => {
     const [fav, setFav] = useState(true)    //estado para visualizar el boton de favorito con y sin color
 
-    const refres = () => {
-
-        deleteFromFav(prod)
-
-        return window.location.reload(true)
-    }
 
 
     const modalCarrito = (prod) => {
@@ -57,7 +51,7 @@ const TarjetaFav = ({ prod, addToCart, deleteFromFav }) => {
                 position="absolute"
                 right="10px"
                 top="5px"
-                onClick={() => refres()}
+                onClick={() => deleteFromFav(prod)}
                 >
                     <Text>x</Text>
             </Link>
