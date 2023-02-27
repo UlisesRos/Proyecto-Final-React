@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Link, Button, Text, Drawer, DrawerBody, DrawerHeader ,DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import { Box, Link, Button, Text, Drawer, DrawerBody, DrawerHeader ,DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Image } from "@chakra-ui/react";
 import heartNav from "../../img/NavIconos/heartNav.png"
 import { useRef } from "react";
 import TarjetaFav from "./TarjetaFav";
@@ -23,9 +23,9 @@ const NavBotonFav = ({addToFav, favoritos, deleteFromFav, addToCart }) => {
                     variant='solid'
                     display="flex"
                     columnGap='5px'
-                    px='12px'
+                    px={['0px','0px','0px','12px']}
                     py={['16px','16px','16px','12px']}
-                    mx='16px'
+                    mx={['0px','0px','0px','16px']}
                     fontSize={["20px", "20px", "20px", "16px"]}
                     letterSpacing="2px"
                     fontFamily= "--first-font"
@@ -34,7 +34,9 @@ const NavBotonFav = ({addToFav, favoritos, deleteFromFav, addToCart }) => {
                     ref={btnRef}
                     onClick={onOpen}
                     >
-                        <Box><img src={heartNav} alt="" /></Box>
+                        <Box><Image src={heartNav} alt=""
+                        width={['34px','34px','34px','24px']}
+                        /></Box>
                         <Box
                             display={["none", "none", "none", "block"]}
                             >

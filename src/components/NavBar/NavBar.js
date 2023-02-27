@@ -77,7 +77,7 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
             <Flex
                 as="nav"
                 alignItems="center"
-                justify={["space-around","space-around","space-between", "space-between"]}
+                justify={["space-around","space-between","space-between", "space-between"]}
                 columnGap={["100px","200px","180px", "0px"]}
                 wrap= {["wrap", "wrap", "nowrap", "nowrap"]}
                 w="100%"
@@ -99,13 +99,13 @@ import NavBotonFav from "../Favoritos/NavBotonFav";
                         px="5px"
                         alignItems= "center"
                         >
-                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} /> 
                         <Buscador searchValue={searchValue} setSearchValue={setSearchValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
+                        <NavBotonFav favoritos={favoritos} addToFav={addToFav} deleteFromFav={deleteFromFav} addToCart={addToCart} /> 
                         <BotonShopping carrito={carrito} addToCart={addToCart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
                     </Box>
-
                     <MenuToggle toggle={toggle} //toogle intercambia el boton de menu y el de close
                     /> 
+
                     <MenuLinks addToFav={addToFav} favoritos={favoritos}  //solo visible entre md y lg
                     /> 
                     <Box display={["none", "none", "none", "flex"]}>
